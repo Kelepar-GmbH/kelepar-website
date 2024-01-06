@@ -82,7 +82,7 @@ a {
   padding: 0 1rem;
   text-decoration: none;
   transition: 0.4s;
-  color: var(--sex-color-orange);
+  color: var(--kelepar-color-orange);
 }
 
 h1 {
@@ -100,7 +100,7 @@ p {
 .text {
   padding: 10px 0;
   text-align: center;
-  color: var(--sex-color-black);
+  color: var(--kelepar-color-black);
 }
 
 @media (min-width: 1200px) {

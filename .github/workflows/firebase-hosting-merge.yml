@@ -22,6 +22,6 @@ jobs:
         uses: FirebaseExtended/action-hosting-deploy@v0
         with:
           repoToken: '${{ secrets.GITHUB_TOKEN }}'
-          firebaseServiceAccount: '${{ secrets.FIREBASE_SERVICE_ACCOUNT_SEXOLOGIE_LUZERN }}'
+          firebaseServiceAccount: '${{ secrets.FIREBASE_SERVICE_ACCOUNT_KELEPAR }}'
           channelId: live
-          projectId: sexologie-luzern
+          projectId: kelepar-98e3a

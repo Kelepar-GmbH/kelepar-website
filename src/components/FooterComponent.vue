@@ -35,13 +35,13 @@ p {
 
 .container {
   padding: 40px 20px 10px 20px;
-  background-color: var(--sex-color-neutral);
+  background-color: var(--kelepar-color-neutral);
 }
 
 .footer-link {
   padding-left: 5px;
   padding-right: 5px;
-  color: var(--sex-color-orange);
+  color: var(--kelepar-color-orange);
   text-decoration: none;
 }
 
@@ -61,7 +61,7 @@ p {
 }
 
 .links a {
-  color: var(--sex-color-orange);
+  color: var(--kelepar-color-orange);
   transition: 0.4s;
   padding: 15px 25px;
   text-decoration: none;
@@ -69,7 +69,7 @@ p {
 }
 
 .social a {
-  color: var(--sex-color-orange);
+  color: var(--kelepar-color-orange);
   text-align: left;
   transition: 0.4s;
 }
@@ -77,7 +77,7 @@ p {
 .links a:hover,
 .social a:hover {
   text-decoration: none;
-  color: var(--sex-color-orange);
+  color: var(--kelepar-color-orange);
 }
 
 .text {

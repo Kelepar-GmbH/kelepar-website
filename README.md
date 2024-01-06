@@ -1,6 +1,6 @@
-# Sexologie Luzern Website
+# Kelepar Website
 
-This repository represents the [Sexologie Luzern](https://sexologie-luzern.com) website. The website is
+This repository represents the [Kelepar](https://kelepar.com) website. The website is
 built with the Vue3 JS framework and its aim is to publicly inform the audience about the project, its progress and how to get in touch with the team.
 
 ## Project setup

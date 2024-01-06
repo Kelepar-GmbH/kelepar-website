@@ -28,7 +28,7 @@ p {
 }
 
 a {
-  color: var(--sex-color-orange);
+  color: var(--kelepar-color-orange);
 }
 
 .container {
@@ -52,7 +52,7 @@ a {
 .btn2 {
   width: 200px;
   border: 2px solid;
-  border-color: var(--sex-color-orange);
+  border-color: var(--kelepar-color-orange);
   border-radius: 0;
 }
 

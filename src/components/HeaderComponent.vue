@@ -121,16 +121,16 @@ nav a {
   padding: 0 1rem;
   text-decoration: none;
   transition: 0.4s;
-  color: var(--sex-color-white);
+  color: var(--kelepar-color-white);
 }
 
 nav a:hover {
   text-decoration: none;
-  color: var(--sex-color-orange);
+  color: var(--kelepar-color-orange);
 }
 
 nav a:active {
-  color: var(--sex-color-orange);
+  color: var(--kelepar-color-orange);
 }
 
 /* Classes */
@@ -190,14 +190,14 @@ nav a:active {
 }
 
 .social a {
-  color: var(--sex-color-white);
+  color: var(--kelepar-color-white);
   text-align: left;
   transition: 0.4s;
 }
 
 .social a:hover {
   text-decoration: none;
-  color: var(--sex-color-orange);
+  color: var(--kelepar-color-orange);
 }
 
 .social li {
@@ -221,7 +221,7 @@ nav a:active {
   background: transparent;
   top: 0;
   right: 0;
-  color: var(--sex-color-white);
+  color: var(--kelepar-color-white);
   width: 30px;
   height: auto;
   position: absolute;
@@ -233,7 +233,7 @@ nav a:active {
   background: transparent;
   top: 0;
   right: 0;
-  color: var(--sex-color-orange);
+  color: var(--kelepar-color-orange);
   width: 30px;
   height: auto;
   position: absolute;
