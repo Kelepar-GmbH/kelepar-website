@@ -1,11 +1,13 @@
 <template>
   <main>
-    <div class="container">
-      <h1>Falsch abgebogen :/</h1>
-      <p>Diese Seite konnte nicht geladen werden.</p>
-      <div class="links">
-        <div class="button">
-          <a class="btn2" href="/#intro" target="" aria-label="Zurück">Zurück</a>
+    <div class="main-container">
+      <div class="content blue-img">
+        <h1>Oops, wrong way :/</h1>
+        <p>Could not load this page.</p>
+        <div class="links">
+          <div class="button">
+            <a class="btn2" href="/#intro" target="" aria-label="Back">Back</a>
+          </div>
         </div>
       </div>
     </div>
@@ -28,19 +30,38 @@ p {
 }
 
 a {
-  color: var(--kelepar-color-orange);
+  color: var(--kelepar-color-highlight-one);
 }
 
-.container {
-  min-height: 100vh;
-  margin: 0 auto;
-  padding: 0 10px;
-  max-width: 1400px;
+.main-container {
   display: flex;
   align-items: center;
-  place-content: center;
+  justify-content: center;
+  min-height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  text-align: center;
   flex-direction: column;
-  text-align: justify;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.blue-img {
+  background-image: url(../assets/img/banners/oxford-blue.webp);
+  width: 100%;
+  background-repeat: no-repeat;
+  background-position: top center;
+  background-size: cover;
 }
 
 .button {
@@ -52,7 +73,7 @@ a {
 .btn2 {
   width: 200px;
   border: 2px solid;
-  border-color: var(--kelepar-color-orange);
+  border-color: var(--kelepar-color-highlight-one);
   border-radius: 0;
 }
 

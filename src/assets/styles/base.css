@@ -1,10 +1,16 @@
 @import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500&display=swap');
 
 :root {
-    --kelepar-color-neutral: #fffcf5;
-    --kelepar-color-orange: #ff9686;
+    --kelepar-color-neutral: #FBFFF1;
+    --kelepar-color-main: #0D2149;
+    --kelepar-color-second: #208AAE;
+    --kelepar-color-highlight-one: #FA7921;
+    --kelepar-color-highlight-two: #FE9920;
     --kelepar-color-black: #333333;
-    --kelepar-color-white: #ffffff;
+
+    /* Font colors */
+    --kelepar-font-color: #FBFFF1;
+    --kelepar-font-color-negative: #0D2149;
 
     /* Font sizes */
     --p-mobile: 16px;
@@ -37,7 +43,7 @@
 body {
     font-family: 'Space Grotesk', sans-serif;
     min-height: 100vh;
-    color: var(--kelepar-color-black);
+    color: var(--kelepar-font-color);
     background: var(--kelepar-color-neutral);
     transition: color 0.5s,
     background-color 0.5s;

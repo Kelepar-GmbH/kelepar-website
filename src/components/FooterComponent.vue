@@ -41,7 +41,7 @@ p {
 .footer-link {
   padding-left: 5px;
   padding-right: 5px;
-  color: var(--kelepar-color-orange);
+  color: var(--kelepar-color-highlight-one);
   text-decoration: none;
 }
 
@@ -61,7 +61,7 @@ p {
 }
 
 .links a {
-  color: var(--kelepar-color-orange);
+  color: var(--kelepar-color-highlight-one);
   transition: 0.4s;
   padding: 15px 25px;
   text-decoration: none;
@@ -69,7 +69,7 @@ p {
 }
 
 .social a {
-  color: var(--kelepar-color-orange);
+  color: var(--kelepar-color-highlight-one);
   text-align: left;
   transition: 0.4s;
 }
@@ -77,7 +77,7 @@ p {
 .links a:hover,
 .social a:hover {
   text-decoration: none;
-  color: var(--kelepar-color-orange);
+  color: var(--kelepar-color-highlight-one);
 }
 
 .text {

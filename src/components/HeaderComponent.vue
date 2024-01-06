@@ -55,30 +55,30 @@ onMounted(() => {
       <nav class="grid">
         <div class="logo">
           <RouterLink :to="{ name: 'Home' }">
+            <img src="@/assets/img/logos/kelepar_k.png" width="50" height="50" alt="Icon">
           </RouterLink>
         </div>
         <div class="nav-content desktop-view">
           <ul class="links">
             <li @click="reset">
-              <a href="/#sexualtherapie">Sexualberatung & Therapie</a>
+              <a href="/#aboutus">About us</a>
             </li>
             <li @click="reset">
-              <a href="/#sexualped">Sexualpädagogik</a>
+              <a href="/#projects">Projects</a>
             </li>
             <li @click="reset">
-              <a href="/#workshops">Workshops</a>
-            </li>
-            <li @click="reset">
-              <a href="/#uebermich">über mich</a>
+              <a href="/#team">Team</a>
             </li>
           </ul>
         </div>
-        <div class="nav-content desktop-view">
-          <ul class="social">
-            <li @click="reset">
-            </li>
-          </ul>
-        </div>
+        <ul class="play nav-content desktop-view">
+          <li @click="reset">
+            <div>
+              <a class="btn1" href="" target="_blank"
+                 aria-label="Contact us">Contact us</a>
+            </div>
+          </li>
+        </ul>
       </nav>
       <div v-if="!mobileView" id="hamburger" class="hamburger" @click="makeMobile">
         <img src="@/assets/img/icons/menu.svg" width="30" height="30" alt="open menu">
@@ -121,16 +121,16 @@ nav a {
   padding: 0 1rem;
   text-decoration: none;
   transition: 0.4s;
-  color: var(--kelepar-color-white);
+  color: var(--kelepar-color-neutral);
 }
 
 nav a:hover {
   text-decoration: none;
-  color: var(--kelepar-color-orange);
+  color: var(--kelepar-color-highlight-one);
 }
 
 nav a:active {
-  color: var(--kelepar-color-orange);
+  color: var(--kelepar-color-highlight-one);
 }
 
 /* Classes */
@@ -190,14 +190,14 @@ nav a:active {
 }
 
 .social a {
-  color: var(--kelepar-color-white);
+  color: var(--kelepar-color-neutral);
   text-align: left;
   transition: 0.4s;
 }
 
 .social a:hover {
   text-decoration: none;
-  color: var(--kelepar-color-orange);
+  color: var(--kelepar-color-highlight-one);
 }
 
 .social li {
@@ -221,7 +221,7 @@ nav a:active {
   background: transparent;
   top: 0;
   right: 0;
-  color: var(--kelepar-color-white);
+  color: var(--kelepar-color-neutral);
   width: 30px;
   height: auto;
   position: absolute;
@@ -233,7 +233,7 @@ nav a:active {
   background: transparent;
   top: 0;
   right: 0;
-  color: var(--kelepar-color-orange);
+  color: var(--kelepar-color-highlight-one);
   width: 30px;
   height: auto;
   position: absolute;

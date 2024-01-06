@@ -1,14 +1,14 @@
 <template>
   <section id="intro">
     <div class="main-container">
-      <div class="content white-img">
+      <div class="content blue-img">
         <div class="row w-100 mobile-spacer">
           <div class="col center mobile-min-width">
             <div class="text text-top">
-              <h1>Sara<br/>Waldispühl</h1>
+              <h1>Kelepar</h1>
             </div>
             <div class="text text-bot">
-              <p>SEXOLOGIE</p>
+              <p>Software Development</p>
             </div>
           </div>
           <div class="w-100 breaker-element"></div>
@@ -19,7 +19,7 @@
             <div class="sara-img"></div>
           </div>
           <div class="col no-padding mobile-only">
-            <div class="sara-img"></div>
+            <div class="content-image"></div>
           </div>
         </div>
       </div>
@@ -57,16 +57,16 @@
   min-height: 100vh;
 }
 
-.white-img {
-  background-image: url(../assets/img/banners/white.webp);
+.blue-img {
+  background-image: url(../assets/img/banners/oxford-blue.webp);
   width: 100%;
   background-repeat: no-repeat;
   background-position: top center;
   background-size: cover;
 }
 
-.sara-img {
-  background-image: url(../assets/img/sara.webp);
+.content-image {
+  /*background-image: url(../assets/img/sara.webp);*/
   background-repeat: no-repeat;
   background-size: cover;
   min-height: 66vh;
@@ -82,7 +82,7 @@ a {
   padding: 0 1rem;
   text-decoration: none;
   transition: 0.4s;
-  color: var(--kelepar-color-orange);
+  color: var(--kelepar-color-highlight-one);
 }
 
 h1 {

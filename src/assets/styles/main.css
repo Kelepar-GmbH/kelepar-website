@@ -10,8 +10,17 @@ body {
     font-family: 'Space Grotesk', sans-serif;
 }
 
-h1, h2, h3, h4{
+h1, h2, h3, h4 {
     font-family: dreamAvenue, sans-serif;
+    color: var(--kelepar-font-color) !important;
+}
+
+p {
+    color: var(--kelepar-font-color) !important;
+}
+
+.text {
+    color: var(--kelepar-font-color) !important;
 }
 
 .gradiant-text {
@@ -25,14 +34,14 @@ h1, h2, h3, h4{
 /*************/
 
 .btn1 {
-    color: white !important;
+    color: var(--kelepar-color-neutral);
     padding: 10px 25px !important;
     border: none;
     outline: none;
     position: relative;
     z-index: 1;
-    border-radius: 7px;
-    /*background: var(--ashenhorizon-color-purple-linear);*/
+    border-radius: 0;
+    background: var(--kelepar-color-second);
     cursor: pointer;
     text-transform: uppercase;
     text-decoration: none;
@@ -45,21 +54,22 @@ h1, h2, h3, h4{
     right: 3px;
     top: 3px;
     bottom: 3px;
-    border-radius: 6px;
-    /*background-color: var(--ashenhorizon-color-blue2);*/
+    border-radius: 0;
+    background-color: var(--kelepar-color-main);
     z-index: -1;
     transition: 200ms;
 }
 
 .btn1::after {
     content: attr(data);
-    /*background: var(--ashenhorizon-color-purple-linear);*/
+    background: var(--kelepar-color-highlight-one);
     -webkit-background-clip: text;
     color: transparent;
     transition: 200ms;
 }
 
 .btn1:hover::before {
+    color: var(--kelepar-color-highlight-one);
     opacity: 1%;
     top: 0;
     right: 0;
@@ -76,8 +86,8 @@ h1, h2, h3, h4{
     text-transform: uppercase;
     text-decoration: none;
     transition: 500ms;
-    /*color: var(--ashenhorizon-color-blue2) !important;*/
-    /*background-image: var(--ashenhorizon-color-gold-linear);*/
+    color: var(--kelepar-color-highlight-one) !important;
+    background-image: var(--kelepar-color-highlight-one);
 }
 
 .btn2::before {
@@ -92,7 +102,7 @@ h1, h2, h3, h4{
 
 .btn2:hover {
     background-position: right center;
-    /*-webkit-box-shadow: 0 0 10px 5px var(--ashenhorizon-color-gold-dark);*/
-    /*-moz-box-shadow: 0 0 10px 5px var(--ashenhorizon-color-gold-dark);*/
-    /*box-shadow: 0 0 10px 5px var(--ashenhorizon-color-gold-dark);*/
+    -webkit-box-shadow: 0 0 10px 5px var(--kelepar-color-highlight-one);
+    -moz-box-shadow: 0 0 10px 5px var(--kelepar-color-highlight-one);
+    box-shadow: 0 0 10px 5px var(--kelepar-color-highlight-one);
 }
