@@ -1,19 +1,23 @@
 <template>
-  <section id="intro">
+  <section id="aboutus">
     <div class="main-container">
-      <div class="content blue-img">
-        <div class="row w-100 mobile-spacer">
+      <div class="content white-img">
+        <div class="row w-100 mvh-100">
           <div class="col center mobile-min-width">
-            <div class="text text-top">
-              <h1>Kelepar</h1>
+            <div class="text">
+              <h1>About us</h1>
             </div>
-            <div class="text text-bot">
-              <p>Software</p>
+            <div class="text">
+              <p>Together with you, we transform opportunities into inspiring solutions. As a young and flexible startup, we help you to find the perfect and sustainable solution.</p>
+            </div>
+            <div class="links">
+              <div class="button">
+                <a class="btn2" href="" target="" aria-label="Contact us">Contact us</a>
+              </div>
             </div>
           </div>
-          <div class="w-100 breaker-element"></div>
           <div class="col no-padding">
-            <div class="content-image"></div>
+            <div class="content-image mvh-100"></div>
           </div>
         </div>
       </div>
@@ -51,8 +55,8 @@
   min-height: 100vh;
 }
 
-.blue-img {
-  background-image: url(../assets/img/banners/bondi-blue.webp);
+.white-img {
+  background-image: url(../assets/img/banners/white.webp);
   width: 100%;
   background-repeat: no-repeat;
   background-position: top center;
@@ -60,7 +64,7 @@
 }
 
 .content-image {
-  background-image: url(../assets/img/software_img.webp);
+  background-image: url(../assets/img/two_hands.webp);
   background-repeat: no-repeat;
   background-size: cover;
   min-height: 66vh;
@@ -83,40 +87,48 @@ h1 {
   font-size: var(--h1-desktop);
   letter-spacing: 3px;
   text-transform: uppercase;
+  font-weight: bold;
+  color: var(--kelepar-color-main) !important;
 }
 
 p {
   font-size: 30px;
-  margin: 0 0 20px 0;
+  margin: 20px 0 0 0;
+  color: var(--kelepar-color-main) !important;
+}
+
+.button {
+  padding: 5px 10px;
+  margin: 0 auto;
+}
+
+.btn1,
+.btn2 {
+  width: 200px;
+  border: 2px solid;
+  border-color: var(--kelepar-color-highlight-one);
+  border-radius: 0;
+}
+
+.links {
+  display: flex;
+  flex-direction: row;
+  padding: 20px;
+  text-align: center;
 }
 
 .text {
   padding: 10px 0;
   text-align: center;
-  color: var(--kelepar-color-black);
+  color: var(--kelepar-color-main);
 }
 
-@media (min-width: 1200px) {
-  .breaker-element {
-    display: none;
-  }
-
-  .desktop-only {
-    display: none;
+@media (min-width: 575px) {
+  .mvh-100 {
+    min-height: 100vh;
   }
 }
 
-@media (max-width: 1200px) {
-  .desktop-large-only {
-    display: none;
-  }
-}
-
-@media (min-width: 769px) {
-  .mobile-only {
-    display: none;
-  }
-}
 
 @media (max-width: 768px) {
   h1 {
@@ -127,24 +139,23 @@ p {
     font-size: var(--h3-mobile);
   }
 
-  .mobile-spacer {
-    padding-top: 25vh;
+  .content-image {
+    max-height: 45vh;
   }
 
   .mobile-min-width {
     min-width: 300px;
+    padding-top: 100px;
   }
 
-  .text-top {
-    padding-bottom: 0;
+  .content {
+    justify-content: flex-start;
   }
+}
 
-  .text-bot {
-    padding-top: 0;
-  }
-
-  .desktop-only {
-    display: none;
+@media (max-width: 570px) {
+  .button {
+    padding: 10px 0;
   }
 }
 
