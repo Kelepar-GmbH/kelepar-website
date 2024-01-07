@@ -51,14 +51,14 @@ export default {
               <swiper-slide>
                 <div class="box-pfp">
                   <div class="card">
-                    <img src="@/assets/img/projects/lars.webp" width="182" height="182" alt="Lars PFP">
+                    <img src="@/assets/img/projects/ah.png" width="182" height="182" alt="Ashen Horizon">
                   </div>
                 </div>
               </swiper-slide>
               <swiper-slide>
                 <div class="box-pfp">
                   <div class="card">
-                    <img src="@/assets/img/projects/luca.webp" width="182" height="182" alt="Luca PFP">
+                    <img src="@/assets/img/projects/ah.png" width="182" height="182" alt="Ashen Horizon">
                   </div>
                 </div>
               </swiper-slide>
