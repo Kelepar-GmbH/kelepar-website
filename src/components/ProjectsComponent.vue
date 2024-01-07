@@ -3,8 +3,6 @@
 import {Swiper, SwiperSlide} from 'swiper/vue';
 
 // import required modules
-import {Pagination, Navigation} from 'swiper/modules';
-
 // Import Swiper styles
 import 'swiper/css';
 import 'swiper/css/pagination';
@@ -14,11 +12,6 @@ export default {
   components: {
     Swiper,
     SwiperSlide,
-  },
-  setup() {
-    return {
-      modules: [Pagination, Navigation],
-    };
   },
 };
 </script>
@@ -30,36 +23,32 @@ export default {
         <div class="row w-100 mvh-100">
           <div class="col center">
             <swiper class="swiper"
-                    :breakpoints="{ 0:{ slidesPerView:1 }, 720:{ slidesPerView:2 }, 1100:{ slidesPerView:3}, 1350:{ slidesPerView:4} }"
-                    :spaceBetween="0"
+                    :breakpoints="{ 0:{ slidesPerView:2 }, 720:{ slidesPerView:2 }, 1100:{ slidesPerView:3}, 1350:{ slidesPerView:4} }"
+                    :spaceBetween="10"
                     :slidesPerGroup="1"
-                    :centerSlide="true"
                     :loop="false"
-                    :loopFillGroupWithBlank="true"
-                    :pagination="{
-                  clickable: true,
-                }"
-                    :navigation="true"
-                    :modules="modules">
+                    :autoplay="true"
+                    :centered-slides="true"
+                    :scrollbar="false"
+                    :speed="100"
+                    :navigation="false">
               <swiper-slide>
                 <div class="box-pfp">
-                  <div class="card">
-                    <img src="@/assets/img/projects/ah.png" width="182" height="182" alt="Ashen Horizon">
-                  </div>
+                  <a href="https://ashenhorizon.com" target="_blank" aria-label="Link to Ashen Horizon">
+                    <div class="card">
+                      <img class="center" src="@/assets/img/projects/ah.png" width="182" height="182"
+                           alt="Ashen Horizon">
+                    </div>
+                  </a>
                 </div>
               </swiper-slide>
               <swiper-slide>
                 <div class="box-pfp">
-                  <div class="card">
-                    <img src="@/assets/img/projects/ah.png" width="182" height="182" alt="Ashen Horizon">
-                  </div>
-                </div>
-              </swiper-slide>
-              <swiper-slide>
-                <div class="box-pfp">
-                  <div class="card">
-                    <img src="@/assets/img/projects/ah.png" width="182" height="182" alt="Ashen Horizon">
-                  </div>
+                  <a href="https://valus.ch" target="_blank" aria-label="Link to Valus AG">
+                    <div class="card">
+                      <img class="center" src="@/assets/img/projects/valus.png" width="182" height="182" alt="Valus AG">
+                    </div>
+                  </a>
                 </div>
               </swiper-slide>
             </swiper>
@@ -75,13 +64,14 @@ export default {
 
 .center {
   margin: auto auto;
+  max-height: 40vh;
 }
 
 .main-container {
   display: flex;
   align-items: center;
   justify-content: center;
-  min-height: 100vh;
+  max-height: 40vh;
   display: -webkit-box;
   display: -ms-flexbox;
   -webkit-box-pack: center;
@@ -92,12 +82,14 @@ export default {
   flex-direction: column;
 }
 
+.mvh-100 {
+  min-height: 30vh;
+}
+
 .blue-img {
-  background-image: url(../assets/img/banners/oxford-blue.webp);
+  max-height: 40vh;
+  background-color: var(--kelepar-color-main);
   width: 100%;
-  background-repeat: no-repeat;
-  background-position: top center;
-  background-size: cover;
 }
 
 p {
@@ -128,8 +120,8 @@ h3 {
 }
 
 .card {
-  height: 190px;
-  width: 190px;
+  height: 130px;
+  width: 130px;
   padding: 4px;
   border: none;
   border-radius: 100%;
@@ -148,12 +140,6 @@ h3 {
   place-content: center;
   justify-content: center;
   align-items: center;
-}
-
-@media (min-width: 575px) {
-  .mvh-100 {
-    min-height: 100vh;
-  }
 }
 
 
