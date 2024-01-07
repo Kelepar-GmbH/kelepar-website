@@ -24,6 +24,7 @@ import {RouterLink} from "vue-router";</script>
 
 h2 {
   font-size: 20px;
+  color: var(--kelepar-color-neutral);
 }
 
 p {
@@ -31,11 +32,12 @@ p {
   display: flex;
   place-content: center;
   align-items: center;
+  color: var(--kelepar-color-neutral);
 }
 
 .container {
   padding: 40px 20px 10px 20px;
-  background-color: var(--kelepar-color-neutral);
+  background-color: var(--kelepar-color-second);
 }
 
 .footer-link {
