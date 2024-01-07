@@ -7,12 +7,13 @@ body {
 #app {
     margin: 0 auto;
     font-weight: lighter;
-    font-family: 'Space Grotesk', sans-serif;
+    font-family: 'Rubik', sans-serif;
 }
 
 h1, h2, h3, h4 {
-    font-family: dreamAvenue, sans-serif;
+    font-family: 'Rubik', sans-serif;
     color: var(--kelepar-font-color) !important;
+    font-weight: lighter;
 }
 
 p {

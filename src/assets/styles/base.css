@@ -41,7 +41,7 @@
 }
 
 body {
-    font-family: 'Space Grotesk', sans-serif;
+    font-family: 'Noto Sans', sans-serif;
     min-height: 100vh;
     color: var(--kelepar-font-color);
     background: var(--kelepar-color-neutral);
@@ -54,4 +54,9 @@ body {
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     position: relative;
+}
+
+@font-face {
+    font-family: Rubik;
+    src: url(./fonts/Rubik-Regular.ttf);
 }

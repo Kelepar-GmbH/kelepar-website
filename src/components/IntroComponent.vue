@@ -12,13 +12,7 @@
             </div>
           </div>
           <div class="w-100 breaker-element"></div>
-          <div class="col-4 no-padding desktop-large-only">
-            <div class="sara-img"></div>
-          </div>
-          <div class="col no-padding desktop-only">
-            <div class="sara-img"></div>
-          </div>
-          <div class="col no-padding mobile-only">
+          <div class="col no-padding">
             <div class="content-image"></div>
           </div>
         </div>
@@ -58,7 +52,7 @@
 }
 
 .blue-img {
-  background-image: url(../assets/img/banners/oxford-blue.webp);
+  background-image: url(../assets/img/banners/bondi-blue.webp);
   width: 100%;
   background-repeat: no-repeat;
   background-position: top center;
@@ -66,7 +60,7 @@
 }
 
 .content-image {
-  /*background-image: url(../assets/img/sara.webp);*/
+  background-image: url(../assets/img/software_img.webp);
   background-repeat: no-repeat;
   background-size: cover;
   min-height: 66vh;
@@ -89,7 +83,6 @@ h1 {
   font-size: var(--h1-desktop);
   letter-spacing: 3px;
   text-transform: uppercase;
-  font-weight: bold;
 }
 
 p {

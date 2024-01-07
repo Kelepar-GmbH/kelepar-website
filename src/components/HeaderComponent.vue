@@ -55,7 +55,7 @@ onMounted(() => {
       <nav class="grid">
         <div class="logo">
           <RouterLink :to="{ name: 'Home' }">
-            <img src="@/assets/img/logos/kelepar_k.png" width="50" height="50" alt="Icon">
+            <img src="@/assets/img/logos/kelepar_k.png" width="75" height="75" alt="Icon">
           </RouterLink>
         </div>
         <div class="nav-content desktop-view">
