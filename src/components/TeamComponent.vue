@@ -40,7 +40,7 @@ export default {
                     :pagination="{
                   clickable: true,
                 }"
-                    :navigation="true"
+                    :navigation="false"
                     :modules="modules">
               <swiper-slide>
                 <div class="box-pfp">
