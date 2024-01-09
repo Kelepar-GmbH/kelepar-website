@@ -37,7 +37,6 @@ export default {
     <div class="main-container">
       <div class="content white-img">
         <div class="container">
-          <h1>Team</h1>
           <div class="pt-5">
             <swiper class="swiper"
                     :breakpoints="{ 0:{ slidesPerView:1 }, 720:{ slidesPerView:2 }, 1100:{ slidesPerView:3}, 1350:{ slidesPerView:3} }"

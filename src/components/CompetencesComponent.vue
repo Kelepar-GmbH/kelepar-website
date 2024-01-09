@@ -137,7 +137,7 @@ h3 {
   padding: 4px;
   border: none;
   border-radius: 100%;
-  background-color: var(--kelepar-color-second);
+  background-color: var(--kelepar-font-color);
 }
 
 .card img {
