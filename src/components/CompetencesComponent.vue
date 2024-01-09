@@ -3,6 +3,8 @@
 import {Swiper, SwiperSlide} from 'swiper/vue';
 
 // import required modules
+import {Autoplay, Navigation, Pagination} from "swiper/modules";
+
 // Import Swiper styles
 import 'swiper/css';
 import 'swiper/css/pagination';
@@ -12,6 +14,11 @@ export default {
   components: {
     Swiper,
     SwiperSlide,
+  },
+  setup() {
+    return {
+      modules: [Autoplay, Navigation, Pagination],
+    };
   },
 };
 </script>
@@ -23,13 +30,16 @@ export default {
         <div class="col center no-padding">
           <swiper class="swiper"
                   :breakpoints="{ 0:{ slidesPerView:2 }, 720:{ slidesPerView:2 }, 1100:{ slidesPerView:3}, 1350:{ slidesPerView:4} }"
-                  :spaceBetween="10"
-                  :slidesPerGroup="1"
-                  :loop="false"
-                  :autoplay="true"
+                  :spaceBetween="50"
+                  :slides-per-group="1"
+                  :autoplay="{
+                    delay: 3000,
+                    pauseOnMouseEnter: true,
+                    waitForTransition: false,
+                    reverseDirection: true
+                  }"
                   :centered-slides="true"
                   :scrollbar="false"
-                  :speed="100"
                   :navigation="false">
             <swiper-slide>
               <div class="box-pfp">
@@ -73,10 +83,6 @@ export default {
 </template>
 
 <style scoped>
-
-.main-container {
-  text-align: center;
-}
 
 .center {
   margin: auto auto;
