@@ -1,32 +1,48 @@
 <script>
+import useValidate from '@vuelidate/core'
+import {required} from '@vuelidate/validators'
+
 const WEB3FORMS_ACCESS_KEY = "ade71fee-66c2-4888-b0c9-c65a2bb8cc51";
 
 export default {
   data() {
     return {
+      v$: useValidate(),
       name: "",
       email: "",
       message: "",
     };
   },
+  validations() {
+    return {
+      name: {required},
+      email: {required},
+      message: {required},
+    }
+  },
   methods: {
     async submitForm() {
-      const response = await fetch("https://api.web3forms.com/submit", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-          Accept: "application/json",
-        },
-        body: JSON.stringify({
-          access_key: WEB3FORMS_ACCESS_KEY,
-          name: this.name,
-          email: this.email,
-          message: this.message,
-        }),
-      });
-      const result = await response.json();
-      if (result.success) {
-        console.log(result);
+      this.v$.$validate()
+      if (!this.v$.$error) {
+        const response = await fetch("https://api.web3forms.com/submit", {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+            Accept: "application/json",
+          },
+          body: JSON.stringify({
+            access_key: WEB3FORMS_ACCESS_KEY,
+            name: this.name,
+            email: this.email,
+            message: this.message,
+          }),
+        });
+        const result = await response.json();
+        if (result.success) {
+          console.log(result);
+        }
+      } else {
+
       }
     },
   },
@@ -39,28 +55,29 @@ export default {
       <div class="content content-img">
         <div class="row center w-100 mvh-100">
           <div class="col center app-form-width">
-            <card class="card-section ">
-              <h1 class="spacer">Contact Form</h1>
-              <form @submit.prevent="submitForm">
-                <div class="row">
-                  <div class="col">
-                    <input class="app-form-control" type="text" name="name" placeholder="NAME" v-model="name"/>
-                  </div>
+            <h1 class="spacer">Contact Form</h1>
+            <form @submit.prevent="submitForm">
+              <div class="row">
+                <div class="col">
+                  <input class="app-form-control" type="text" name="name" placeholder="NAME" v-model="name"/>
+                  <span class="app-form-error" v-if="v$.name.$error"> {{ v$.name.$errors[0].$message }} </span>
                 </div>
-                <div class="row">
-                  <div class="col">
-                    <input class="app-form-control" type="email" name="email" placeholder="EMAIL" v-model="email"/>
-                  </div>
+              </div>
+              <div class="row">
+                <div class="col">
+                  <input class="app-form-control" type="email" name="email" placeholder="EMAIL" v-model="email"/>
+                  <span class="app-form-error" v-if="v$.email.$error"> {{ v$.email.$errors[0].$message }} </span>
                 </div>
-                <div class="row">
-                  <div class="col">
+              </div>
+              <div class="row">
+                <div class="col">
                     <textarea class="app-form-control" name="message" placeholder="MESSAGE"
                               v-model="message"></textarea>
-                  </div>
+                  <span class="app-form-error" v-if="v$.message.$error"> {{ v$.message.$errors[0].$message }} </span>
                 </div>
-                <button class="app-form-button" type="submit">Send Message</button>
-              </form>
-            </card>
+              </div>
+              <button class="app-form-button" type="submit">Send Message</button>
+            </form>
           </div>
         </div>
       </div>
@@ -79,7 +96,12 @@ export default {
   margin: auto auto;
 }
 
+.app-form-error {
+  color: var(--kelepar-color-error);
+}
+
 .app-form-width {
+  text-align: center;
   background: rgb(13, 33, 73);
   background: linear-gradient(0deg, rgba(13, 33, 73, 1) 0%, rgba(13, 33, 73, 0) 91%, rgba(13, 33, 73, 0) 100%);
   border-radius: 10px;
