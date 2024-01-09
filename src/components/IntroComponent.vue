@@ -2,7 +2,7 @@
   <section id="intro">
     <div class="main-container">
       <div class="content content-img">
-        <div class="row w-100 mvh-100 mobile-spacer">
+        <div class="row w-100 mvh-70 mobile-spacer">
           <div class="col center mobile-min-width">
             <div class="text text-top">
               <h1>Kelepar</h1>
@@ -10,6 +10,50 @@
             <div class="text text-bot">
               <p>Software</p>
             </div>
+          </div>
+        </div>
+        <div class="row w-100 mvh-30 mobile-move-bot">
+          <div class="col center">
+            <swiper class="swiper"
+                    :breakpoints="{ 0:{ slidesPerView:2 }, 720:{ slidesPerView:2 }, 1100:{ slidesPerView:3}, 1350:{ slidesPerView:3} }"
+                    :spaceBetween="10"
+                    :slidesPerGroup="1"
+                    :loop="false"
+                    :autoplay="true"
+                    :centered-slides="true"
+                    :scrollbar="false"
+                    :speed="100"
+                    :navigation="false">
+              <swiper-slide>
+                <div class="box-pfp">
+                  <a href="https://ashenhorizon.com" target="_blank" aria-label="Link to Ashen Horizon">
+                    <div class="card">
+                      <img class="center" src="@/assets/img/projects/ah.png" width="182" height="182"
+                           alt="Ashen Horizon">
+                    </div>
+                  </a>
+                </div>
+              </swiper-slide>
+              <swiper-slide>
+                <div class="box-pfp">
+                  <a href="https://valus.ch" target="_blank" aria-label="Link to Valus AG">
+                    <div class="card">
+                      <img class="center" src="@/assets/img/projects/valus.png" width="182" height="182" alt="Valus AG">
+                    </div>
+                  </a>
+                </div>
+              </swiper-slide>
+              <swiper-slide>
+                <div class="box-pfp">
+                  <a href="https://sexologie-luzern.com" target="_blank" aria-label="Link to Sexologie Luzern">
+                    <div class="card">
+                      <img class="center" src="@/assets/img/projects/sexologie-luzern.png" width="182" height="182"
+                           alt="Sexologie Luzern">
+                    </div>
+                  </a>
+                </div>
+              </swiper-slide>
+            </swiper>
           </div>
         </div>
       </div>
@@ -55,14 +99,6 @@
   background-size: cover;
 }
 
-.content-image {
-  background-image: url(../assets/img/software_img.webp);
-  background-repeat: no-repeat;
-  background-size: cover;
-  min-height: 66vh;
-  min-width: 20vh;
-}
-
 .no-padding {
   padding: 0;
 }
@@ -93,6 +129,28 @@ p {
   color: var(--kelepar-color-black);
 }
 
+.box-pfp {
+  padding: 0 14px 20px 14px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.card {
+  height: 130px;
+  width: 130px;
+  padding: 4px;
+  border: none;
+  border-radius: 0;
+  background: rgba(13, 33, 73, 0) 100%;
+}
+
+.card img {
+  height: auto;
+  width: 100%;
+  object-fit: cover;
+}
+
 @media (max-width: 768px) {
   h1 {
     font-size: var(--h2-mobile);
@@ -103,7 +161,7 @@ p {
   }
 
   .mobile-spacer {
-    padding-top: 25vh;
+    padding-top: 15vh;
   }
 
   .mobile-min-width {
@@ -124,8 +182,12 @@ p {
 }
 
 @media (min-width: 575px) {
-  .mvh-100 {
-    min-height: 100vh;
+  .mvh-70 {
+    min-height: 70vh;
+  }
+
+  .mvh-30 {
+    min-height: 30vh;
   }
 }
 
@@ -157,6 +219,10 @@ p {
   .button {
     padding: 10px 0;
   }
+
+  .mobile-move-bot {
+    padding-top: 35vh;
+  }
 }
 
 @media (max-width: 300px) {
@@ -169,3 +235,6 @@ p {
   }
 }
 </style>
+<script setup>
+import {Swiper, SwiperSlide} from "swiper/vue";
+</script>

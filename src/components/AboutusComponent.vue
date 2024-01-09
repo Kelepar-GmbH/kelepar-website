@@ -3,9 +3,6 @@
     <div class="main-container">
       <div class="content white-img">
         <div class="row w-100 mvh-100">
-          <div class="col no-padding">
-            <div class="content-image mvh-100"></div>
-          </div>
           <div class="col center mobile-min-width">
             <div class="text">
               <h1>About us</h1>
@@ -19,6 +16,9 @@
                 <a class="btn2" href="" target="" aria-label="Contact us">Contact us</a>
               </div>
             </div>
+          </div>
+          <div class="col no-padding">
+            <div class="content-image mvh-100"></div>
           </div>
         </div>
       </div>
@@ -65,7 +65,7 @@
 }
 
 .content-image {
-  background-image: url(../assets/img/software_img.webp);
+  background-image: url(../assets/img/about_us.webp);
   background-repeat: no-repeat;
   background-size: cover;
   min-height: 66vh;

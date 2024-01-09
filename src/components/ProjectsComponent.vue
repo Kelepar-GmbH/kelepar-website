@@ -73,14 +73,14 @@ export default {
 
 .center {
   margin: auto auto;
-  max-height: 40vh;
+  max-height: 30vh;
 }
 
 .main-container {
   display: flex;
   align-items: center;
   justify-content: center;
-  max-height: 40vh;
+  max-height: 30vh;
   display: -webkit-box;
   display: -ms-flexbox;
   -webkit-box-pack: center;
@@ -96,7 +96,7 @@ export default {
 }
 
 .blue-img {
-  max-height: 40vh;
+  max-height: 30vh;
   background-color: var(--kelepar-color-main);
   width: 100%;
 }
