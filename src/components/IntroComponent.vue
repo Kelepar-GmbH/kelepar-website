@@ -82,6 +82,7 @@ h1 {
   font-size: var(--h1-desktop);
   letter-spacing: 3px;
   text-transform: uppercase;
+  font-weight: bold;
 }
 
 p {

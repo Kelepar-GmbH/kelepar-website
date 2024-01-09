@@ -37,7 +37,7 @@ export default {
     <div class="main-container">
       <div class="content white-img">
         <div class="container">
-          <h2>Team</h2>
+          <h1>Team</h1>
           <div class="pt-5">
             <swiper class="swiper"
                     :breakpoints="{ 0:{ slidesPerView:1 }, 720:{ slidesPerView:2 }, 1100:{ slidesPerView:3}, 1350:{ slidesPerView:3} }"
@@ -154,13 +154,12 @@ p {
   margin: 10px 0;
 }
 
-h2 {
-  font-size: var(--h2-desktop);
-  letter-spacing: 5px;
+h1 {
+  font-size: var(--h1-desktop);
+  letter-spacing: 3px;
   text-transform: uppercase;
-  text-align: center;
-  padding: 20px 0 40px 0;
-  color: var(--kelepar-font-color-negative) !important;
+  font-weight: bold;
+  color: var(--kelepar-color-main) !important;
 }
 
 h3 {
@@ -221,6 +220,26 @@ a:hover {
   place-content: center;
   justify-content: center;
   align-items: center;
+}
+
+@media (max-width: 768px) {
+  h1 {
+    font-size: var(--h2-mobile);
+  }
+
+  p {
+    font-size: var(--h3-mobile);
+  }
+}
+
+@media (max-width: 300px) {
+  h1 {
+    font-size: var(--h3-mobile);
+  }
+
+  p {
+    font-size: var(--h4-mobile);
+  }
 }
 
 @media (max-width: 1600px) {
