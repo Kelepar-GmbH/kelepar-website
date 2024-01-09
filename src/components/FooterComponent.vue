@@ -1,5 +1,4 @@
-<script setup>
-import {RouterLink} from "vue-router";</script>
+<script setup></script>
 
 <template>
   <div class="container">
@@ -9,12 +8,9 @@ import {RouterLink} from "vue-router";</script>
       </div>
       <div class="text d-inline-block">
         <p class="d-inline-block">© 2024 </p>
-        <a class="footer-link d-inline-block" href="https://kelepar.com" target="_blank" aria-label="Link to Kelepar">Kelepar
+        <a class="footer-link d-inline-block" href="https://kelepar.com" aria-label="Link to Kelepar">Kelepar
           GmbH</a>
         <p class="d-inline-block"> All rights reserved.</p>
-      </div>
-      <div class="links">
-        <RouterLink :to="{ name: 'About' }">About</RouterLink>
       </div>
     </div>
   </div>

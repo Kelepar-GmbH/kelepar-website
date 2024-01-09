@@ -44,7 +44,7 @@ body {
     font-family: 'Noto Sans', sans-serif;
     min-height: 100vh;
     color: var(--kelepar-font-color);
-    background: var(--kelepar-color-neutral);
+    background: var(--kelepar-color-second) !important;
     transition: color 0.5s,
     background-color 0.5s;
     line-height: 1.6;
