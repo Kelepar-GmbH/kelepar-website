@@ -44,12 +44,34 @@ export default {
             <swiper-slide>
               <div class="box-pfp">
                 <div class="card">
-                  <img class="center" src="@/assets/img/icons/icon_webdesign.png" width="182" height="182"
-                       alt="Web Design">
+                  <img class="center" src="../assets/img/icons/icon_dev.png" width="182" height="182"
+                       alt="Web Development">
                 </div>
               </div>
               <div class="box-description">
-                <h3>Web Development</h3>
+                <h3>Development</h3>
+              </div>
+            </swiper-slide>
+            <swiper-slide>
+              <div class="box-pfp">
+                <div class="card">
+                  <img class="center" src="../assets/img/icons/icon_devops.png" width="182" height="182"
+                       alt="Dev Ops">
+                </div>
+              </div>
+              <div class="box-description">
+                <h3>Dev Ops</h3>
+              </div>
+            </swiper-slide>
+            <swiper-slide>
+              <div class="box-pfp">
+                <div class="card">
+                  <img class="center" src="../assets/img/icons/icon_itsec.png" width="182" height="182"
+                       alt="IT Security">
+                </div>
+              </div>
+              <div class="box-description">
+                <h3>IT Security</h3>
               </div>
             </swiper-slide>
             <swiper-slide>
