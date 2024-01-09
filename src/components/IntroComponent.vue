@@ -43,16 +43,16 @@
                   </a>
                 </div>
               </swiper-slide>
-              <swiper-slide>
-                <div class="box-pfp">
-                  <a href="https://sexologie-luzern.com" target="_blank" aria-label="Link to Sexologie Luzern">
-                    <div class="card">
-                      <img class="center" src="@/assets/img/projects/sexologie-luzern.png" width="182" height="182"
-                           alt="Sexologie Luzern">
-                    </div>
-                  </a>
-                </div>
-              </swiper-slide>
+<!--              <swiper-slide>-->
+              <!--                <div class="box-pfp">-->
+              <!--                  <a href="https://sexologie-luzern.com" target="_blank" aria-label="Link to Sexologie Luzern">-->
+              <!--                    <div class="card">-->
+              <!--                      <img class="center" src="@/assets/img/projects/sexologie-luzern.png" width="182" height="182"-->
+              <!--                           alt="Sexologie Luzern">-->
+              <!--                    </div>-->
+              <!--                  </a>-->
+              <!--                </div>-->
+              <!--              </swiper-slide>-->
             </swiper>
           </div>
         </div>

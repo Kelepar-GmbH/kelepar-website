@@ -64,9 +64,6 @@ onMounted(() => {
               <a href="/#aboutus">About us</a>
             </li>
             <li @click="reset">
-              <a href="/#projects">Projects</a>
-            </li>
-            <li @click="reset">
               <a href="/#team">Team</a>
             </li>
           </ul>
