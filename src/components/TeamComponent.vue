@@ -61,9 +61,9 @@ export default {
                   <p>CEO & Co-Founder</p>
                   <IconLinkedin :url=urlLukas></IconLinkedin>
                   <p>
-                    Lukas is a serial entrepreneur and former competitive Hearthstone player. He has been active in the
-                    crypto space as analyst, investor, and event organizer. Co-founding a web3 gaming startup was the
-                    perfect opportunity to match his passions for entrepreneurship, crypto and gaming.
+                    Lukas is a serial entrepreneur and and started as analyst, investor, and event organizer.
+                    Co-founding a software development startup was the perfect opportunity to match his passions for
+                    entrepreneurship, software and business.
                   </p>
                 </div>
               </swiper-slide>
@@ -80,9 +80,8 @@ export default {
                   <p>
                     Lars studied software engineering and programmed at different multinational European software
                     companies. He is used to working with a variety of programming and smart contract languages.
-                    Co-founding
-                    Ashen Horizon was the perfect opportunity to break out of the golden cage and follow his passion for
-                    gaming and web3.</p>
+                    Co-founding Kelepar was the perfect opportunity to break out of the golden cage and follow his
+                    passion for software development.</p>
                 </div>
               </swiper-slide>
               <swiper-slide>
@@ -98,8 +97,7 @@ export default {
                   <p>
                     Luca has a Business-IT background and worked as a Senior IT-Auditor. He engaged with world
                     leading clients in traditional finance as well as in the crypto space. With his flair and passion
-                    for
-                    web development he builds stunning user-centric web experiences with a creative edge.</p>
+                    for web development he builds stunning user-centric web experiences with a creative edge.</p>
                 </div>
               </swiper-slide>
             </swiper>
