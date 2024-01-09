@@ -124,7 +124,7 @@ p {
   color: var(--kelepar-color-main);
 }
 
-@media (max-width: 575px) {
+@media (min-width: 575px) {
   .mvh-100 {
     min-height: 100vh;
   }

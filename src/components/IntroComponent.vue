@@ -4,11 +4,11 @@
       <div class="content content-img">
         <div class="row w-100 mvh-70 mobile-spacer">
           <div class="col center mobile-min-width">
-            <div class="text text-top">
+            <div class="text no-padding-bottom">
               <h1>Kelepar</h1>
             </div>
-            <div class="text text-bot">
-              <p>Software</p>
+            <div class="text spacer-top">
+              <p>Building Innovative Software Solutions</p>
             </div>
           </div>
         </div>
@@ -68,6 +68,10 @@
   margin: auto auto;
 }
 
+.spacer-top{
+  padding-top: 10vh !important;
+}
+
 .main-container {
   display: flex;
   align-items: center;
@@ -101,6 +105,14 @@
 
 .no-padding {
   padding: 0;
+}
+
+.no-padding-bottom {
+  padding-bottom: 0 !important;
+}
+
+.no-padding-top {
+  padding-top: 0 !important;
 }
 
 a {
@@ -161,19 +173,11 @@ p {
   }
 
   .mobile-spacer {
-    padding-top: 15vh;
+    padding-top: 10vh;
   }
 
   .mobile-min-width {
     min-width: 300px;
-  }
-
-  .text-top {
-    padding-bottom: 0;
-  }
-
-  .text-bot {
-    padding-top: 0;
   }
 
   .desktop-only {
@@ -221,7 +225,7 @@ p {
   }
 
   .mobile-move-bot {
-    padding-top: 35vh;
+    padding-top: 25vh;
   }
 }
 
