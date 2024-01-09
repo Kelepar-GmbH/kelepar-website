@@ -2,7 +2,7 @@
   <section id="contact">
     <div class="main-container">
       <div class="content content-img">
-        <div class="row w-100 mvh-70 mobile-spacer">
+        <div class="row w-100 mvh-100 mobile-spacer">
         </div>
       </div>
     </div>
@@ -134,12 +134,8 @@ p {
 }
 
 @media (min-width: 575px) {
-  .mvh-70 {
-    min-height: 70vh;
-  }
-
-  .mvh-30 {
-    min-height: 30vh;
+  .mvh-100 {
+    min-height: 100vh;
   }
 }
 
@@ -187,6 +183,4 @@ p {
   }
 }
 </style>
-<script setup>
-import {Swiper, SwiperSlide} from "swiper/vue";
-</script>
+<script setup></script>

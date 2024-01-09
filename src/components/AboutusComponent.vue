@@ -13,7 +13,7 @@
             </div>
             <div class="links">
               <div class="button">
-                <a class="btn2" href="" target="" aria-label="Contact us">Contact us</a>
+                <a class="btn2" href="/contact" target="_self" aria-label="Contact us">Contact us</a>
               </div>
             </div>
           </div>
