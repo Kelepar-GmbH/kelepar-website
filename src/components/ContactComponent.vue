@@ -1,8 +1,54 @@
+<script>
+const WEB3FORMS_ACCESS_KEY = "ade71fee-66c2-4888-b0c9-c65a2bb8cc51";
+
+export default {
+  data() {
+    return {
+      name: "",
+      email: "",
+      message: "",
+    };
+  },
+  methods: {
+    async submitForm() {
+      const response = await fetch("https://api.web3forms.com/submit", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          Accept: "application/json",
+        },
+        body: JSON.stringify({
+          access_key: WEB3FORMS_ACCESS_KEY,
+          name: this.name,
+          email: this.email,
+          message: this.message,
+        }),
+      });
+      const result = await response.json();
+      if (result.success) {
+        console.log(result);
+      }
+    },
+  },
+};
+</script>
+
 <template>
   <section id="contact">
     <div class="main-container">
       <div class="content content-img">
         <div class="row w-100 mvh-100 mobile-spacer">
+          <div class="col center mobile-min-width">
+            <card class="card-section">
+              <h1>Contact Form</h1>
+              <form @submit.prevent="submitForm">
+                <input type="text" name="name" v-model="name"/>
+                <input type="email" name="email" v-model="email"/>
+                <textarea name="message" v-model="message"></textarea>
+                <button type="submit">Send Message</button>
+              </form>
+            </card>
+          </div>
         </div>
       </div>
     </div>
@@ -51,18 +97,6 @@
   background-size: cover;
 }
 
-.no-padding {
-  padding: 0;
-}
-
-.no-padding-bottom {
-  padding-bottom: 0 !important;
-}
-
-.no-padding-top {
-  padding-top: 0 !important;
-}
-
 a {
   display: inline-block;
   padding: 0 1rem;
@@ -81,34 +115,6 @@ h1 {
 p {
   font-size: 30px;
   margin: 0 0 20px 0;
-}
-
-.text {
-  padding: 10px 0;
-  text-align: center;
-  color: var(--kelepar-color-black);
-}
-
-.box-pfp {
-  padding: 0 14px 20px 14px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.card {
-  height: 130px;
-  width: 130px;
-  padding: 4px;
-  border: none;
-  border-radius: 0;
-  background: rgba(13, 33, 73, 0) 100%;
-}
-
-.card img {
-  height: auto;
-  width: 100%;
-  object-fit: cover;
 }
 
 @media (max-width: 768px) {
