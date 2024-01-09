@@ -17,13 +17,13 @@ export default {
 </script>
 
 <template>
-  <section id="projects">
+  <section id="competences">
     <div class="main-container">
       <div class="content blue-img">
         <div class="row w-100 mvh-100">
           <div class="col center">
             <swiper class="swiper"
-                    :breakpoints="{ 0:{ slidesPerView:2 }, 720:{ slidesPerView:2 }, 1100:{ slidesPerView:3}, 1350:{ slidesPerView:3} }"
+                    :breakpoints="{ 0:{ slidesPerView:2 }, 720:{ slidesPerView:2 }, 1100:{ slidesPerView:3}, 1350:{ slidesPerView:4} }"
                     :spaceBetween="10"
                     :slidesPerGroup="1"
                     :loop="false"
@@ -34,30 +34,35 @@ export default {
                     :navigation="false">
               <swiper-slide>
                 <div class="box-pfp">
-                  <a href="https://ashenhorizon.com" target="_blank" aria-label="Link to Ashen Horizon">
-                    <div class="card">
-                      <img class="center" src="@/assets/img/projects/ah.png" width="182" height="182"
-                           alt="Ashen Horizon">
-                    </div>
-                  </a>
+                  <div class="card">
+                    <img class="center" src="@/assets/img/icons/icon_webdesign.png" width="182" height="182"
+                         alt="Web Design">
+                  </div>
+                </div>
+                <div class="box-description">
+                  <h3>Web Development</h3>
                 </div>
               </swiper-slide>
               <swiper-slide>
                 <div class="box-pfp">
-                  <a href="https://valus.ch" target="_blank" aria-label="Link to Valus AG">
-                    <div class="card">
-                      <img class="center" src="@/assets/img/projects/valus.png" width="182" height="182" alt="Valus AG">
-                    </div>
-                  </a>
+                  <div class="card">
+                    <img class="center" src="@/assets/img/icons/icon_freelancing.png" width="182" height="182"
+                         alt="Freelancing">
+                  </div>
+                </div>
+                <div class="box-description">
+                  <h3>Freelancing</h3>
                 </div>
               </swiper-slide>
               <swiper-slide>
                 <div class="box-pfp">
-                  <a href="https://sexologie-luzern.com" target="_blank" aria-label="Link to Sexologie Luzern">
-                    <div class="card">
-                      <img class="center" src="@/assets/img/projects/sexologie-luzern.png" width="182" height="182" alt="Sexologie Luzern">
-                    </div>
-                  </a>
+                  <div class="card">
+                    <img class="center" src="@/assets/img/icons/icon_consulting.png" width="182" height="182"
+                         alt="Consulting">
+                  </div>
+                </div>
+                <div class="box-description">
+                  <h3>Consulting</h3>
                 </div>
               </swiper-slide>
             </swiper>
@@ -97,7 +102,7 @@ export default {
 
 .blue-img {
   max-height: 40vh;
-  background-color: var(--kelepar-color-main);
+  background-color: var(--kelepar-color-second);
   width: 100%;
 }
 
@@ -134,7 +139,7 @@ h3 {
   padding: 4px;
   border: none;
   border-radius: 100%;
-  background-color: var(--kelepar-color-main);
+  background-color: var(--kelepar-color-second);
 }
 
 .card img {
@@ -154,11 +159,15 @@ h3 {
 
 @media (max-width: 768px) {
   h1 {
-    font-size: var(--h2-mobile);
+    font-size: var(--h3-mobile);
+  }
+
+  h3 {
+    font-size: var(--h3-mobile);
   }
 
   p {
-    font-size: var(--h3-mobile);
+    font-size: var(--h4-mobile);
   }
 
   .content {

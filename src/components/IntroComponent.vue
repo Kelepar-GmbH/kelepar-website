@@ -2,7 +2,7 @@
   <section id="intro">
     <div class="main-container">
       <div class="content blue-img">
-        <div class="row w-100 mobile-spacer">
+        <div class="row w-100 mvh-100 mobile-spacer">
           <div class="col center mobile-min-width">
             <div class="text text-top">
               <h1>Kelepar</h1>
@@ -11,9 +11,8 @@
               <p>Software</p>
             </div>
           </div>
-          <div class="w-100 breaker-element"></div>
           <div class="col no-padding">
-            <div class="content-image"></div>
+            <div class="content-image mvh-100"></div>
           </div>
         </div>
       </div>
@@ -96,28 +95,6 @@ p {
   color: var(--kelepar-color-black);
 }
 
-@media (min-width: 1200px) {
-  .breaker-element {
-    display: none;
-  }
-
-  .desktop-only {
-    display: none;
-  }
-}
-
-@media (max-width: 1200px) {
-  .desktop-large-only {
-    display: none;
-  }
-}
-
-@media (min-width: 769px) {
-  .mobile-only {
-    display: none;
-  }
-}
-
 @media (max-width: 768px) {
   h1 {
     font-size: var(--h2-mobile);
@@ -145,6 +122,42 @@ p {
 
   .desktop-only {
     display: none;
+  }
+}
+
+@media (min-width: 575px) {
+  .mvh-100 {
+    min-height: 100vh;
+  }
+}
+
+
+@media (max-width: 768px) {
+  h1 {
+    font-size: var(--h2-mobile);
+  }
+
+  p {
+    font-size: var(--h3-mobile);
+  }
+
+  .content-image {
+    max-height: 45vh;
+  }
+
+  .mobile-min-width {
+    min-width: 300px;
+    padding-top: 100px;
+  }
+
+  .content {
+    justify-content: flex-start;
+  }
+}
+
+@media (max-width: 570px) {
+  .button {
+    padding: 10px 0;
   }
 }
 

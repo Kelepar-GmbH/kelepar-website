@@ -3,15 +3,17 @@
 import {Swiper, SwiperSlide} from 'swiper/vue';
 
 // import required modules
-import {Pagination, Navigation} from 'swiper/modules';
+import {Navigation, Pagination} from 'swiper/modules';
 
 // Import Swiper styles
 import 'swiper/css';
 import 'swiper/css/pagination';
 import 'swiper/css/navigation';
+import IconLinkedin from "@/components/icons/IconLinkedin.vue";
 
 export default {
   components: {
+    IconLinkedin,
     Swiper,
     SwiperSlide,
   },
@@ -20,6 +22,13 @@ export default {
       modules: [Pagination, Navigation],
     };
   },
+  data() {
+    return {
+      urlLukas: 'https://www.linkedin.com/in/lukas-untersch%C3%BCtz/',
+      urlLars: 'https://www.linkedin.com/in/lars-stalder/',
+      urlLuca: 'https://www.linkedin.com/in/lucaraneri/',
+    }
+  }
 };
 </script>
 
@@ -28,10 +37,10 @@ export default {
     <div class="main-container">
       <div class="content white-img">
         <div class="container">
-          <h2>The Team</h2>
-          <div class="content">
+          <h2>Team</h2>
+          <div class="pt-5">
             <swiper class="swiper"
-                    :breakpoints="{ 0:{ slidesPerView:1 }, 720:{ slidesPerView:2 }, 1100:{ slidesPerView:3}, 1350:{ slidesPerView:4} }"
+                    :breakpoints="{ 0:{ slidesPerView:1 }, 720:{ slidesPerView:2 }, 1100:{ slidesPerView:3}, 1350:{ slidesPerView:3} }"
                     :spaceBetween="0"
                     :slidesPerGroup="1"
                     :centerSlide="true"
@@ -51,6 +60,7 @@ export default {
                 <div class="box-description">
                   <h3>Lukas Unterschütz</h3>
                   <p>CEO & Co-Founder</p>
+                  <IconLinkedin :url=urlLukas></IconLinkedin>
                   <p>
                     Lukas is a serial entrepreneur and former competitive Hearthstone player. He has been active in the
                     crypto space as analyst, investor, and event organizer. Co-founding a web3 gaming startup was the
@@ -67,6 +77,7 @@ export default {
                 <div class="box-description">
                   <h3>Lars Stalder</h3>
                   <p>CTO & Co-Founder</p>
+                  <IconLinkedin :url=urlLars></IconLinkedin>
                   <p>
                     Lars studied software engineering and programmed at different multinational European software
                     companies. He is used to working with a variety of programming and smart contract languages.
@@ -84,6 +95,7 @@ export default {
                 <div class="box-description">
                   <h3>Luca Raneri</h3>
                   <p>Full Stack Developer</p>
+                  <IconLinkedin :url=urlLuca></IconLinkedin>
                   <p>
                     Luca has a Business-IT background and worked as a Senior IT-Auditor. He engaged with world
                     leading clients in traditional finance as well as in the crypto space. With his flair and passion
@@ -115,6 +127,11 @@ export default {
   text-align: center;
   flex-direction: column;
 }
+
+.container {
+  padding-top: 0 !important;
+}
+
 
 .content {
   display: flex;
@@ -173,6 +190,17 @@ h3 {
   padding: 4px;
   border-color: var(--kelepar-color-highlight-one);
   border-radius: 0;
+}
+
+a {
+  color: var(--kelepar-color-second);
+  text-align: left;
+  transition: 0.4s;
+}
+
+a:hover {
+  text-decoration: none;
+  color: var(--kelepar-color-highlight-one);
 }
 
 .card img {

@@ -3,21 +3,22 @@
     <div class="main-container">
       <div class="content white-img">
         <div class="row w-100 mvh-100">
+          <div class="col no-padding">
+            <div class="content-image mvh-100"></div>
+          </div>
           <div class="col center mobile-min-width">
             <div class="text">
               <h1>About us</h1>
             </div>
             <div class="text">
-              <p>Together with you, we transform opportunities into inspiring solutions. As a young and flexible startup, we help you to find the perfect and sustainable solution.</p>
+              <p>Together with you, we transform opportunities into inspiring solutions. As a young and flexible
+                startup, we help you to find the perfect and sustainable solution.</p>
             </div>
             <div class="links">
               <div class="button">
                 <a class="btn2" href="" target="" aria-label="Contact us">Contact us</a>
               </div>
             </div>
-          </div>
-          <div class="col no-padding">
-            <div class="content-image mvh-100"></div>
           </div>
         </div>
       </div>
@@ -64,7 +65,7 @@
 }
 
 .content-image {
-  background-image: url(../assets/img/two_hands.webp);
+  background-image: url(../assets/img/software_img.webp);
   background-repeat: no-repeat;
   background-size: cover;
   min-height: 66vh;
@@ -169,3 +170,5 @@ p {
   }
 }
 </style>
+<script setup>
+</script>
