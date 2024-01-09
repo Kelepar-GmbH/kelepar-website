@@ -37,15 +37,28 @@ export default {
   <section id="contact">
     <div class="main-container">
       <div class="content content-img">
-        <div class="row w-100 mvh-100 mobile-spacer">
-          <div class="col center mobile-min-width">
-            <card class="card-section">
-              <h1>Contact Form</h1>
+        <div class="row center w-100 mvh-100">
+          <div class="col center app-form-width">
+            <card class="card-section ">
+              <h1 class="spacer">Contact Form</h1>
               <form @submit.prevent="submitForm">
-                <input type="text" name="name" v-model="name"/>
-                <input type="email" name="email" v-model="email"/>
-                <textarea name="message" v-model="message"></textarea>
-                <button type="submit">Send Message</button>
+                <div class="row">
+                  <div class="col">
+                    <input class="app-form-control" type="text" name="name" placeholder="NAME" v-model="name"/>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col">
+                    <input class="app-form-control" type="email" name="email" placeholder="EMAIL" v-model="email"/>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col">
+                    <textarea class="app-form-control" name="message" placeholder="MESSAGE"
+                              v-model="message"></textarea>
+                  </div>
+                </div>
+                <button class="app-form-button" type="submit">Send Message</button>
               </form>
             </card>
           </div>
@@ -58,12 +71,79 @@ export default {
 
 <style scoped>
 
+.spacer {
+  margin-bottom: 40px;
+}
+
 .center {
   margin: auto auto;
 }
 
-.spacer-top {
-  padding-top: 10vh !important;
+.app-form-width {
+  background: rgb(13, 33, 73);
+  background: linear-gradient(0deg, rgba(13, 33, 73, 1) 0%, rgba(13, 33, 73, 0) 91%, rgba(13, 33, 73, 0) 100%);
+  border-radius: 10px;
+  margin: auto auto;
+  max-width: 60vw;
+}
+
+.app-form-control {
+  width: 100%;
+  padding: 10px 0;
+  margin: 10px 0;
+  background: none;
+  border: none;
+  border-bottom: 1px solid var(--kelepar-color-neutral);
+  color: var(--kelepar-color-neutral);
+  font-size: 14px;
+  text-transform: uppercase;
+  outline: none;
+  transition: border-color .2s;
+}
+
+.app-form-control::placeholder {
+  color: var(--kelepar-color-neutral);
+}
+
+.app-form-control:focus::placeholder {
+  color: var(--kelepar-color-highlight-one);
+}
+
+.app-form-control:focus {
+  border-bottom-color: var(--kelepar-color-highlight-one);
+}
+
+.app-form-button {
+  flex: 1 1 auto;
+  border-radius: 0;
+  padding: 10px 25px !important;
+  text-align: center;
+  background-size: 150% auto;
+  text-transform: uppercase;
+  text-decoration: none;
+  transition: 500ms;
+  border: 1px solid;
+  color: var(--kelepar-color-highlight-one) !important;
+  background-image: var(--kelepar-color-highlight-one);
+  background-color: transparent;
+  margin: 10px 0 30px 0;
+}
+
+.app-form-button:before {
+  content: "";
+  position: absolute;
+  top: 1px;
+  right: 1px;
+  bottom: 1px;
+  left: 1px;
+  z-index: -1;
+}
+
+.app-form-button:hover {
+  background-position: right center;
+  -webkit-box-shadow: 0 0 10px 5px var(--kelepar-color-highlight-one);
+  -moz-box-shadow: 0 0 10px 5px var(--kelepar-color-highlight-one);
+  box-shadow: 0 0 10px 5px var(--kelepar-color-highlight-one);
 }
 
 .main-container {
@@ -117,6 +197,12 @@ p {
   margin: 0 0 20px 0;
 }
 
+@media (max-width: 1200px) {
+  .app-form-width {
+    max-width: 80vw;
+  }
+}
+
 @media (max-width: 768px) {
   h1 {
     font-size: var(--h2-mobile);
@@ -124,18 +210,6 @@ p {
 
   p {
     font-size: var(--h3-mobile);
-  }
-
-  .mobile-spacer {
-    padding-top: 10vh;
-  }
-
-  .mobile-min-width {
-    min-width: 300px;
-  }
-
-  .desktop-only {
-    display: none;
   }
 }
 
@@ -155,27 +229,12 @@ p {
     font-size: var(--h3-mobile);
   }
 
-  .content-image {
-    max-height: 45vh;
-  }
-
-  .mobile-min-width {
-    min-width: 300px;
-    padding-top: 100px;
-  }
-
   .content {
     justify-content: flex-start;
   }
-}
 
-@media (max-width: 570px) {
-  .button {
-    padding: 10px 0;
-  }
-
-  .mobile-move-bot {
-    padding-top: 25vh;
+  .app-form-width {
+    max-width: 100vw;
   }
 }
 
