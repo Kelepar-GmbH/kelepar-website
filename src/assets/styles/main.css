@@ -42,7 +42,7 @@ p {
     position: relative;
     z-index: 1;
     border-radius: 0;
-    background: var(--kelepar-color-second);
+    background: var(--kelepar-color-highlight-two);
     cursor: pointer;
     text-transform: uppercase;
     text-decoration: none;
@@ -80,13 +80,14 @@ p {
 
 .btn2 {
     flex: 1 1 auto;
-    border-radius: 6px;
+    border-radius: 0;
     padding: 10px 25px !important;
     text-align: center;
     background-size: 150% auto;
     text-transform: uppercase;
     text-decoration: none;
     transition: 500ms;
+    border: 1px solid;
     color: var(--kelepar-color-highlight-one) !important;
     background-image: var(--kelepar-color-highlight-one);
 }

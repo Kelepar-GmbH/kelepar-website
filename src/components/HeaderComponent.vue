@@ -74,7 +74,7 @@ onMounted(() => {
         <ul class="play nav-content desktop-view">
           <li @click="reset">
             <div>
-              <a class="btn1" href="" target="_blank"
+              <a class="btn2" href="" target="_blank"
                  aria-label="Contact us">Contact us</a>
             </div>
           </li>
