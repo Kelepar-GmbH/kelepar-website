@@ -1,7 +1,7 @@
 <template>
   <section id="intro">
     <div class="main-container">
-      <div class="content blue-img">
+      <div class="content content-img">
         <div class="row w-100 mvh-100 mobile-spacer">
           <div class="col center mobile-min-width">
             <div class="text text-top">
@@ -10,9 +10,6 @@
             <div class="text text-bot">
               <p>Software</p>
             </div>
-          </div>
-          <div class="col no-padding">
-            <div class="content-image mvh-100"></div>
           </div>
         </div>
       </div>
@@ -50,8 +47,8 @@
   min-height: 100vh;
 }
 
-.blue-img {
-  background-image: url(../assets/img/banners/bondi-blue.webp);
+.content-img {
+  background-image: url(../assets/img/banners/intro_background.webp);
   width: 100%;
   background-repeat: no-repeat;
   background-position: top center;
