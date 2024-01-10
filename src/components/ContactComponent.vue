@@ -11,6 +11,7 @@ export default {
       name: "",
       email: "",
       message: "",
+      formSubmitted: false,
     };
   },
   validations() {
@@ -24,6 +25,7 @@ export default {
     async submitForm() {
       this.v$.$validate()
       if (!this.v$.$error) {
+        this.formSubmitted = true;
         const response = await fetch("https://api.web3forms.com/submit", {
           method: "POST",
           headers: {
@@ -41,8 +43,6 @@ export default {
         if (result.success) {
           console.log(result);
         }
-      } else {
-
       }
     },
   },
@@ -54,7 +54,15 @@ export default {
     <div class="main-container">
       <div class="content content-img">
         <div class="row center w-100 mvh-100">
-          <div class="col center app-form-width">
+          <div v-if="formSubmitted" class="col center app-form-width">
+            <h1 class="spacer">Contact Form</h1>
+            <div class="row">
+              <div class="col">
+                <p>Thank you for reaching out. We will get back to you as soon as possible!</p>
+              </div>
+            </div>
+          </div>
+          <div v-else class="col center app-form-width">
             <h1 class="spacer">Contact Form</h1>
             <form @submit.prevent="submitForm">
               <div class="row">
