@@ -5,7 +5,8 @@ body {
 }
 
 #app {
-    margin: 0 auto;
+    margin: 0 !important;
+    width: 100%;
     font-weight: lighter;
     font-family: 'Rubik', sans-serif;
 }
