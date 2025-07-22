@@ -7,7 +7,7 @@
         <p>Made with ❤️ in Switzerland</p>
       </div>
       <div class="text d-inline-block">
-        <p class="d-inline-block">© 2024 </p>
+        <p class="d-inline-block">© 2025 </p>
         <a class="footer-link d-inline-block" href="https://kelepar.com" aria-label="Link to Kelepar">Kelepar
           GmbH</a>
         <p class="d-inline-block"> All rights reserved.</p>
