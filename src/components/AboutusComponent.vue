@@ -55,24 +55,24 @@ import { RouterLink } from 'vue-router';
 .bg-gradient-1 {
   width: 200px;
   height: 200px;
-  top: 10%;
-  right: 15%;
+  top: 5%;
+  left: 10%;
   animation-delay: 0s;
 }
 
 .bg-gradient-2 {
   width: 150px;
   height: 150px;
-  bottom: 20%;
-  left: 10%;
+  top: 70%;
+  right: 10%;
   animation-delay: 2s;
 }
 
 .bg-gradient-3 {
   width: 100px;
   height: 100px;
-  top: 60%;
-  right: 25%;
+  top: 30%;
+  left: 70%;
   animation-delay: 4s;
 }
 
@@ -86,8 +86,8 @@ import { RouterLink } from 'vue-router';
 .bg-accent-1 {
   width: 80px;
   height: 80px;
-  top: 30%;
-  left: 20%;
+  top: 60%;
+  left: 25%;
   transform: rotate(45deg);
   animation-delay: 1s;
 }
@@ -95,8 +95,8 @@ import { RouterLink } from 'vue-router';
 .bg-accent-2 {
   width: 60px;
   height: 60px;
-  bottom: 30%;
-  right: 30%;
+  top: 15%;
+  right: 40%;
   transform: rotate(45deg);
   animation-delay: 3s;
 }
