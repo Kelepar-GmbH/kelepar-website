@@ -1,254 +1,128 @@
-<script>
-// Import Swiper Vue.js components
-import {Swiper, SwiperSlide} from 'swiper/vue';
+<script setup>
+import IconLinkedin from '@/components/icons/IconLinkedin.vue';
+import lukasImg from '@/assets/img/team/lukas.webp';
+import larsImg from '@/assets/img/team/lars.webp';
+import lucaImg from '@/assets/img/team/luca.webp';
 
-// import required modules
-import {Navigation, Pagination} from 'swiper/modules';
-
-// Import Swiper styles
-import 'swiper/css';
-import 'swiper/css/pagination';
-import 'swiper/css/navigation';
-import IconLinkedin from "@/components/icons/IconLinkedin.vue";
-
-export default {
-  components: {
-    IconLinkedin,
-    Swiper,
-    SwiperSlide,
+const team = [
+  {
+    name: 'Lukas Unterschütz',
+    key: 'lukas',
+    img: lukasImg,
+    linkedin: 'https://www.linkedin.com/in/lukas-untersch%C3%BCtz/'
   },
-  setup() {
-    return {
-      modules: [Pagination, Navigation],
-    };
+  {
+    name: 'Lars Stalder',
+    key: 'lars',
+    img: larsImg,
+    linkedin: 'https://www.linkedin.com/in/lars-stalder/'
   },
-  data() {
-    return {
-      urlLukas: 'https://www.linkedin.com/in/lukas-untersch%C3%BCtz/',
-      urlLars: 'https://www.linkedin.com/in/lars-stalder/',
-      urlLuca: 'https://www.linkedin.com/in/lucaraneri/',
-    }
+  {
+    name: 'Luca Raneri',
+    key: 'luca',
+    img: lucaImg,
+    linkedin: 'https://www.linkedin.com/in/lucaraneri/'
   }
-};
+];
 </script>
 
 <template>
-  <div id="team">
-    <div class="main-container">
-      <div class="content white-img">
-        <div class="container">
-          <div class="pt-5">
-            <swiper class="swiper"
-                    :breakpoints="{ 0:{ slidesPerView:1 }, 720:{ slidesPerView:2 }, 1100:{ slidesPerView:3}, 1350:{ slidesPerView:3} }"
-                    :spaceBetween="0"
-                    :slidesPerGroup="1"
-                    :centerSlide="true"
-                    :loop="false"
-                    :loopFillGroupWithBlank="true"
-                    :pagination="{
-                  clickable: true,
-                }"
-                    :navigation="false"
-                    :modules="modules">
-              <swiper-slide>
-                <div class="box-pfp">
-                  <div class="card">
-                    <img src="@/assets/img/team/lukas.webp" width="182" height="182" alt="Lukas PFP">
-                  </div>
-                </div>
-                <div class="box-description">
-                  <h3>Lukas Unterschütz</h3>
-                  <p>CEO & Co-Founder</p>
-                  <IconLinkedin :url=urlLukas></IconLinkedin>
-                  <p>
-                    Lukas is a serial entrepreneur and and started as analyst, investor, and event organizer.
-                    Co-founding a software development startup was the perfect opportunity to match his passions for
-                    entrepreneurship, software and business.
-                  </p>
-                </div>
-              </swiper-slide>
-              <swiper-slide>
-                <div class="box-pfp">
-                  <div class="card">
-                    <img src="@/assets/img/team/lars.webp" width="182" height="182" alt="Lars PFP">
-                  </div>
-                </div>
-                <div class="box-description">
-                  <h3>Lars Stalder</h3>
-                  <p>CTO & Co-Founder</p>
-                  <IconLinkedin :url=urlLars></IconLinkedin>
-                  <p>
-                    Lars studied software engineering and programmed at different multinational European software
-                    companies. He is used to working with a variety of programming and smart contract languages.
-                    Co-founding Kelepar was the perfect opportunity to break out of the golden cage and follow his
-                    passion for software development.</p>
-                </div>
-              </swiper-slide>
-              <swiper-slide>
-                <div class="box-pfp">
-                  <div class="card">
-                    <img src="@/assets/img/team/luca.webp" width="182" height="182" alt="Luca PFP">
-                  </div>
-                </div>
-                <div class="box-description">
-                  <h3>Luca Raneri</h3>
-                  <p>Full Stack Developer</p>
-                  <IconLinkedin :url=urlLuca></IconLinkedin>
-                  <p>
-                    Luca has a Business-IT background and worked as a Senior IT-Auditor. He engaged with world
-                    leading clients in traditional finance as well as in the crypto space. With his flair and passion
-                    for web development he builds stunning user-centric web experiences with a creative edge.</p>
-                </div>
-              </swiper-slide>
-            </swiper>
+  <section id="team">
+    <div class="team-container">
+      <h2>{{ $t('team.title') }}</h2>
+      <div class="team-list">
+        <div v-for="member in team" :key="member.name" class="team-card">
+          <div class="team-img">
+            <img :src="member.img" :alt="member.name" />
           </div>
+          <h3>{{ member.name }}</h3>
+          <p class="team-role">{{ $t(`team_section.${member.key}.role`) }}</p>
+          <IconLinkedin :url="member.linkedin" />
+          <p class="team-desc">{{ $t(`team_section.${member.key}.desc`) }}</p>
         </div>
       </div>
     </div>
-  </div>
+  </section>
 </template>
 
 <style scoped>
-
-.main-container {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  min-height: 100vh;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
+.team-container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 3rem 1rem;
   text-align: center;
-  flex-direction: column;
 }
-
-.container {
-  padding-top: 0 !important;
+h2 {
+  font-size: var(--h2-desktop);
+  color: var(--kelepar-color-main);
+  margin-bottom: 2.5rem;
+  font-weight: 700;
 }
-
-
-.content {
+.team-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2.5rem;
+  justify-content: center;
+}
+.team-card {
+  background: #fff;
+  border-radius: var(--border-radius);
+  box-shadow: var(--box-shadow);
+  padding: 2.5rem 2rem 2rem 2rem;
+  max-width: 260px;
+  min-width: 220px;
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
-  min-height: 100vh;
+  transition: box-shadow 0.2s, transform 0.2s;
 }
-
-.white-img {
-  background-image: url(../assets/img/banners/white.webp);
-  width: 100%;
-  background-repeat: no-repeat;
-  background-position: top center;
-  background-size: cover;
+.team-card:hover {
+  box-shadow: 0 8px 32px 0 rgba(30, 34, 90, 0.13);
+  transform: translateY(-6px) scale(1.03);
 }
-
-p {
-  color: var(--kelepar-font-color-negative) !important;
-  margin: 10px 0;
+.team-img {
+  width: 90px;
+  height: 90px;
+  margin-bottom: 1.2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--kelepar-color-second);
+  border-radius: 50%;
+  box-shadow: 0 2px 8px 0 rgba(30, 34, 90, 0.08);
+  overflow: hidden;
 }
-
-h1 {
-  font-size: var(--h1-desktop);
-  letter-spacing: 3px;
-  text-transform: uppercase;
-  font-weight: bold;
-  color: var(--kelepar-color-main) !important;
+.team-img img {
+  width: 90px;
+  height: 90px;
+  object-fit: cover;
+  border-radius: 50%;
 }
-
 h3 {
   font-size: var(--h3-desktop);
-  letter-spacing: 2px;
-  color: var(--kelepar-font-color-negative) !important;
+  color: var(--kelepar-color-main);
+  margin-bottom: 0.3rem;
+  font-weight: 600;
 }
-
-.box-pfp {
-  padding: 0 14px 20px 14px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.box-description {
-  text-align: center;
-  padding: 0 14px 50px 14px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.card {
-  height: 190px;
-  width: 190px;
-  padding: 4px;
-  border-color: var(--kelepar-color-highlight-one);
-  border-radius: 0;
-}
-
-a {
-  color: var(--kelepar-color-second);
-  text-align: left;
-  transition: 0.4s;
-}
-
-a:hover {
-  text-decoration: none;
+.team-role {
   color: var(--kelepar-color-highlight-one);
+  font-weight: 500;
+  margin-bottom: 0.7rem;
 }
-
-.card img {
-  height: auto;
-  width: 100%;
-  object-fit: cover;
+.team-desc {
+  color: var(--kelepar-color-black);
+  font-size: 1.05em;
+  margin-top: 0.7rem;
 }
-
-.container {
-  margin: 0 auto;
-  padding: 50px 10px;
-  max-width: 1500px;
-}
-
-.content {
-  display: flex;
-  flex-direction: row;
-  place-content: center;
-  justify-content: center;
-  align-items: center;
-}
-
-@media (max-width: 768px) {
-  h1 {
-    font-size: var(--h2-mobile);
+@media (max-width: 900px) {
+  .team-list {
+    flex-direction: column;
+    gap: 2rem;
+    align-items: center;
   }
-
-  p {
-    font-size: var(--h3-mobile);
+  .team-card {
+    max-width: 100%;
+    width: 100%;
   }
 }
-
-@media (max-width: 300px) {
-  h1 {
-    font-size: var(--h3-mobile);
-  }
-
-  p {
-    font-size: var(--h4-mobile);
-  }
-}
-
-@media (max-width: 1600px) {
-  p {
-    font-size: var(--p-mobile);
-  }
-}
-
-@media (max-width: 992px) {
-  h2 {
-    font-size: var(--h2-mobile);
-  }
-}
-
 </style>

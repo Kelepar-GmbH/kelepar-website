@@ -2,27 +2,42 @@
 
 body {
     place-items: center;
+    background: var(--kelepar-color-second);
 }
 
 #app {
     margin: 0 !important;
     width: 100%;
-    font-weight: lighter;
     font-family: 'Rubik', sans-serif;
+    background: var(--kelepar-color-second);
+    min-height: 100vh;
 }
 
 h1, h2, h3, h4 {
     font-family: 'Rubik', sans-serif;
-    color: var(--kelepar-font-color) !important;
-    font-weight: lighter;
+    color: var(--kelepar-color-main) !important;
+    font-weight: 700;
+    margin-bottom: 0.5em;
 }
 
-p {
-    color: var(--kelepar-font-color) !important;
+p, .text {
+    color: var(--kelepar-font-color);
+    font-size: 1.1em;
+    margin-bottom: 1em;
 }
 
-.text {
-    color: var(--kelepar-font-color) !important;
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem 1rem;
+}
+
+.card {
+    background: #fff;
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow);
+    padding: 2rem;
+    margin-bottom: 2rem;
 }
 
 .gradiant-text {
@@ -60,77 +75,38 @@ p {
 /*  BUTTONs  */
 /*************/
 
-.btn1 {
-    color: var(--kelepar-color-neutral);
-    padding: 10px 25px !important;
+.btn1, .btn2 {
+    border-radius: var(--border-radius);
+    box-shadow: 0 2px 8px 0 rgba(30, 34, 90, 0.08);
+    font-weight: 500;
+    font-size: 1em;
+    padding: 12px 32px;
     border: none;
-    outline: none;
-    position: relative;
-    z-index: 1;
-    border-radius: 0;
-    background: var(--kelepar-color-highlight-two);
     cursor: pointer;
-    text-transform: uppercase;
+    transition: background 0.2s, color 0.2s, box-shadow 0.2s;
     text-decoration: none;
 }
 
-.btn1::before {
-    content: "";
-    position: absolute;
-    left: 3px;
-    right: 3px;
-    top: 3px;
-    bottom: 3px;
-    border-radius: 0;
-    background-color: var(--kelepar-color-main);
-    z-index: -1;
-    transition: 200ms;
-}
-
-.btn1::after {
-    content: attr(data);
+.btn1 {
     background: var(--kelepar-color-highlight-one);
-    -webkit-background-clip: text;
-    color: transparent;
-    transition: 200ms;
+    color: #fff;
+    text-decoration: none;
 }
 
-.btn1:hover::before {
-    color: var(--kelepar-color-highlight-one);
-    opacity: 1%;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
+.btn1:hover {
+    background: var(--kelepar-color-highlight-two);
+    text-decoration: none;
 }
 
 .btn2 {
-    flex: 1 1 auto;
-    border-radius: 0;
-    padding: 10px 25px !important;
-    text-align: center;
-    background-size: 150% auto;
-    text-transform: uppercase;
+    background: #fff;
+    color: var(--kelepar-color-highlight-one);
+    border: 2px solid var(--kelepar-color-highlight-one);
     text-decoration: none;
-    transition: 500ms;
-    border: 1px solid;
-    color: var(--kelepar-color-highlight-one) !important;
-    background-image: var(--kelepar-color-highlight-one);
-}
-
-.btn2::before {
-    content: "";
-    position: absolute;
-    top: 1px;
-    right: 1px;
-    bottom: 1px;
-    left: 1px;
-    z-index: -1;
 }
 
 .btn2:hover {
-    background-position: right center;
-    -webkit-box-shadow: 0 0 10px 5px var(--kelepar-color-highlight-one);
-    -moz-box-shadow: 0 0 10px 5px var(--kelepar-color-highlight-one);
-    box-shadow: 0 0 10px 5px var(--kelepar-color-highlight-one);
+    background: var(--kelepar-color-highlight-one);
+    color: #fff;
+    text-decoration: none;
 }

@@ -1,199 +1,123 @@
-<script>
-// Import Swiper Vue.js components
-import {Swiper, SwiperSlide} from 'swiper/vue';
+<script setup>
+import { 
+  ChatBubbleLeftRightIcon, 
+  RocketLaunchIcon, 
+  ShieldCheckIcon, 
+  StarIcon,
+  PuzzlePieceIcon 
+} from '@heroicons/vue/24/outline';
 
-// import required modules
-import {Autoplay, Navigation, Pagination} from "swiper/modules";
-
-// Import Swiper styles
-import 'swiper/css';
-import 'swiper/css/pagination';
-import 'swiper/css/navigation';
-
-export default {
-  components: {
-    Swiper,
-    SwiperSlide,
+const competences = [
+  {
+    icon: ChatBubbleLeftRightIcon,
+    key: 'ai_consulting'
   },
-  setup() {
-    return {
-      modules: [Autoplay, Navigation, Pagination],
-    };
+  {
+    icon: RocketLaunchIcon,
+    key: 'efficiency_ai'
   },
-};
+  {
+    icon: ShieldCheckIcon,
+    key: 'data_protection'
+  },
+  {
+    icon: StarIcon,
+    key: 'swiss_made'
+  },
+  {
+    icon: PuzzlePieceIcon,
+    key: 'ai_integration'
+  }
+];
 </script>
 
 <template>
   <section id="competences">
-    <div class="blue-img">
-      <div class="row w-100 mvh-100">
-        <div class="col center no-padding">
-          <swiper class="swiper"
-                  :breakpoints="{ 0:{ slidesPerView:2 }, 720:{ slidesPerView:2 }, 1100:{ slidesPerView:3}, 1350:{ slidesPerView:4} }"
-                  :spaceBetween="50"
-                  :slides-per-group="1"
-                  :autoplay="{
-                    delay: 3000,
-                    pauseOnMouseEnter: true,
-                    waitForTransition: false,
-                    reverseDirection: true
-                  }"
-                  :centered-slides="true"
-                  :scrollbar="false"
-                  :navigation="false">
-            <swiper-slide>
-              <div class="box-pfp">
-                <div class="card">
-                  <img class="center" src="../assets/img/icons/icon_dev.png" width="182" height="182"
-                       alt="Web Development">
-                </div>
-              </div>
-              <div class="box-description">
-                <h3>Development</h3>
-              </div>
-            </swiper-slide>
-            <swiper-slide>
-              <div class="box-pfp">
-                <div class="card">
-                  <img class="center" src="../assets/img/icons/icon_devops.png" width="182" height="182"
-                       alt="Dev Ops">
-                </div>
-              </div>
-              <div class="box-description">
-                <h3>Dev Ops</h3>
-              </div>
-            </swiper-slide>
-            <swiper-slide>
-              <div class="box-pfp">
-                <div class="card">
-                  <img class="center" src="../assets/img/icons/icon_itsec.png" width="182" height="182"
-                       alt="IT Security">
-                </div>
-              </div>
-              <div class="box-description">
-                <h3>IT Security</h3>
-              </div>
-            </swiper-slide>
-            <swiper-slide>
-              <div class="box-pfp">
-                <div class="card">
-                  <img class="center" src="@/assets/img/icons/icon_freelancing.png" width="182" height="182"
-                       alt="Freelancing">
-                </div>
-              </div>
-              <div class="box-description">
-                <h3>Freelancing</h3>
-              </div>
-            </swiper-slide>
-            <swiper-slide>
-              <div class="box-pfp">
-                <div class="card">
-                  <img class="center" src="@/assets/img/icons/icon_consulting.png" width="182" height="182"
-                       alt="Consulting">
-                </div>
-              </div>
-              <div class="box-description">
-                <h3>Consulting</h3>
-              </div>
-            </swiper-slide>
-          </swiper>
+    <div class="competences-container">
+      <h2>{{ $t('competences.title') }}</h2>
+      <div class="competences-list">
+        <div v-for="(c, i) in competences" :key="i" class="competence-card">
+          <div class="competence-icon">
+            <component :is="c.icon" />
+          </div>
+          <h3>{{ $t(`competences_section.${c.key}.title`) }}</h3>
+          <p>{{ $t(`competences_section.${c.key}.desc`) }}</p>
         </div>
       </div>
     </div>
   </section>
-
 </template>
 
 <style scoped>
-
-.center {
-  margin: auto auto;
-  max-height: 40vh;
-}
-
-.mvh-100 {
-  min-height: 30vh;
-}
-
-.blue-img {
+.competences-container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 3rem 1rem;
   text-align: center;
-  max-height: 40vh;
-  background-color: var(--kelepar-color-second);
-  width: 100%;
 }
-
-.no-padding {
-  padding: 0;
-}
-
-p {
-  color: var(--kelepar-font-color) !important;
-  margin: 10px 0;
-}
-
 h2 {
   font-size: var(--h2-desktop);
-  letter-spacing: 5px;
-  text-transform: uppercase;
-  text-align: center;
-  padding: 20px 0 40px 0;
-  color: var(--kelepar-font-color) !important;
+  color: var(--kelepar-color-main);
+  margin-bottom: 2.5rem;
+  font-weight: 700;
 }
-
-h3 {
-  font-size: var(--h3-desktop);
-  letter-spacing: 2px;
-  color: var(--kelepar-font-color) !important;
+.competences-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2.5rem;
+  justify-content: center;
 }
-
-.box-pfp {
-  padding: 0 14px 20px 14px;
+.competence-card {
+  background: #fff;
+  border-radius: var(--border-radius);
+  box-shadow: var(--box-shadow);
+  padding: 2.5rem 2rem 2rem 2rem;
+  max-width: 260px;
+  min-width: 220px;
   display: flex;
   flex-direction: column;
   align-items: center;
+  transition: box-shadow 0.2s, transform 0.2s;
 }
-
-.card {
-  height: 130px;
-  width: 130px;
-  padding: 4px;
-  border: none;
-  border-radius: 100%;
-  background-color: var(--kelepar-font-color);
+.competence-card:hover {
+  box-shadow: 0 8px 32px 0 rgba(30, 34, 90, 0.13);
+  transform: translateY(-6px) scale(1.03);
 }
-
-.card img {
-  height: auto;
-  width: 100%;
-  object-fit: cover;
+.competence-icon {
+  width: 70px;
+  height: 70px;
+  margin-bottom: 1.2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--kelepar-color-second);
+  border-radius: 50%;
+  box-shadow: 0 2px 8px 0 rgba(30, 34, 90, 0.08);
 }
-
-
-@media (max-width: 768px) {
-  h1 {
-    font-size: var(--h3-mobile);
-  }
-
-  h3 {
-    font-size: var(--h3-mobile);
-  }
-
-  p {
-    font-size: var(--h4-mobile);
-  }
-
-  .content {
-    justify-content: flex-start;
-  }
+.competence-icon svg {
+  width: 32px;
+  height: 32px;
+  color: var(--kelepar-color-main);
 }
-
-@media (max-width: 300px) {
-  h1 {
-    font-size: var(--h3-mobile);
+h3 {
+  font-size: var(--h3-desktop);
+  color: var(--kelepar-color-main);
+  margin-bottom: 0.7rem;
+  font-weight: 600;
+}
+p {
+  color: var(--kelepar-color-black);
+  font-size: 1.05em;
+}
+@media (max-width: 900px) {
+  .competences-list {
+    flex-direction: column;
+    gap: 2rem;
+    align-items: center;
   }
-
-  p {
-    font-size: var(--h4-mobile);
+  .competence-card {
+    max-width: 100%;
+    width: 100%;
   }
 }
 </style>

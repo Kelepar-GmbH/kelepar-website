@@ -16,6 +16,11 @@ const router = createRouter({
             component: Contact
         },
         {
+            path: '/datenschutz',
+            name: 'Privacy',
+            component: () => import('../views/Privacy.vue')
+        },
+        {
             path: '/:catchAll(.*)',
             name: 'NotFound',
             component: () => import('../views/NotFound.vue')

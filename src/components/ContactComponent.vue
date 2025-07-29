@@ -1,281 +1,137 @@
-<script>
-import useValidate from '@vuelidate/core'
-import {required} from '@vuelidate/validators'
+<script setup>
+import { ref } from 'vue';
+
+const name = ref('');
+const email = ref('');
+const message = ref('');
+const formSubmitted = ref(false);
+const error = ref('');
 
 const WEB3FORMS_ACCESS_KEY = "ade71fee-66c2-4888-b0c9-c65a2bb8cc51";
 
-export default {
-  data() {
-    return {
-      v$: useValidate(),
-      name: "",
-      email: "",
-      message: "",
-      formSubmitted: false,
-    };
-  },
-  validations() {
-    return {
-      name: {required},
-      email: {required},
-      message: {required},
-    }
-  },
-  methods: {
-    async submitForm() {
-      this.v$.$validate()
-      if (!this.v$.$error) {
-        this.formSubmitted = true;
-        const response = await fetch("https://api.web3forms.com/submit", {
-          method: "POST",
-          headers: {
-            "Content-Type": "application/json",
-            Accept: "application/json",
-          },
-          body: JSON.stringify({
-            access_key: WEB3FORMS_ACCESS_KEY,
-            name: this.name,
-            email: this.email,
-            message: this.message,
-          }),
-        });
-        const result = await response.json();
-        if (result.success) {
-          console.log(result);
-        }
-      }
+async function submitForm() {
+  error.value = '';
+  if (!name.value || !email.value || !message.value) {
+    error.value = 'Bitte alle Felder ausfüllen.';
+    return;
+  }
+  formSubmitted.value = true;
+  const response = await fetch("https://api.web3forms.com/submit", {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+      Accept: "application/json",
     },
-  },
-};
+    body: JSON.stringify({
+      access_key: WEB3FORMS_ACCESS_KEY,
+      name: name.value,
+      email: email.value,
+      message: message.value,
+    }),
+  });
+  const result = await response.json();
+  if (!result.success) {
+    error.value = 'Fehler beim Senden. Bitte versuchen Sie es später erneut.';
+    formSubmitted.value = false;
+  }
+}
 </script>
 
 <template>
   <section id="contact">
-    <div class="main-container">
-      <div class="content content-img">
-        <div class="row center w-100 mvh-100">
-          <div v-if="formSubmitted" class="col center app-form-width">
-            <h1 class="spacer">Contact Form</h1>
-            <div class="row">
-              <div class="col">
-                <p>Thank you for reaching out. We will get back to you as soon as possible!</p>
-              </div>
-            </div>
+    <div class="contact-container">
+      <h2>{{ $t('contact.title') }}</h2>
+      <div class="contact-card">
+        <form v-if="!formSubmitted" @submit.prevent="submitForm">
+          <div class="form-group">
+            <input v-model="name" type="text" :placeholder="$t('contact.name')" />
           </div>
-          <div v-else class="col center app-form-width">
-            <h1 class="spacer">Contact Form</h1>
-            <form @submit.prevent="submitForm">
-              <div class="row">
-                <div class="col">
-                  <input class="app-form-control" type="text" name="name" placeholder="NAME" v-model="name"/>
-                  <span class="app-form-error" v-if="v$.name.$error"> {{ v$.name.$errors[0].$message }} </span>
-                </div>
-              </div>
-              <div class="row">
-                <div class="col">
-                  <input class="app-form-control" type="email" name="email" placeholder="EMAIL" v-model="email"/>
-                  <span class="app-form-error" v-if="v$.email.$error"> {{ v$.email.$errors[0].$message }} </span>
-                </div>
-              </div>
-              <div class="row">
-                <div class="col">
-                    <textarea class="app-form-control" name="message" placeholder="MESSAGE"
-                              v-model="message"></textarea>
-                  <span class="app-form-error" v-if="v$.message.$error"> {{ v$.message.$errors[0].$message }} </span>
-                </div>
-              </div>
-              <button class="app-form-button" type="submit">Send Message</button>
-            </form>
+          <div class="form-group">
+            <input v-model="email" type="email" :placeholder="$t('contact.email')" />
           </div>
+          <div class="form-group">
+            <textarea v-model="message" rows="5" :placeholder="$t('contact.message')"></textarea>
+          </div>
+          <div v-if="error" class="form-error">{{ error }}</div>
+          <button class="btn1 contact-btn" type="submit">{{ $t('contact.cta') }}</button>
+          <div class="contact-privacy">{{ $t('contact.privacy') }}</div>
+        </form>
+        <div v-else class="form-success">
+          <h3>{{ $t('contact.successTitle') }}</h3>
+          <p>{{ $t('contact.successText') }}</p>
         </div>
       </div>
     </div>
   </section>
-
 </template>
 
 <style scoped>
-
-.spacer {
-  margin-bottom: 40px;
-}
-
-.center {
-  margin: auto auto;
-}
-
-.app-form-error {
-  color: var(--kelepar-color-error);
-}
-
-.app-form-width {
+.contact-container {
+  max-width: 500px;
+  margin: 0 auto;
+  padding: 10rem 1rem 7rem 1rem;
   text-align: center;
-  background: rgb(13, 33, 73);
-  background: linear-gradient(0deg, rgba(13, 33, 73, 1) 0%, rgba(13, 33, 73, 0) 91%, rgba(13, 33, 73, 0) 100%);
-  border-radius: 10px;
-  margin: auto auto;
-  max-width: 60vw;
 }
-
-.app-form-control {
+@media (max-width: 900px) {
+  .contact-container {
+    padding-top: 9rem;
+    padding-bottom: 6rem;
+  }
+}
+h2 {
+  font-size: var(--h2-desktop);
+  color: var(--kelepar-color-main);
+  margin-bottom: 2.5rem;
+  font-weight: 700;
+}
+.contact-card {
+  background: #fff;
+  border-radius: var(--border-radius);
+  box-shadow: var(--box-shadow);
+  padding: 2.5rem 2rem 2rem 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.form-group {
   width: 100%;
-  padding: 10px 0;
-  margin: 10px 0;
-  background: none;
-  border: none;
-  border-bottom: 1px solid var(--kelepar-color-neutral);
-  color: var(--kelepar-color-neutral);
-  font-size: 14px;
-  text-transform: uppercase;
+  margin-bottom: 1.5rem;
+}
+input, textarea {
+  width: 100%;
+  padding: 1em;
+  border-radius: var(--border-radius);
+  border: 1px solid var(--kelepar-color-second);
+  background: var(--kelepar-color-second);
+  color: var(--kelepar-color-black);
+  font-size: 1.1em;
   outline: none;
-  transition: border-color .2s;
+  transition: border-color 0.2s;
 }
-
-.app-form-control::placeholder {
-  color: var(--kelepar-color-neutral);
+input:focus, textarea:focus {
+  border-color: var(--kelepar-color-highlight-one);
 }
-
-.app-form-control:focus::placeholder {
-  color: var(--kelepar-color-highlight-one);
-}
-
-.app-form-control:focus {
-  border-bottom-color: var(--kelepar-color-highlight-one);
-}
-
-.app-form-button {
-  flex: 1 1 auto;
-  border-radius: 0;
-  padding: 10px 25px !important;
-  text-align: center;
-  background-size: 150% auto;
-  text-transform: uppercase;
-  text-decoration: none;
-  transition: 500ms;
-  border: 1px solid;
-  color: var(--kelepar-color-highlight-one) !important;
-  background-image: var(--kelepar-color-highlight-one);
-  background-color: transparent;
-  margin: 10px 0 30px 0;
-}
-
-.app-form-button:before {
-  content: "";
-  position: absolute;
-  top: 1px;
-  right: 1px;
-  bottom: 1px;
-  left: 1px;
-  z-index: -1;
-}
-
-.app-form-button:hover {
-  background-position: right center;
-  -webkit-box-shadow: 0 0 10px 5px var(--kelepar-color-highlight-one);
-  -moz-box-shadow: 0 0 10px 5px var(--kelepar-color-highlight-one);
-  box-shadow: 0 0 10px 5px var(--kelepar-color-highlight-one);
-}
-
-.main-container {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  min-height: 100vh;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  text-align: center;
-  flex-direction: column;
-}
-
-.content {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  min-height: 100vh;
-}
-
-.content-img {
-  background-image: url(../assets/img/banners/intro_background.webp);
+.contact-btn {
   width: 100%;
-  background-repeat: no-repeat;
-  background-position: top center;
-  background-size: cover;
+  margin-top: 0.5rem;
+  font-size: 1.1em;
+  padding: 0.8em 0;
 }
-
-a {
-  display: inline-block;
-  padding: 0 1rem;
-  text-decoration: none;
-  transition: 0.4s;
-  color: var(--kelepar-color-highlight-one);
+.form-error {
+  color: var(--kelepar-color-error);
+  margin-bottom: 1rem;
 }
-
-h1 {
-  font-size: var(--h1-desktop);
-  letter-spacing: 3px;
-  text-transform: uppercase;
-  font-weight: bold;
+.form-success {
+  text-align: center;
+  color: var(--kelepar-color-main);
 }
-
-p {
-  font-size: 30px;
-  margin: 0 0 20px 0;
+.form-success h3 {
+  margin-bottom: 1rem;
 }
-
-@media (max-width: 1200px) {
-  .app-form-width {
-    max-width: 80vw;
-  }
-}
-
-@media (max-width: 768px) {
-  h1 {
-    font-size: var(--h2-mobile);
-  }
-
-  p {
-    font-size: var(--h3-mobile);
-  }
-}
-
-@media (min-width: 575px) {
-  .mvh-100 {
-    min-height: 100vh;
-  }
-}
-
-
-@media (max-width: 768px) {
-  h1 {
-    font-size: var(--h2-mobile);
-  }
-
-  p {
-    font-size: var(--h3-mobile);
-  }
-
-  .content {
-    justify-content: flex-start;
-  }
-
-  .app-form-width {
-    max-width: 100vw;
-  }
-}
-
-@media (max-width: 300px) {
-  h1 {
-    font-size: var(--h3-mobile);
-  }
-
-  p {
-    font-size: var(--h4-mobile);
-  }
+.contact-privacy {
+  margin-top: 1.5rem;
+  font-size: 0.95em;
+  color: var(--kelepar-color-black);
+  opacity: 0.7;
 }
 </style>
-<script setup></script>

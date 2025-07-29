@@ -1,84 +1,91 @@
 <script setup></script>
 
 <template>
-  <div class="container">
-    <div class="footer-border content">
-      <div class="text">
-        <p>Made with ❤️ in Switzerland</p>
-      </div>
-      <div class="text d-inline-block">
-        <p class="d-inline-block">© 2025 </p>
-        <a class="footer-link d-inline-block" href="https://kelepar.com" aria-label="Link to Kelepar">Kelepar
-          GmbH</a>
-        <p class="d-inline-block"> All rights reserved.</p>
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-brand">
+          <img src="@/assets/img/logos/kelepar_k.png" width="40" height="40" alt="Kelepar Logo">
+          <span>Kelepar GmbH – Swiss AI Consulting</span>
+        </div>
+        <div class="footer-links">
+          <a href="/#aboutus">{{ $t('aboutus') }}</a>
+          <a href="/#competences">{{ $t('competences') }}</a>
+          <a href="/contact">{{ $t('contact') }}</a>
+        </div>
+        <div class="footer-meta">
+          <span>© 2025 Kelepar GmbH</span>
+          <span>Made with ❤️ in Switzerland</span>
+          <a href="/datenschutz">{{ $t('privacy') }}</a>
+        </div>
       </div>
     </div>
-  </div>
+  </footer>
 </template>
 
 <style scoped>
-
-h2 {
-  font-size: 20px;
-  color: var(--kelepar-color-neutral);
+.footer {
+  background: var(--kelepar-color-neutral);
+  border-radius: var(--border-radius) var(--border-radius) 0 0;
+  box-shadow: var(--box-shadow);
+  padding: 2rem 0 1rem 0;
+  margin-top: 4rem;
 }
-
-p {
-  font-size: 16px;
-  display: flex;
-  place-content: center;
-  align-items: center;
-  color: var(--kelepar-color-neutral);
-}
-
 .container {
-  padding: 40px 20px 10px 20px;
-  background-color: var(--kelepar-color-second);
-}
-
-.footer-link {
-  padding-left: 5px;
-  padding-right: 5px;
-  color: var(--kelepar-color-highlight-one);
-  text-decoration: none;
-}
-
-.content {
-  min-width: auto;
+  max-width: 1200px;
   margin: 0 auto;
+  padding: 0 2rem;
+}
+.footer-content {
   display: flex;
-  place-content: center;
   flex-direction: column;
   align-items: center;
+  gap: 1.5rem;
 }
-
-.footer-border {
-  max-width: 1450px;
-  padding: 30px 0;
+.footer-brand {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  font-weight: 600;
+  color: var(--kelepar-color-main);
+  font-size: 1.2em;
 }
-
-.links a {
+.footer-links {
+  display: flex;
+  gap: 2rem;
+}
+.footer-links a {
   color: var(--kelepar-color-highlight-one);
-  transition: 0.4s;
-  padding: 15px 25px;
   text-decoration: none;
-  text-align: left;
+  font-weight: 500;
+  font-size: 1em;
+  transition: color 0.2s;
 }
-
-.social a {
+.footer-links a:hover {
+  color: var(--kelepar-color-highlight-two);
+}
+.footer-meta {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.3rem;
+  color: var(--kelepar-color-black);
+  font-size: 0.95em;
+}
+.footer-meta a {
   color: var(--kelepar-color-highlight-one);
-  text-align: left;
-  transition: 0.4s;
+  text-decoration: underline;
+  font-size: 0.95em;
 }
-
-.links a:hover,
-.social a:hover {
-  text-decoration: none;
-  color: var(--kelepar-color-highlight-one);
-}
-
-.text {
-  padding: 5px 0 0 0;
-  text-align: center;
+@media (max-width: 900px) {
+  .container {
+    padding: 0 1rem;
+  }
+  .footer-content {
+    gap: 1rem;
+  }
+  .footer-links {
+    gap: 1rem;
+  }
 }
 </style>

@@ -1,0 +1,86 @@
+{
+  "welcome": "Willkommen bei Kelepar GmbH",
+  "services": "Unsere Dienstleistungen",
+  "hero": {
+    "title": "Vertrauen. Innovation. Swiss Made.",
+    "subtitle": "Künstliche Intelligenz für Schweizer KMU – Swiss Made, datenschutzkonform, persönlich.",
+    "cta": "Jetzt unverbindlich beraten lassen"
+  },
+  "competences": "Kompetenzen",
+  "competences.title": "Kompetenzen",
+  "team": "Team",
+  "team.title": "Team",
+  "contact": "Kontakt",
+  "privacy": "Datenschutz",
+  "aboutus": "Über uns",
+  "contact.title": "Kontakt aufnehmen",
+  "contact.name": "Ihr Name",
+  "contact.email": "Ihre E-Mail",
+  "contact.message": "Ihre Nachricht",
+  "contact.cta": "Nachricht senden",
+  "contact.privacy": "Mit dem Absenden stimmen Sie der Verarbeitung Ihrer Daten gemäß Schweizer Datenschutz zu.",
+  "aboutus_section": {
+    "title": "Über uns",
+    "text": "Wir sind Ihr Schweizer Partner für KI-Lösungen. Mit Leidenschaft, Know-how und höchsten Datenschutz-Standards begleiten wir KMU auf dem Weg in die digitale Zukunft. Vertrauen Sie auf Swiss Made AI – persönlich, sicher, effizient.",
+    "cta": "Jetzt Kontakt aufnehmen"
+  },
+  "contact_section": {
+    "title": "Kontakt aufnehmen",
+    "name": "Ihr Name",
+    "email": "Ihre E-Mail",
+    "message": "Ihre Nachricht",
+    "cta": "Nachricht senden",
+    "privacy": "Mit dem Absenden stimmen Sie der Verarbeitung Ihrer Daten gemäß Schweizer Datenschutz zu.",
+    "successTitle": "Vielen Dank!",
+    "successText": "Ihre Nachricht wurde erfolgreich übermittelt. Wir melden uns so schnell wie möglich."
+  },
+  "privacy_section": {
+    "title": "Datenschutzerklärung",
+    "intro": "Diese Datenschutzerklärung informiert Sie über die Art, den Umfang und Zweck der Verarbeitung von personenbezogenen Daten auf dieser Website.",
+    "responsible": "Verantwortlicher",
+    "responsible_text": "Kelepar GmbH<br>Museggstrasse 17<br>6004 Luzern, Schweiz<br>E-Mail: info@kelepar.com",
+    "data_collection": "Erhebung und Verarbeitung von Daten",
+    "data_collection_text": "Wir erheben und verarbeiten personenbezogene Daten nur im notwendigen Umfang und ausschließlich für die angegebenen Zwecke.",
+    "your_rights": "Ihre Rechte",
+    "your_rights_text": "Sie haben das Recht auf Auskunft, Berichtigung, Löschung und Einschränkung der Verarbeitung Ihrer personenbezogenen Daten.",
+    "contact": "Kontakt",
+    "contact_text": "Bei Fragen zum Datenschutz kontaktieren Sie uns gerne unter info@kelepar.com",
+    "back_home": "Zurück zur Startseite"
+  },
+  "competences_section": {
+    "ai_consulting": {
+      "title": "AI Consulting",
+      "desc": "Individuelle Beratung und Umsetzung von KI-Lösungen für KMU in der Schweiz."
+    },
+    "efficiency_ai": {
+      "title": "Effizienz mit AI",
+      "desc": "Automatisieren Sie Prozesse und steigern Sie Ihre Produktivität mit künstlicher Intelligenz."
+    },
+    "data_protection": {
+      "title": "Datenschutz",
+      "desc": "Ihre Daten bleiben sicher – Speicherung und Verarbeitung ausschliesslich in der Schweiz."
+    },
+    "swiss_made": {
+      "title": "Swiss Made",
+      "desc": "Lösungen und Beratung aus der Schweiz, für die Schweiz. Qualität, Zuverlässigkeit, Nähe."
+    },
+    "ai_integration": {
+      "title": "KI-Integration",
+      "desc": "Nahtlose Integration von KI-Funktionen in Ihre bestehenden Geschäftsprozesse und Systeme."
+    }
+  },
+  "team_section": {
+    "lukas": {
+      "role": "CEO & Co-Founder",
+      "desc": "Unternehmer, Analyst und Investor mit Leidenschaft für KI und Digitalisierung. Bringt Business und Technologie zusammen."
+    },
+    "lars": {
+      "role": "CTO & Co-Founder",
+      "desc": "Software Engineer mit Fokus auf innovative Lösungen und sichere IT. Begeistert von AI und Swiss Quality."
+    },
+    "luca": {
+      "role": "Full Stack Developer",
+      "desc": "Business-IT-Experte und kreativer Entwickler. Baut nutzerzentrierte Web-Erlebnisse mit einem Auge für Datenschutz."
+    }
+  }
+}

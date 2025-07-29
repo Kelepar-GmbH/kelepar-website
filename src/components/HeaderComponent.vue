@@ -1,13 +1,26 @@
 <script setup>
 // imports
-import {RouterLink} from 'vue-router';
-import {onMounted, ref} from "vue";
+import { RouterLink } from 'vue-router';
+import { onMounted, ref } from "vue";
+import { useI18n } from 'vue-i18n'
 
-// global variables
+const { locale } = useI18n()
+const mobileView = ref(false);
+
+function openMobileMenu() {
+  mobileView.value = true;
+}
+function closeMobileMenu() {
+  mobileView.value = false;
+}
+function setLanguage(lang) {
+  locale.value = lang
+  localStorage.setItem('lang', lang)
+  closeMobileMenu();
+}
+
+// Optional: Scroll-Header-Blur (kann später optimiert werden)
 let scrollPosition = null;
-let mobileView = ref(false);
-
-// change color on scroll event
 function updateScroll() {
   scrollPosition = window.scrollY;
   const header = document.querySelector(".header");
@@ -19,31 +32,6 @@ function updateScroll() {
     header.classList.add("no-blur");
   }
 }
-
-// navbar function
-function makeMobile() {
-  mobileView.value = true;
-  document.querySelector(".logo").classList.add("hidden");
-  const container = document.querySelector(".container");
-  const items = document.querySelectorAll(".nav-content");
-  items.forEach((item) => {
-    item.classList.toggle("desktop-view");
-  });
-  container.classList.toggle("header-mobile");
-}
-
-function reset() {
-  mobileView.value = false;
-  document.querySelector(".logo").classList.remove("hidden");
-  const container = document.querySelector(".container");
-  const items = document.querySelectorAll(".nav-content");
-  items.forEach((item) => {
-    item.classList.add("desktop-view");
-  });
-  container.classList.remove("header-mobile");
-}
-
-// event listener on mount
 onMounted(() => {
   window.addEventListener('scroll', updateScroll);
 })
@@ -52,275 +40,244 @@ onMounted(() => {
 <template>
   <div class="header no-blur">
     <div class="container">
-      <nav class="grid">
+      <nav class="header-nav">
+        <!-- Logo -->
         <div class="logo">
           <RouterLink :to="{ name: 'Home' }">
-            <img src="@/assets/img/logos/kelepar_k.png" width="75" height="75" alt="Icon">
+            <img src="@/assets/img/logos/kelepar_k.png" width="60" height="60" alt="Kelepar Logo">
           </RouterLink>
         </div>
-        <div class="nav-content desktop-view">
-          <ul class="links">
-            <li @click="reset">
-              <a href="/#aboutus">About us</a>
-            </li>
-            <li @click="reset">
-              <a href="/#team">Team</a>
-            </li>
-          </ul>
-        </div>
-        <ul class="play nav-content desktop-view">
-          <li @click="reset">
-            <div>
-              <a class="btn2" href="/contact" target="_self"
-                 aria-label="Contact us">Contact us</a>
-            </div>
-          </li>
+        <!-- Desktop Navigation -->
+        <ul class="nav-links desktop-only">
+          <li><a href="/#aboutus">{{ $t('aboutus') }}</a></li>
+          <li><a href="/#team">{{ $t('team') }}</a></li>
+          <li><a href="/#competences">{{ $t('competences') }}</a></li>
         </ul>
+        <div class="nav-cta desktop-only">
+          <RouterLink class="btn1" to="/contact">{{ $t('contact') }}</RouterLink>
+        </div>
+        <div class="lang-switch desktop-only">
+          <button :class="locale === 'de' ? 'active' : ''" @click="setLanguage('de')">DE</button>
+          <button :class="locale === 'en' ? 'active' : ''" @click="setLanguage('en')">EN</button>
+        </div>
+        <!-- Hamburger Icon (Mobile) -->
+        <button class="hamburger mobile-only" @click="openMobileMenu" aria-label="Open menu">
+          <img src="@/assets/img/icons/menu.svg" width="32" height="32" alt="Menu">
+        </button>
       </nav>
-      <div v-if="!mobileView" id="hamburger" class="hamburger" @click="makeMobile">
-        <img src="@/assets/img/icons/menu.svg" width="30" height="30" alt="open menu">
-      </div>
-      <div v-else id="cross" class="cross" @click="reset">
-        <img src="@/assets/img/icons/cross.svg" width="28" height="28" alt="close menu">
+    </div>
+    <!-- Mobile Overlay Navigation -->
+    <div v-if="mobileView" class="mobile-menu-overlay">
+      <div class="mobile-menu-content">
+        <button class="close-btn" @click="closeMobileMenu" aria-label="Close menu">
+          <img src="@/assets/img/icons/cross.svg" width="28" height="28" alt="Close">
+        </button>
+        <ul class="nav-links-mobile">
+          <li><a href="/#aboutus" @click="closeMobileMenu">{{ $t('aboutus') }}</a></li>
+          <li><a href="/#team" @click="closeMobileMenu">{{ $t('team') }}</a></li>
+          <li><a href="/#competences" @click="closeMobileMenu">{{ $t('competences') }}</a></li>
+        </ul>
+        <RouterLink class="btn1 mobile-cta" to="/contact" @click="closeMobileMenu">{{ $t('contact') }}</RouterLink>
+        <div class="lang-switch-mobile">
+          <button :class="locale === 'de' ? 'active' : ''" @click="setLanguage('de')">DE</button>
+          <button :class="locale === 'en' ? 'active' : ''" @click="setLanguage('en')">EN</button>
+        </div>
       </div>
     </div>
   </div>
 </template>
 
 <style scoped>
-
-/* Tags */
-li {
-  list-style: none;
-  padding: 4px 0;
-  margin: 0 15px;
-  transition: all .5s ease-in-out;
-  letter-spacing: 0;
-  float: left;
-}
-
-ul {
-  margin-bottom: 1rem;
-  margin-top: 0;
-  margin-block-start: 1em;
-  margin-block-end: 1em;
-  margin-inline-start: 0;
-  margin-inline-end: 0;
-  padding-inline-start: 40px;
-}
-
-nav {
-  float: right;
-}
-
-nav a {
-  display: inline-block;
-  padding: 0 1rem;
-  text-decoration: none;
-  transition: 0.4s;
-  color: var(--kelepar-color-neutral);
-}
-
-nav a:hover {
-  text-decoration: none;
-  color: var(--kelepar-color-highlight-one);
-}
-
-nav a:active {
-  color: var(--kelepar-color-highlight-one);
-}
-
-/* Classes */
 .header {
-  left: 0;
   width: 100%;
   position: fixed;
   top: 0;
-  transition: all .5s cubic-bezier(.87, 0, .13, 1);
-  z-index: 10;
-  margin: 0 auto;
+  left: 0;
+  z-index: 100;
+  background: var(--kelepar-color-neutral);
+  box-shadow: var(--box-shadow);
+  border-radius: 0 0 var(--border-radius) var(--border-radius);
+  transition: background 0.3s, box-shadow 0.3s;
 }
-
-.no-blur {
-  background: linear-gradient(180deg, rgba(16, 15, 33, 1.0) 0%, rgba(16, 15, 33, 0) 100%);
-  transition: all .3s cubic-bezier(.87, 0, .13, 1);
-  height: 200px;
-  padding: 45px 0;
-}
-
-.blur {
-  background: rgba(16, 15, 33, 0.95);
-  transition: all .3s cubic-bezier(.87, 0, .13, 1);
-  height: 100px;
-  padding: 15px 0;
-}
-
-.grid {
-  display: grid;
-  justify-content: center;
-  place-content: center;
-  grid-template-columns: 72px auto 310px auto;
-}
-
 .container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0.5rem 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.header-nav {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+}
+.logo img {
+  border-radius: var(--border-radius);
+  box-shadow: 0 2px 8px 0 rgba(30, 34, 90, 0.08);
+  background: #fff;
+}
+.nav-links {
+  display: flex;
+  gap: 2rem;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.nav-links li a {
+  color: var(--kelepar-color-main);
+  font-weight: 500;
+  font-size: 1.1em;
+  text-decoration: none;
+  padding: 0.5em 0.8em;
+  border-radius: var(--border-radius);
+  transition: background 0.2s, color 0.2s;
+}
+.nav-links li a:hover {
+  background: var(--kelepar-color-highlight-two);
+  color: #fff;
+}
+.nav-cta {
+  margin-left: 1rem;
+}
+.lang-switch {
+  display: flex;
+  gap: 0.5rem;
+}
+.lang-switch button {
+  background: none;
+  border: 1px solid var(--kelepar-color-main);
+  color: var(--kelepar-color-main);
+  border-radius: var(--border-radius);
+  padding: 0.3em 0.9em;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background 0.2s, color 0.2s;
+}
+.lang-switch button.active,
+.lang-switch button:hover {
+  background: var(--kelepar-color-highlight-one);
+  color: #fff;
+  border-color: var(--kelepar-color-highlight-one);
+}
+.hamburger {
+  background: none;
+  border: none;
+  cursor: pointer;
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 100%;
-  margin: 0 auto;
-  place-items: center;
-  flex-wrap: wrap;
+  padding: 0.3em;
 }
-
-.logo {
-  float: left;
-}
-
-.play {
-  margin: 6px auto;
-  padding: 0 0 0 80px;
-}
-
-.social {
-  padding: 0 0 0 80px;
-  margin-left: 25px;
-}
-
-.social a {
-  color: var(--kelepar-color-neutral);
-  text-align: left;
-  transition: 0.4s;
-}
-
-.social a:hover {
-  text-decoration: none;
-  color: var(--kelepar-color-highlight-one);
-}
-
-.social li {
+.desktop-only {
   display: flex;
-  margin: 0;
 }
-
-@media (max-width: 1458px) {
-  .links {
-    margin-block-start: 0;
+.mobile-only {
+  display: none;
+}
+@media (max-width: 900px) {
+  .desktop-only {
+    display: none !important;
+  }
+  .mobile-only {
+    display: flex !important;
   }
 }
-
-/**********/
-/* MOBILE */
-/**********/
-
-.hamburger {
-  opacity: 0;
-  cursor: pointer;
-  background: transparent;
+/* Mobile Overlay */
+.mobile-menu-overlay {
+  position: fixed;
   top: 0;
-  right: 0;
-  color: var(--kelepar-color-neutral);
-  width: 30px;
-  height: auto;
-  position: absolute;
-  margin: 40px 20px;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(255,255,255,0.98);
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  animation: fadeIn 0.2s;
 }
-
-.cross {
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+.mobile-menu-content {
+  width: 90vw;
+  max-width: 400px;
+  background: #fff;
+  border-radius: var(--border-radius);
+  box-shadow: var(--box-shadow);
+  padding: 2.5rem 1.5rem 2rem 1.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+}
+.close-btn {
+  position: absolute;
+  top: 1.2rem;
+  right: 1.2rem;
+  background: none;
+  border: none;
   cursor: pointer;
-  background: transparent;
-  top: 0;
-  right: 0;
-  color: var(--kelepar-color-highlight-one);
-  width: 30px;
-  height: auto;
-  position: absolute;
-  margin: 40px 20px;
+  padding: 0.2em;
 }
-
-@media (max-width: 1200px) {
-
-  li {
-    margin: 15px 15px;
-  }
-
-  .header-mobile {
-    background: rgba(16, 15, 33, 0.97);
-    position: fixed;
-    padding: 0;
-    margin: 0;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-  }
-
-  @supports (backdrop-filter: blur(1rem)) {
-    .header-mobile {
-      background: rgba(16, 15, 33, 0.5);
-      backdrop-filter: blur(1rem);
-    }
-  }
-
-  .grid {
-    display: flex;
-    justify-content: center;
-    place-content: center;
-    flex-direction: column;
-    grid-template-columns: none;
-  }
-
-  .hamburger {
-    opacity: 1;
-  }
-
-  .hidden {
-    opacity: 0;
-  }
-
-  .links,
-  .logo {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    place-content: center;
-    flex-direction: column;
-  }
-
-  .logo {
-    float: none;
-  }
-
-  .no-blur {
-    padding: 25px 0;
-    height: 120px;
-  }
-
-  .desktop-view {
-    display: none;
-  }
-
-  .blur {
-    padding: 12px 0;
-    height: 94px;
-  }
-
-  .links,
-  .play,
-  .social {
-    padding: 0;
-  }
-
-  .play {
-    margin: 15px auto;
-  }
-
-  .social {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    place-content: center;
-    flex-direction: row;
-    margin-left: 0;
-  }
+.nav-links-mobile {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  list-style: none;
+  margin: 2.5rem 0 1.5rem 0;
+  padding: 0;
+  width: 100%;
+  align-items: center;
+}
+.nav-links-mobile li a {
+  color: var(--kelepar-color-main);
+  font-weight: 600;
+  font-size: 1.2em;
+  text-decoration: none;
+  padding: 0.7em 0.8em;
+  border-radius: var(--border-radius);
+  transition: background 0.2s, color 0.2s;
+  width: 100%;
+  display: block;
+  text-align: center;
+}
+.nav-links-mobile li a:hover {
+  background: var(--kelepar-color-highlight-two);
+  color: #fff;
+}
+.mobile-cta {
+  width: 100%;
+  margin: 1.2rem 0 0.7rem 0;
+  font-size: 1.1em;
+  padding: 1em 0;
+  border-radius: var(--border-radius);
+  text-align: center;
+}
+.lang-switch-mobile {
+  display: flex;
+  gap: 0.7rem;
+  margin-top: 0.7rem;
+  justify-content: center;
+}
+.lang-switch-mobile button {
+  background: none;
+  border: 1px solid var(--kelepar-color-main);
+  color: var(--kelepar-color-main);
+  border-radius: var(--border-radius);
+  padding: 0.3em 1.1em;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background 0.2s, color 0.2s;
+}
+.lang-switch-mobile button.active,
+.lang-switch-mobile button:hover {
+  background: var(--kelepar-color-highlight-one);
+  color: #fff;
+  border-color: var(--kelepar-color-highlight-one);
 }
 </style>

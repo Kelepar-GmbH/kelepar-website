@@ -1,0 +1,86 @@
+{
+  "welcome": "Welcome to Kelepar GmbH",
+  "services": "Our Services",
+  "hero": {
+    "title": "Trust. Innovation. Swiss Made.",
+    "subtitle": "Artificial Intelligence for Swiss SMEs – Swiss Made, privacy-first, personal.",
+    "cta": "Get your free consultation"
+  },
+  "competences": "Competences",
+  "competences.title": "Competences",
+  "team": "Team",
+  "team.title": "Team",
+  "contact": "Contact",
+  "privacy": "Privacy",
+  "aboutus": "About us",
+  "contact.title": "Contact us",
+  "contact.name": "Your name",
+  "contact.email": "Your email",
+  "contact.message": "Your message",
+  "contact.cta": "Send message",
+  "contact.privacy": "By submitting, you agree to the processing of your data according to Swiss data protection laws.",
+  "aboutus_section": {
+    "title": "About us",
+    "text": "We are your Swiss partner for AI solutions. With passion, expertise and the highest data protection standards, we guide SMEs into the digital future. Rely on Swiss Made AI – personal, secure, efficient.",
+    "cta": "Contact us now"
+  },
+  "contact_section": {
+    "title": "Contact us",
+    "name": "Your name",
+    "email": "Your email",
+    "message": "Your message",
+    "cta": "Send message",
+    "privacy": "By submitting, you agree to the processing of your data according to Swiss data protection laws.",
+    "successTitle": "Thank you!",
+    "successText": "Your message has been sent successfully. We will get back to you as soon as possible."
+  },
+  "privacy_section": {
+    "title": "Privacy Policy",
+    "intro": "This privacy policy informs you about the nature, scope and purpose of the processing of personal data on this website.",
+    "responsible": "Responsible",
+    "responsible_text": "Kelepar GmbH<br>Museggstrasse 17<br>6004 Lucerne, Switzerland<br>Email: info@kelepar.com",
+    "data_collection": "Data Collection and Processing",
+    "data_collection_text": "We collect and process personal data only to the extent necessary and exclusively for the specified purposes.",
+    "your_rights": "Your Rights",
+    "your_rights_text": "You have the right to information, correction, deletion and restriction of the processing of your personal data.",
+    "contact": "Contact",
+    "contact_text": "If you have any questions about data protection, please contact us at info@kelepar.com",
+    "back_home": "Back to Homepage"
+  },
+  "competences_section": {
+    "ai_consulting": {
+      "title": "AI Consulting",
+      "desc": "Individual consulting and implementation of AI solutions for Swiss SMEs."
+    },
+    "efficiency_ai": {
+      "title": "Efficiency with AI",
+      "desc": "Automate processes and increase your productivity with artificial intelligence."
+    },
+    "data_protection": {
+      "title": "Data Protection",
+      "desc": "Your data stays secure – storage and processing exclusively in Switzerland."
+    },
+    "swiss_made": {
+      "title": "Swiss Made",
+      "desc": "Solutions and consulting from Switzerland, for Switzerland. Quality, reliability, proximity."
+    },
+    "ai_integration": {
+      "title": "AI Integration",
+      "desc": "Seamless integration of AI functions into your existing business processes and systems."
+    }
+  },
+  "team_section": {
+    "lukas": {
+      "role": "CEO & Co-Founder",
+      "desc": "Entrepreneur, analyst and investor with a passion for AI and digitalization. Brings business and technology together."
+    },
+    "lars": {
+      "role": "CTO & Co-Founder",
+      "desc": "Software engineer with focus on innovative solutions and secure IT. Enthusiastic about AI and Swiss quality."
+    },
+    "luca": {
+      "role": "Full Stack Developer",
+      "desc": "Business-IT expert and creative developer. Builds user-centered web experiences with an eye for data protection."
+    }
+  }
+}
