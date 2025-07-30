@@ -41,9 +41,31 @@ p, .text {
 }
 
 .gradiant-text {
-    background: -webkit-linear-gradient(144deg, #3c0150 0%, #AF40FF 30%, #5B42F3 70%) padding-box;
+    background: linear-gradient(135deg, var(--kelepar-color-highlight-one) 0%, var(--kelepar-color-highlight-two) 50%, var(--kelepar-color-accent) 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+/* AI-inspired gradient backgrounds */
+.ai-gradient-bg {
+    background: linear-gradient(135deg, var(--kelepar-color-highlight-one) 0%, var(--kelepar-color-highlight-two) 100%);
+}
+
+.ai-gradient-text {
+    background: linear-gradient(135deg, var(--kelepar-color-highlight-one), var(--kelepar-color-highlight-two));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+/* Subtle glow effects for AI feel */
+.ai-glow {
+    box-shadow: 0 0 20px rgba(99, 102, 241, 0.1);
+}
+
+.ai-glow:hover {
+    box-shadow: 0 0 30px rgba(99, 102, 241, 0.2);
 }
 
 /*************/
@@ -88,25 +110,39 @@ p, .text {
 }
 
 .btn1 {
-    background: var(--kelepar-color-highlight-one);
+    background: linear-gradient(135deg, var(--kelepar-color-highlight-one), var(--kelepar-color-highlight-two));
     color: #fff;
     text-decoration: none;
+    border: none;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
 }
 
 .btn1:hover {
-    background: var(--kelepar-color-highlight-two);
+    background: linear-gradient(135deg, var(--kelepar-color-highlight-two), var(--kelepar-color-accent));
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(99, 102, 241, 0.3);
     text-decoration: none;
+}
+
+.btn1:active {
+    transform: translateY(0);
 }
 
 .btn2 {
-    background: #fff;
+    background: transparent;
     color: var(--kelepar-color-highlight-one);
     border: 2px solid var(--kelepar-color-highlight-one);
     text-decoration: none;
+    transition: all 0.3s ease;
 }
 
 .btn2:hover {
-    background: var(--kelepar-color-highlight-one);
+    background: linear-gradient(135deg, var(--kelepar-color-highlight-one), var(--kelepar-color-highlight-two));
     color: #fff;
+    border-color: transparent;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(99, 102, 241, 0.2);
     text-decoration: none;
 }

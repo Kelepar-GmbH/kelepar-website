@@ -1,6 +1,6 @@
-# Kelepar GmbH - Swiss AI Consulting Website
+# Kelepar GmbH - Swiss AI Website
 
-Eine moderne, professionelle Website für die Kelepar GmbH, spezialisiert auf Swiss AI Consulting mit Fokus auf Datenschutz und Schweizer Qualität.
+Eine moderne, professionelle Website für die Kelepar GmbH, spezialisiert auf Swiss AI mit Fokus auf Datenschutz und Schweizer Qualität.
 
 ## 🚀 Features
 

@@ -14,7 +14,7 @@ const router = createRouter({
             name: 'Home',
             component: Home,
             meta: {
-                title: 'Kelepar GmbH - Swiss AI Consulting',
+                title: 'Kelepar GmbH - Swiss AI',
                 description: 'Vertrauen. Innovation. Swiss Made. Ihr Schweizer Partner für KI-Lösungen mit höchsten Datenschutz-Standards.'
             }
         },

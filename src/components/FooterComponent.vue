@@ -6,7 +6,7 @@
       <div class="footer-content">
         <div class="footer-brand">
           <img src="@/assets/img/logos/kelepar_k.png" width="40" height="40" alt="Kelepar Logo">
-          <span>Kelepar GmbH – Swiss AI Consulting</span>
+          <span>Kelepar GmbH – Swiss AI</span>
         </div>
         
         <div class="footer-links">

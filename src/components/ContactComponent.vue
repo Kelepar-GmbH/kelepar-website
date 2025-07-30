@@ -185,7 +185,7 @@ const trackFormInteraction = (field) => {
             <p>{{ $t('contact.privacy') }}</p>
             <p class="privacy-links">
               <a href="/privacy" target="_blank">{{ $t('privacy') }}</a> | 
-              <a href="/agb" target="_blank">{{ $t('agb') }}</a>
+              <a href="/agb" target="_blank">AGB</a>
             </p>
           </div>
         </form>
@@ -232,11 +232,19 @@ h2 {
 .contact-card {
   background: var(--kelepar-color-neutral);
   border-radius: var(--border-radius);
-  box-shadow: var(--box-shadow);
+  box-shadow: 0 8px 32px rgba(99, 102, 241, 0.1);
+  border: 1px solid rgba(99, 102, 241, 0.1);
   padding: 2.5rem 2rem 2rem 2rem;
   display: flex;
   flex-direction: column;
   align-items: center;
+  backdrop-filter: blur(10px);
+  transition: all 0.3s ease;
+}
+
+.contact-card:hover {
+  box-shadow: 0 12px 40px rgba(99, 102, 241, 0.15);
+  transform: translateY(-2px);
 }
 
 .form-group {
@@ -258,7 +266,8 @@ input, textarea {
 
 input:focus, textarea:focus {
   border-color: var(--kelepar-color-highlight-one);
-  box-shadow: 0 0 0 3px rgba(30, 34, 90, 0.1);
+  box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.1);
+  background: var(--kelepar-color-neutral);
 }
 
 input:disabled, textarea:disabled {

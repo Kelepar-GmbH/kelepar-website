@@ -29,13 +29,15 @@ import { RouterLink } from 'vue-router';
   display: flex;
   align-items: center;
   justify-content: center;
-  background: var(--kelepar-color-second);
+  background: linear-gradient(135deg, var(--kelepar-color-second) 0%, rgba(99, 102, 241, 0.02) 100%);
   border-radius: var(--border-radius);
-  box-shadow: var(--box-shadow);
+  box-shadow: 0 8px 32px rgba(99, 102, 241, 0.08);
+  border: 1px solid rgba(99, 102, 241, 0.05);
   margin-top: 5rem;
   margin-bottom: 2rem;
   position: relative;
   overflow: hidden;
+  backdrop-filter: blur(10px);
 }
 
 .hero-background {
@@ -50,9 +52,10 @@ import { RouterLink } from 'vue-router';
 .bg-circle {
   position: absolute;
   border-radius: 50%;
-  background: linear-gradient(135deg, var(--kelepar-color-highlight-one), var(--kelepar-color-highlight-two));
-  opacity: 0.1;
+  background: linear-gradient(135deg, var(--kelepar-color-highlight-one), var(--kelepar-color-highlight-two), var(--kelepar-color-accent));
+  opacity: 0.08;
   animation: float 6s ease-in-out infinite;
+  filter: blur(1px);
 }
 
 .bg-circle-1 {
@@ -81,9 +84,10 @@ import { RouterLink } from 'vue-router';
 
 .bg-square {
   position: absolute;
-  background: linear-gradient(45deg, var(--kelepar-color-main), var(--kelepar-color-highlight-one));
-  opacity: 0.08;
+  background: linear-gradient(45deg, var(--kelepar-color-highlight-one), var(--kelepar-color-highlight-two), var(--kelepar-color-accent));
+  opacity: 0.06;
   animation: rotate 8s linear infinite;
+  filter: blur(0.5px);
 }
 
 .bg-square-1 {

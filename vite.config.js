@@ -11,7 +11,7 @@ export default defineConfig({
       registerType: 'autoUpdate',
       includeAssets: ['favicon.ico', 'apple-touch-icon.png', 'masked-icon.svg'],
       manifest: {
-        name: 'Kelepar GmbH - Swiss AI Consulting',
+        name: 'Kelepar GmbH - Swiss AI',
         short_name: 'Kelepar',
         description: 'Vertrauen. Innovation. Swiss Made. Ihr Schweizer Partner für KI-Lösungen.',
         theme_color: '#1e225a',
