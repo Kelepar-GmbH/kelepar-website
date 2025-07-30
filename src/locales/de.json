@@ -12,13 +12,27 @@
   "team.title": "Team",
   "contact": "Kontakt",
   "privacy": "Datenschutz",
+  "impressum": "Impressum",
+  "agb": "AGB",
   "aboutus": "Über uns",
   "contact.title": "Kontakt aufnehmen",
   "contact.name": "Ihr Name",
   "contact.email": "Ihre E-Mail",
   "contact.message": "Ihre Nachricht",
   "contact.cta": "Nachricht senden",
+  "contact.submitting": "Wird gesendet...",
+  "contact.sendAnother": "Weitere Nachricht senden",
   "contact.privacy": "Mit dem Absenden stimmen Sie der Verarbeitung Ihrer Daten gemäß Schweizer Datenschutz zu.",
+  "footer": {
+    "navigation": "Navigation",
+    "legal": "Rechtliches",
+    "contact": "Kontakt",
+    "address": "Museggstrasse 17, 6004 Luzern",
+    "email": "E-Mail",
+    "madeInSwitzerland": "Made with ❤️ in Switzerland",
+    "swissMade": "Swiss Made",
+    "dataProtection": "Datenschutzkonform"
+  },
   "aboutus_section": {
     "title": "Über uns",
     "text": "Wir sind Ihr Schweizer Partner für KI-Lösungen. Mit Leidenschaft, Know-how und höchsten Datenschutz-Standards begleiten wir KMU auf dem Weg in die digitale Zukunft. Vertrauen Sie auf Swiss Made AI – persönlich, sicher, effizient.",
@@ -34,6 +48,11 @@
     "successTitle": "Vielen Dank!",
     "successText": "Ihre Nachricht wurde erfolgreich übermittelt. Wir melden uns so schnell wie möglich.",
     "errorFillFields": "Bitte alle Felder ausfüllen.",
+    "errorNameRequired": "Bitte geben Sie Ihren Namen ein.",
+    "errorEmailRequired": "Bitte geben Sie Ihre E-Mail-Adresse ein.",
+    "errorEmailInvalid": "Bitte geben Sie eine gültige E-Mail-Adresse ein.",
+    "errorMessageRequired": "Bitte geben Sie eine Nachricht ein.",
+    "errorMessageTooShort": "Ihre Nachricht sollte mindestens 10 Zeichen lang sein.",
     "errorSubmit": "Fehler beim Senden. Bitte versuchen Sie es später erneut."
   },
   "privacy_section": {
@@ -84,5 +103,98 @@
       "role": "Full Stack Developer",
       "desc": "Business-IT-Experte und kreativer Entwickler. Baut nutzerzentrierte Web-Erlebnisse mit einem Auge für Datenschutz."
     }
+  },
+  "impressum": {
+    "title": "Impressum",
+    "company": {
+      "title": "Unternehmen",
+      "name": "Kelepar GmbH",
+      "address": {
+        "street": "Museggstrasse 17",
+        "city": "6004 Luzern, Schweiz",
+        "country": "Schweiz"
+      }
+    },
+    "contact": {
+      "title": "Kontakt",
+      "email": "E-Mail",
+      "emailAddress": "info@kelepar.com",
+      "website": "Website",
+      "websiteUrl": "www.kelepar.com"
+    },
+    "legal": {
+      "title": "Rechtliche Informationen",
+      "registry": "Handelsregister",
+      "registryNumber": "CHE-123.456.789",
+      "vat": "MWST-Nummer",
+      "vatNumber": "CHE-123.456.789 MWST",
+      "authority": "Aufsichtsbehörde",
+      "authorityName": "Handelsregisteramt Luzern"
+    },
+    "responsibility": {
+      "title": "Verantwortlichkeit",
+      "text": "Für den Inhalt dieser Website ist die Kelepar GmbH verantwortlich. Trotz sorgfältiger inhaltlicher Kontrolle übernehmen wir keine Haftung für die Inhalte externer Links. Für den Inhalt der verlinkten Seiten sind ausschließlich deren Betreiber verantwortlich."
+    },
+    "disclaimer": {
+      "title": "Haftungsausschluss",
+      "text": "Die Informationen auf dieser Website werden sorgfältig gepflegt. Dennoch können wir keine Gewähr für die Richtigkeit, Vollständigkeit und Aktualität der bereitgestellten Informationen übernehmen. Eine Haftung für Schäden, die durch die Nutzung der bereitgestellten Informationen entstehen, ist ausgeschlossen."
+    },
+    "copyright": {
+      "title": "Urheberrecht",
+      "text": "Alle Inhalte dieser Website sind urheberrechtlich geschützt. Die Vervielfältigung, Verbreitung oder öffentliche Zugänglichmachung der Inhalte ist ohne ausdrückliche Zustimmung der Kelepar GmbH nicht gestattet."
+    },
+    "backHome": "Zurück zur Startseite"
+  },
+  "agb": {
+    "title": "Allgemeine Geschäftsbedingungen",
+    "scope": {
+      "title": "Geltungsbereich",
+      "text": "Diese Allgemeinen Geschäftsbedingungen gelten für alle Geschäftsbeziehungen zwischen der Kelepar GmbH und ihren Kunden in der jeweils gültigen Fassung."
+    },
+    "services": {
+      "title": "Leistungsangebot",
+      "text": "Die Kelepar GmbH bietet folgende Dienstleistungen an:",
+      "item1": "KI-Beratung und Consulting für Unternehmen",
+      "item2": "Entwicklung und Implementierung von KI-Lösungen",
+      "item3": "Datenschutzkonforme IT-Lösungen",
+      "item4": "Schulungen und Workshops zu KI-Themen"
+    },
+    "contract": {
+      "title": "Vertragsschluss",
+      "text": "Verträge kommen durch Angebot und Annahme zustande. Angebote der Kelepar GmbH sind freibleibend und gelten für 30 Tage ab Ausstellungsdatum."
+    },
+    "pricing": {
+      "title": "Preise und Zahlungsbedingungen",
+      "text": "Alle Preise verstehen sich in Schweizer Franken (CHF) zuzüglich der gesetzlichen Mehrwertsteuer. Die Preise werden individuell vereinbart und sind in der jeweiligen Offerte angegeben."
+    },
+    "payment": {
+      "title": "Zahlung",
+      "text": "Rechnungen sind innerhalb von 30 Tagen nach Rechnungsstellung ohne Abzug zur Zahlung fällig. Bei Zahlungsverzug behalten wir uns das Recht vor, Verzugszinsen in Höhe von 5% p.a. zu berechnen."
+    },
+    "delivery": {
+      "title": "Leistungserbringung",
+      "text": "Die Leistungserbringung erfolgt nach den vereinbarten Terminen. Bei Verzögerungen werden die Kunden umgehend informiert. Die Kelepar GmbH bemüht sich um termingerechte Erfüllung."
+    },
+    "liability": {
+      "title": "Haftung",
+      "text": "Die Haftung der Kelepar GmbH ist auf grobe Fahrlässigkeit und Vorsatz beschränkt. Die Haftung für indirekte Schäden ist ausgeschlossen. Die Gesamthaftung ist auf den Auftragswert begrenzt."
+    },
+    "dataProtection": {
+      "title": "Datenschutz",
+      "text": "Die Verarbeitung personenbezogener Daten erfolgt gemäß der Schweizerischen Datenschutzgesetzgebung (DSG) und unserer Datenschutzerklärung. Alle Daten werden ausschließlich in der Schweiz verarbeitet und gespeichert."
+    },
+    "termination": {
+      "title": "Kündigung",
+      "text": "Verträge können von beiden Parteien mit einer Frist von 30 Tagen zum Monatsende gekündigt werden. Bei groben Vertragsverletzungen ist eine fristlose Kündigung möglich."
+    },
+    "law": {
+      "title": "Anwendbares Recht",
+      "text": "Für alle Rechtsbeziehungen zwischen der Kelepar GmbH und ihren Kunden gilt ausschließlich Schweizerisches Recht. Gerichtsstand ist Luzern, Schweiz."
+    },
+    "changes": {
+      "title": "Änderungen der AGB",
+      "text": "Die Kelepar GmbH behält sich das Recht vor, diese AGB zu ändern. Änderungen werden den Kunden rechtzeitig mitgeteilt und gelten als akzeptiert, wenn nicht innerhalb von 30 Tagen widersprochen wird."
+    },
+    "backHome": "Zurück zur Startseite"
   }
 }

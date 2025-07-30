@@ -2,6 +2,8 @@ import {createRouter, createWebHistory} from 'vue-router'
 import Home from '@/views/Home.vue'
 import Contact from '@/views/Contact.vue'
 import Privacy from '@/views/Privacy.vue'
+import Impressum from '@/views/Impressum.vue'
+import AGB from '@/views/AGB.vue'
 import NotFound from '@/views/NotFound.vue'
 
 const router = createRouter({
@@ -10,22 +12,56 @@ const router = createRouter({
         {
             path: '/',
             name: 'Home',
-            component: Home
+            component: Home,
+            meta: {
+                title: 'Kelepar GmbH - Swiss AI Consulting',
+                description: 'Vertrauen. Innovation. Swiss Made. Ihr Schweizer Partner für KI-Lösungen mit höchsten Datenschutz-Standards.'
+            }
         },
         {
             path: '/contact',
             name: 'Contact',
-            component: Contact
+            component: Contact,
+            meta: {
+                title: 'Kontakt - Kelepar GmbH',
+                description: 'Kontaktieren Sie uns für eine unverbindliche Beratung zu KI-Lösungen für Ihr Unternehmen.'
+            }
         },
         {
             path: '/privacy',
             name: 'Privacy',
-            component: Privacy
+            component: Privacy,
+            meta: {
+                title: 'Datenschutz - Kelepar GmbH',
+                description: 'Datenschutzerklärung der Kelepar GmbH - Ihre Daten sind bei uns sicher.'
+            }
+        },
+        {
+            path: '/impressum',
+            name: 'Impressum',
+            component: Impressum,
+            meta: {
+                title: 'Impressum - Kelepar GmbH',
+                description: 'Rechtliche Informationen und Impressum der Kelepar GmbH.'
+            }
+        },
+        {
+            path: '/agb',
+            name: 'AGB',
+            component: AGB,
+            meta: {
+                title: 'AGB - Kelepar GmbH',
+                description: 'Allgemeine Geschäftsbedingungen der Kelepar GmbH.'
+            }
         },
         {
             path: '/:catchAll(.*)',
             name: 'NotFound',
-            component: NotFound
+            component: NotFound,
+            meta: {
+                title: '404 - Seite nicht gefunden',
+                description: 'Die angeforderte Seite konnte nicht gefunden werden.'
+            }
         }
     ],
     scrollBehavior(to, from, savedPosition) {
@@ -38,5 +74,30 @@ const router = createRouter({
         }
     },
 })
+
+// Global navigation guard for SEO
+router.beforeEach((to, from, next) => {
+    // Update page title and meta description
+    if (to.meta.title) {
+        document.title = to.meta.title;
+    }
+    
+    if (to.meta.description) {
+        const metaDescription = document.querySelector('meta[name="description"]');
+        if (metaDescription) {
+            metaDescription.setAttribute('content', to.meta.description);
+        }
+    }
+    
+    // Track page view for analytics
+    if (window.gtag) {
+        window.gtag('config', 'G-XXXXXXXXXX', {
+            page_path: to.path,
+            page_title: to.meta.title || 'Kelepar GmbH'
+        });
+    }
+    
+    next();
+});
 
 export default router

@@ -1,14 +1,102 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="de">
 <head>
     <meta charset="UTF-8">
-    <meta name="description" content="Kelepar software development.">
-    <link rel="icon" href="/favicon.ico">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kelepar Software</title>
+    
+    <!-- SEO Meta Tags -->
+    <title>Kelepar GmbH - Swiss AI Consulting | Vertrauen. Innovation. Swiss Made.</title>
+    <meta name="description" content="Kelepar GmbH - Ihr Schweizer Partner für KI-Lösungen. Swiss Made AI-Beratung mit höchsten Datenschutz-Standards für KMU in der Schweiz.">
+    <meta name="keywords" content="KI Consulting, Artificial Intelligence, Swiss Made, Datenschutz, Schweiz, KMU, Digitalisierung, AI Beratung, Luzern">
+    <meta name="author" content="Kelepar GmbH">
+    <meta name="robots" content="index, follow">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://kelepar.com/">
+    <meta property="og:title" content="Kelepar GmbH - Swiss AI Consulting">
+    <meta property="og:description" content="Vertrauen. Innovation. Swiss Made. Ihr Schweizer Partner für KI-Lösungen mit höchsten Datenschutz-Standards.">
+    <meta property="og:image" content="https://kelepar.com/og-image.jpg">
+    <meta property="og:locale" content="de_CH">
+    
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://kelepar.com/">
+    <meta property="twitter:title" content="Kelepar GmbH - Swiss AI Consulting">
+    <meta property="twitter:description" content="Vertrauen. Innovation. Swiss Made. Ihr Schweizer Partner für KI-Lösungen.">
+    <meta property="twitter:image" content="https://kelepar.com/twitter-image.jpg">
+    
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "Kelepar GmbH",
+      "url": "https://kelepar.com",
+      "logo": "https://kelepar.com/logo.png",
+      "description": "Swiss AI Consulting - Vertrauen. Innovation. Swiss Made.",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Museggstrasse 17",
+        "addressLocality": "Luzern",
+        "postalCode": "6004",
+        "addressCountry": "CH"
+      },
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "contactType": "customer service",
+        "email": "info@kelepar.com"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/company/kelepar",
+        "https://twitter.com/kelepar"
+      ]
+    }
+    </script>
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+    
+    <!-- Preload Critical Resources -->
+    <link rel="preload" href="/src/assets/styles/main.css" as="style">
+    <link rel="preload" href="/src/assets/styles/base.css" as="style">
+    <link rel="preload" href="/src/assets/img/logos/kelepar_k.png" as="image">
+    
+    <!-- DNS Prefetch -->
+    <link rel="dns-prefetch" href="//api.web3forms.com">
+    <link rel="dns-prefetch" href="//www.google-analytics.com">
+    
+    <!-- Security Headers -->
+    <meta http-equiv="X-Content-Type-Options" content="nosniff">
+    <meta http-equiv="X-Frame-Options" content="DENY">
+    <meta http-equiv="X-XSS-Protection" content="1; mode=block">
+    <meta http-equiv="Referrer-Policy" content="strict-origin-when-cross-origin">
+    
+    <!-- Theme Color -->
+    <meta name="theme-color" content="#1e225a">
+    <meta name="msapplication-TileColor" content="#1e225a">
+    
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://kelepar.com/">
 </head>
 <body>
-<div id="app"></div>
-<script type="module" src="/src/main.js"></script>
+    <div id="app"></div>
+    <script type="module" src="/src/main.js"></script>
+    
+    <!-- Cookie Consent Banner -->
+    <div id="cookie-banner" class="cookie-banner" style="display: none;">
+        <div class="cookie-content">
+            <p>Wir verwenden Cookies, um Ihre Erfahrung auf unserer Website zu verbessern. Durch die weitere Nutzung der Website stimmen Sie der Verwendung von Cookies zu.</p>
+            <div class="cookie-buttons">
+                <button id="accept-cookies" class="btn-accept">Akzeptieren</button>
+                <button id="reject-cookies" class="btn-reject">Ablehnen</button>
+                <a href="/privacy" class="btn-privacy">Datenschutz</a>
+            </div>
+        </div>
+    </div>
 </body>
 </html>

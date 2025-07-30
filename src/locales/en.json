@@ -12,13 +12,27 @@
   "team.title": "Team",
   "contact": "Contact",
   "privacy": "Privacy",
+  "impressum": "Legal Notice",
+  "agb": "Terms & Conditions",
   "aboutus": "About us",
   "contact.title": "Contact us",
   "contact.name": "Your name",
   "contact.email": "Your email",
   "contact.message": "Your message",
   "contact.cta": "Send message",
+  "contact.submitting": "Sending...",
+  "contact.sendAnother": "Send another message",
   "contact.privacy": "By submitting, you agree to the processing of your data according to Swiss data protection laws.",
+  "footer": {
+    "navigation": "Navigation",
+    "legal": "Legal",
+    "contact": "Contact",
+    "address": "Museggstrasse 17, 6004 Lucerne",
+    "email": "Email",
+    "madeInSwitzerland": "Made with ❤️ in Switzerland",
+    "swissMade": "Swiss Made",
+    "dataProtection": "Privacy Compliant"
+  },
   "aboutus_section": {
     "title": "About us",
     "text": "We are your Swiss partner for AI solutions. With passion, expertise and the highest data protection standards, we guide SMEs into the digital future. Rely on Swiss Made AI – personal, secure, efficient.",
@@ -34,6 +48,11 @@
     "successTitle": "Thank you!",
     "successText": "Your message has been sent successfully. We will get back to you as soon as possible.",
     "errorFillFields": "Please fill in all fields.",
+    "errorNameRequired": "Please enter your name.",
+    "errorEmailRequired": "Please enter your email address.",
+    "errorEmailInvalid": "Please enter a valid email address.",
+    "errorMessageRequired": "Please enter a message.",
+    "errorMessageTooShort": "Your message should be at least 10 characters long.",
     "errorSubmit": "Error sending message. Please try again later."
   },
   "privacy_section": {
@@ -84,5 +103,98 @@
       "role": "Full Stack Developer",
       "desc": "Business-IT expert and creative developer. Builds user-centered web experiences with an eye for data protection."
     }
+  },
+  "impressum": {
+    "title": "Legal Notice",
+    "company": {
+      "title": "Company",
+      "name": "Kelepar GmbH",
+      "address": {
+        "street": "Museggstrasse 17",
+        "city": "6004 Lucerne, Switzerland",
+        "country": "Switzerland"
+      }
+    },
+    "contact": {
+      "title": "Contact",
+      "email": "Email",
+      "emailAddress": "info@kelepar.com",
+      "website": "Website",
+      "websiteUrl": "www.kelepar.com"
+    },
+    "legal": {
+      "title": "Legal Information",
+      "registry": "Commercial Register",
+      "registryNumber": "CHE-123.456.789",
+      "vat": "VAT Number",
+      "vatNumber": "CHE-123.456.789 VAT",
+      "authority": "Supervisory Authority",
+      "authorityName": "Commercial Register Office Lucerne"
+    },
+    "responsibility": {
+      "title": "Responsibility",
+      "text": "Kelepar GmbH is responsible for the content of this website. Despite careful content control, we assume no liability for the content of external links. The operators of the linked pages are solely responsible for their content."
+    },
+    "disclaimer": {
+      "title": "Disclaimer",
+      "text": "The information on this website is carefully maintained. However, we cannot guarantee the accuracy, completeness and timeliness of the information provided. Liability for damages arising from the use of the provided information is excluded."
+    },
+    "copyright": {
+      "title": "Copyright",
+      "text": "All content on this website is protected by copyright. Reproduction, distribution or public accessibility of the content is not permitted without the express consent of Kelepar GmbH."
+    },
+    "backHome": "Back to Homepage"
+  },
+  "agb": {
+    "title": "Terms & Conditions",
+    "scope": {
+      "title": "Scope",
+      "text": "These General Terms and Conditions apply to all business relationships between Kelepar GmbH and its customers in the respective valid version."
+    },
+    "services": {
+      "title": "Service Offer",
+      "text": "Kelepar GmbH offers the following services:",
+      "item1": "AI consulting and consulting for companies",
+      "item2": "Development and implementation of AI solutions",
+      "item3": "Privacy-compliant IT solutions",
+      "item4": "Training and workshops on AI topics"
+    },
+    "contract": {
+      "title": "Contract Formation",
+      "text": "Contracts are concluded by offer and acceptance. Offers from Kelepar GmbH are subject to change and valid for 30 days from the date of issue."
+    },
+    "pricing": {
+      "title": "Pricing and Payment Terms",
+      "text": "All prices are in Swiss Francs (CHF) plus statutory VAT. Prices are agreed individually and are specified in the respective offer."
+    },
+    "payment": {
+      "title": "Payment",
+      "text": "Invoices are due for payment within 30 days of invoicing without deduction. In the event of late payment, we reserve the right to charge default interest of 5% p.a."
+    },
+    "delivery": {
+      "title": "Service Delivery",
+      "text": "Service delivery takes place according to the agreed deadlines. In the event of delays, customers are informed immediately. Kelepar GmbH strives for timely fulfillment."
+    },
+    "liability": {
+      "title": "Liability",
+      "text": "The liability of Kelepar GmbH is limited to gross negligence and intent. Liability for indirect damages is excluded. Total liability is limited to the order value."
+    },
+    "dataProtection": {
+      "title": "Data Protection",
+      "text": "The processing of personal data is carried out in accordance with Swiss data protection legislation (DSG) and our privacy policy. All data is processed and stored exclusively in Switzerland."
+    },
+    "termination": {
+      "title": "Termination",
+      "text": "Contracts can be terminated by both parties with 30 days' notice to the end of the month. Immediate termination is possible in the event of gross contractual violations."
+    },
+    "law": {
+      "title": "Applicable Law",
+      "text": "Swiss law applies exclusively to all legal relationships between Kelepar GmbH and its customers. The place of jurisdiction is Lucerne, Switzerland."
+    },
+    "changes": {
+      "title": "Changes to Terms & Conditions",
+      "text": "Kelepar GmbH reserves the right to change these terms and conditions. Changes will be communicated to customers in good time and are considered accepted if not objected to within 30 days."
+    },
+    "backHome": "Back to Homepage"
   }
 }
