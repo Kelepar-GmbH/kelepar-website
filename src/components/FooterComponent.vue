@@ -16,7 +16,7 @@
         <div class="footer-meta">
           <span>© 2025 Kelepar GmbH</span>
           <span>Made with ❤️ in Switzerland</span>
-          <a href="/datenschutz">{{ $t('privacy') }}</a>
+          <a href="/privacy">{{ $t('privacy') }}</a>
         </div>
       </div>
     </div>

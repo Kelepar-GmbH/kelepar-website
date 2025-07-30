@@ -18,7 +18,7 @@ const router = createRouter({
             component: Contact
         },
         {
-            path: '/datenschutz',
+            path: '/privacy',
             name: 'Privacy',
             component: Privacy
         },
