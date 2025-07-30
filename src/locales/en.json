@@ -32,7 +32,9 @@
     "cta": "Send message",
     "privacy": "By submitting, you agree to the processing of your data according to Swiss data protection laws.",
     "successTitle": "Thank you!",
-    "successText": "Your message has been sent successfully. We will get back to you as soon as possible."
+    "successText": "Your message has been sent successfully. We will get back to you as soon as possible.",
+    "errorFillFields": "Please fill in all fields.",
+    "errorSubmit": "Error sending message. Please try again later."
   },
   "privacy_section": {
     "title": "Privacy Policy",

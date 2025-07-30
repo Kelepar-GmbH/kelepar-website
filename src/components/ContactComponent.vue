@@ -1,5 +1,8 @@
 <script setup>
 import { ref } from 'vue';
+import { useI18n } from 'vue-i18n';
+
+const { t } = useI18n();
 
 const name = ref('');
 const email = ref('');
@@ -12,7 +15,7 @@ const WEB3FORMS_ACCESS_KEY = "ade71fee-66c2-4888-b0c9-c65a2bb8cc51";
 async function submitForm() {
   error.value = '';
   if (!name.value || !email.value || !message.value) {
-    error.value = 'Bitte alle Felder ausfüllen.';
+    error.value = t('contact_section.errorFillFields');
     return;
   }
   formSubmitted.value = true;
@@ -31,7 +34,7 @@ async function submitForm() {
   });
   const result = await response.json();
   if (!result.success) {
-    error.value = 'Fehler beim Senden. Bitte versuchen Sie es später erneut.';
+    error.value = t('contact_section.errorSubmit');
     formSubmitted.value = false;
   }
 }
@@ -85,7 +88,7 @@ h2 {
   font-weight: 700;
 }
 .contact-card {
-  background: #fff;
+  background: var(--kelepar-color-neutral);
   border-radius: var(--border-radius);
   box-shadow: var(--box-shadow);
   padding: 2.5rem 2rem 2rem 2rem;
@@ -103,7 +106,7 @@ input, textarea {
   border-radius: var(--border-radius);
   border: 1px solid var(--kelepar-color-second);
   background: var(--kelepar-color-second);
-  color: var(--kelepar-color-black);
+  color: var(--kelepar-font-color);
   font-size: 1.1em;
   outline: none;
   transition: border-color 0.2s;
@@ -131,7 +134,7 @@ input:focus, textarea:focus {
 .contact-privacy {
   margin-top: 1.5rem;
   font-size: 0.95em;
-  color: var(--kelepar-color-black);
+  color: var(--kelepar-font-color);
   opacity: 0.7;
 }
 </style>

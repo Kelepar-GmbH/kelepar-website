@@ -68,7 +68,7 @@ h2 {
   justify-content: center;
 }
 .competence-card {
-  background: #fff;
+  background: var(--kelepar-color-neutral);
   border-radius: var(--border-radius);
   box-shadow: var(--box-shadow);
   padding: 2.5rem 2rem 2rem 2rem;
@@ -106,7 +106,7 @@ h3 {
   font-weight: 600;
 }
 p {
-  color: var(--kelepar-color-black);
+  color: var(--kelepar-font-color);
   font-size: 1.05em;
 }
 @media (max-width: 900px) {

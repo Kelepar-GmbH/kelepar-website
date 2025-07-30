@@ -3,6 +3,7 @@
 import { RouterLink } from 'vue-router';
 import { onMounted, ref } from "vue";
 import { useI18n } from 'vue-i18n'
+import ThemeSwitcherComponent from './ThemeSwitcherComponent.vue';
 
 const { locale } = useI18n()
 const mobileView = ref(false);
@@ -56,9 +57,12 @@ onMounted(() => {
         <div class="nav-cta desktop-only">
           <RouterLink class="btn1" to="/contact">{{ $t('contact') }}</RouterLink>
         </div>
-        <div class="lang-switch desktop-only">
-          <button :class="locale === 'de' ? 'active' : ''" @click="setLanguage('de')">DE</button>
-          <button :class="locale === 'en' ? 'active' : ''" @click="setLanguage('en')">EN</button>
+        <div class="nav-controls desktop-only">
+          <ThemeSwitcherComponent />
+          <div class="lang-switch">
+            <button :class="locale === 'de' ? 'active' : ''" @click="setLanguage('de')">DE</button>
+            <button :class="locale === 'en' ? 'active' : ''" @click="setLanguage('en')">EN</button>
+          </div>
         </div>
         <!-- Hamburger Icon (Mobile) -->
         <button class="hamburger mobile-only" @click="openMobileMenu" aria-label="Open menu">
@@ -78,9 +82,12 @@ onMounted(() => {
           <li><a href="/#competences" @click="closeMobileMenu">{{ $t('competences') }}</a></li>
         </ul>
         <RouterLink class="btn1 mobile-cta" to="/contact" @click="closeMobileMenu">{{ $t('contact') }}</RouterLink>
-        <div class="lang-switch-mobile">
-          <button :class="locale === 'de' ? 'active' : ''" @click="setLanguage('de')">DE</button>
-          <button :class="locale === 'en' ? 'active' : ''" @click="setLanguage('en')">EN</button>
+        <div class="mobile-controls">
+          <ThemeSwitcherComponent />
+          <div class="lang-switch-mobile">
+            <button :class="locale === 'de' ? 'active' : ''" @click="setLanguage('de')">DE</button>
+            <button :class="locale === 'en' ? 'active' : ''" @click="setLanguage('en')">EN</button>
+          </div>
         </div>
       </div>
     </div>
@@ -117,7 +124,7 @@ onMounted(() => {
 .logo img {
   border-radius: var(--border-radius);
   box-shadow: 0 2px 8px 0 rgba(30, 34, 90, 0.08);
-  background: #fff;
+  background: var(--kelepar-color-neutral);
 }
 .nav-links {
   display: flex;
@@ -141,6 +148,11 @@ onMounted(() => {
 }
 .nav-cta {
   margin-left: 1rem;
+}
+.nav-controls {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
 }
 .lang-switch {
   display: flex;
@@ -192,7 +204,7 @@ onMounted(() => {
   left: 0;
   width: 100vw;
   height: 100vh;
-  background: rgba(255,255,255,0.98);
+  background: rgba(0,0,0,0.8);
   z-index: 9999;
   display: flex;
   align-items: center;
@@ -206,7 +218,7 @@ onMounted(() => {
 .mobile-menu-content {
   width: 90vw;
   max-width: 400px;
-  background: #fff;
+  background: var(--kelepar-color-neutral);
   border-radius: var(--border-radius);
   box-shadow: var(--box-shadow);
   padding: 2.5rem 1.5rem 2rem 1.5rem;
@@ -258,10 +270,15 @@ onMounted(() => {
   border-radius: var(--border-radius);
   text-align: center;
 }
+.mobile-controls {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-top: 0.7rem;
+}
 .lang-switch-mobile {
   display: flex;
   gap: 0.7rem;
-  margin-top: 0.7rem;
   justify-content: center;
 }
 .lang-switch-mobile button {

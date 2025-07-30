@@ -32,7 +32,9 @@
     "cta": "Nachricht senden",
     "privacy": "Mit dem Absenden stimmen Sie der Verarbeitung Ihrer Daten gemäß Schweizer Datenschutz zu.",
     "successTitle": "Vielen Dank!",
-    "successText": "Ihre Nachricht wurde erfolgreich übermittelt. Wir melden uns so schnell wie möglich."
+    "successText": "Ihre Nachricht wurde erfolgreich übermittelt. Wir melden uns so schnell wie möglich.",
+    "errorFillFields": "Bitte alle Felder ausfüllen.",
+    "errorSubmit": "Fehler beim Senden. Bitte versuchen Sie es später erneut."
   },
   "privacy_section": {
     "title": "Datenschutzerklärung",

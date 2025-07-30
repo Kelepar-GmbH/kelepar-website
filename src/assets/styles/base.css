@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;700&display=swap');
 
 :root {
+    /* Light Theme Colors */
     --kelepar-color-neutral: #ffffff;
     --kelepar-color-main: #1a237e;
     --kelepar-color-second: #f5f7fa;
@@ -35,6 +36,25 @@
     /* Border radius and shadow */
     --border-radius: 18px;
     --box-shadow: 0 4px 24px 0 rgba(30, 34, 90, 0.08);
+}
+
+/* Dark Theme */
+[data-theme="dark"] {
+    --kelepar-color-neutral: #1a1a1a;
+    --kelepar-color-main: #4a90e2;
+    --kelepar-color-second: #2d2d2d;
+    --kelepar-color-highlight-one: #ff6b6b;
+    --kelepar-color-highlight-two: #4ecdc4;
+    --kelepar-color-black: #ffffff;
+    --kelepar-color-error: #ff6b6b;
+
+    /* Font colors */
+    --kelepar-font-color: #ffffff;
+    --kelepar-font-color-negative: #1a1a1a;
+
+    /* Border radius and shadow */
+    --border-radius: 18px;
+    --box-shadow: 0 4px 24px 0 rgba(0, 0, 0, 0.3);
 }
 
 *,

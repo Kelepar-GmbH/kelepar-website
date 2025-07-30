@@ -65,7 +65,7 @@ h2 {
   justify-content: center;
 }
 .team-card {
-  background: #fff;
+  background: var(--kelepar-color-neutral);
   border-radius: var(--border-radius);
   box-shadow: var(--box-shadow);
   padding: 2.5rem 2rem 2rem 2rem;
@@ -110,7 +110,7 @@ h3 {
   margin-bottom: 0.7rem;
 }
 .team-desc {
-  color: var(--kelepar-color-black);
+  color: var(--kelepar-font-color);
   font-size: 1.05em;
   margin-top: 0.7rem;
 }
