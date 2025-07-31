@@ -23,6 +23,7 @@ class AnalyticsService {
     const banner = document.getElementById('cookie-banner');
     const acceptBtn = document.getElementById('accept-cookies');
     const rejectBtn = document.getElementById('reject-cookies');
+    const privacyLink = document.querySelector('.btn-privacy');
 
     if (!localStorage.getItem('cookie-consent') && banner) {
       banner.style.display = 'block';
@@ -37,6 +38,14 @@ class AnalyticsService {
     if (rejectBtn) {
       rejectBtn.addEventListener('click', () => {
         this.rejectCookies();
+      });
+    }
+
+    if (privacyLink) {
+      privacyLink.addEventListener('click', (e) => {
+        e.preventDefault();
+        this.hideCookieBanner();
+        window.location.href = '/privacy';
       });
     }
   }
