@@ -10,8 +10,10 @@
       </div>
       <div class="hero-content">
         <div class="hero-text">
-          <h1>{{ $t('hero.title') }}</h1>
-          <p>{{ $t('hero.subtitle') }}</p>
+          <h1>
+            {{ $t('hero.title') }}<br>{{ $t('hero.title2') }}
+          </h1>
+          <p class="hero-subtitle" v-html="$t('hero.subtitle')"></p>
           <RouterLink class="btn1 hero-cta" to="/contact">{{ $t('hero.cta') }}</RouterLink>
         </div>
       </div>
@@ -158,6 +160,24 @@ import { RouterLink } from 'vue-router';
   margin-bottom: 1.2em;
   max-width: 600px;
   line-height: 1.6;
+}
+
+.hero-subtitle {
+  white-space: nowrap;
+}
+
+.hero-subtitle br {
+  display: none;
+}
+
+@media (max-width: 900px) {
+  .hero-subtitle {
+    white-space: normal;
+  }
+  
+  .hero-subtitle br {
+    display: inline;
+  }
 }
 
 .hero-cta {

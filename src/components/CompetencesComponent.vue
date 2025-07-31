@@ -1,32 +1,37 @@
 <script setup>
 import { 
   ChatBubbleLeftRightIcon, 
-  RocketLaunchIcon, 
-  ShieldCheckIcon, 
-  StarIcon,
-  PuzzlePieceIcon 
+  CodeBracketIcon, 
+  CloudIcon, 
+  CpuChipIcon,
+  UserGroupIcon,
+  ShieldCheckIcon 
 } from '@heroicons/vue/24/outline';
 
 const competences = [
   {
     icon: ChatBubbleLeftRightIcon,
-    key: 'ai_consulting'
+    key: 'it_consulting'
   },
   {
-    icon: RocketLaunchIcon,
-    key: 'efficiency_ai'
+    icon: CodeBracketIcon,
+    key: 'software_development'
+  },
+  {
+    icon: CloudIcon,
+    key: 'devops'
+  },
+  {
+    icon: CpuChipIcon,
+    key: 'ai_solutions'
+  },
+  {
+    icon: UserGroupIcon,
+    key: 'freelancing'
   },
   {
     icon: ShieldCheckIcon,
     key: 'data_protection'
-  },
-  {
-    icon: StarIcon,
-    key: 'swiss_made'
-  },
-  {
-    icon: PuzzlePieceIcon,
-    key: 'ai_integration'
   }
 ];
 </script>

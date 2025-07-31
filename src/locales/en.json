@@ -2,8 +2,9 @@
   "welcome": "Welcome to Kelepar GmbH",
   "services": "Our Services",
   "hero": {
-    "title": "Trust. Innovation. Swiss Made.",
-    "subtitle": "Artificial Intelligence for Swiss SMEs – Swiss Made, privacy-first, personal.",
+    "title": "Trust. Innovation.",
+    "title2": "Swiss Made.",
+    "subtitle": "IT Consulting, Development & DevOps for Swiss clients<br>privacy-first - personal",
     "cta": "Get your free consultation"
   },
   "competences": "Competences",
@@ -35,7 +36,7 @@
   },
   "aboutus_section": {
     "title": "About us",
-    "text": "We are your Swiss partner for AI solutions. With passion, expertise and the highest data protection standards, we guide SMEs into the digital future. Rely on Swiss Made AI – personal, secure, efficient.",
+    "text": "We are your Swiss partner for IT consulting, software development and DevOps solutions. With passion, expertise and the highest data protection standards, we guide our clients into the digital future. Rely on Swiss Made IT – personal, secure, efficient.",
     "cta": "Contact us now"
   },
   "contact_section": {
@@ -69,35 +70,39 @@
     "back_home": "Back to Homepage"
   },
   "competences_section": {
-    "ai_consulting": {
-      "title": "AI Consulting",
-      "desc": "Individual consulting and implementation of AI solutions for Swiss SMEs."
+    "it_consulting": {
+      "title": "IT Consulting",
+      "desc": "Strategic consulting and roadmap development for your IT transformation and digitalization."
     },
-    "efficiency_ai": {
-      "title": "Efficiency with AI",
-      "desc": "Automate processes and increase your productivity with artificial intelligence."
+    "software_development": {
+      "title": "Software Development",
+      "desc": "Custom software solutions, web apps and mobile applications using the latest standards."
+    },
+    "devops": {
+      "title": "DevOps & Cloud",
+      "desc": "Automation, CI/CD pipelines and cloud infrastructure for efficient software development."
+    },
+    "ai_solutions": {
+      "title": "AI Solutions",
+      "desc": "Artificial Intelligence and Machine Learning for process optimization and intelligent automation."
+    },
+    "freelancing": {
+      "title": "Freelancing",
+      "desc": "Flexible IT services for projects of all sizes – from consulting to implementation."
     },
     "data_protection": {
       "title": "Data Protection",
       "desc": "Your data stays secure – storage and processing exclusively in Switzerland."
-    },
-    "swiss_made": {
-      "title": "Swiss Made",
-      "desc": "Solutions and consulting from Switzerland, for Switzerland. Quality, reliability, proximity."
-    },
-    "ai_integration": {
-      "title": "AI Integration",
-      "desc": "Seamless integration of AI functions into your existing business processes and systems."
     }
   },
   "team_section": {
     "lukas": {
       "role": "CEO & Co-Founder",
-      "desc": "Entrepreneur, analyst and investor with a passion for AI and digitalization. Brings business and technology together."
+      "desc": "Entrepreneur, analyst and investor with a passion for IT consulting and digitalization. Brings business and technology together."
     },
     "lars": {
       "role": "CTO & Co-Founder",
-      "desc": "Software engineer with focus on innovative solutions and secure IT. Enthusiastic about AI and Swiss quality."
+      "desc": "Software engineer with focus on innovative solutions and secure IT. Expert in DevOps and cloud architectures."
     },
     "luca": {
       "role": "Full Stack Developer",
@@ -154,10 +159,11 @@
     "services": {
       "title": "Service Offer",
       "text": "Kelepar GmbH offers the following services:",
-      "item1": "AI consulting and consulting for companies",
-      "item2": "Development and implementation of AI solutions",
-      "item3": "Privacy-compliant IT solutions",
-      "item4": "Training and workshops on AI topics"
+      "item1": "IT consulting and strategic consulting for companies",
+      "item2": "Software development and web development",
+      "item3": "DevOps and cloud infrastructure",
+      "item4": "AI solutions and machine learning",
+      "item5": "Freelancing and project work"
     },
     "contract": {
       "title": "Contract Formation",

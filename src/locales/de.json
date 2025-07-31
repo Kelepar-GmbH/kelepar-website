@@ -2,8 +2,9 @@
   "welcome": "Willkommen bei Kelepar GmbH",
   "services": "Unsere Dienstleistungen",
   "hero": {
-    "title": "Vertrauen. Innovation. Swiss Made.",
-    "subtitle": "Künstliche Intelligenz für Schweizer KMU – Swiss Made, datenschutzkonform, persönlich.",
+    "title": "Vertrauen. Innovation.",
+    "title2": "Swiss Made.",
+    "subtitle": "IT-Consulting, Entwicklung & DevOps für Schweizer Kunden<br>datenschutzkonform - persönlich",
     "cta": "Jetzt unverbindlich beraten lassen"
   },
   "competences": "Kompetenzen",
@@ -35,7 +36,7 @@
   },
   "aboutus_section": {
     "title": "Über uns",
-    "text": "Wir sind Ihr Schweizer Partner für KI-Lösungen. Mit Leidenschaft, Know-how und höchsten Datenschutz-Standards begleiten wir KMU auf dem Weg in die digitale Zukunft. Vertrauen Sie auf Swiss Made AI – persönlich, sicher, effizient.",
+    "text": "Wir sind Ihr Schweizer Partner für IT-Consulting, Software-Entwicklung und DevOps-Lösungen. Mit Leidenschaft, Know-how und höchsten Datenschutz-Standards begleiten wir unsere Kunden auf dem Weg in die digitale Zukunft. Vertrauen Sie auf Swiss Made IT – persönlich, sicher, effizient.",
     "cta": "Jetzt Kontakt aufnehmen"
   },
   "contact_section": {
@@ -69,35 +70,39 @@
     "back_home": "Zurück zur Startseite"
   },
   "competences_section": {
-    "ai_consulting": {
-      "title": "AI Consulting",
-      "desc": "Individuelle Beratung und Umsetzung von KI-Lösungen für KMU in der Schweiz."
+    "it_consulting": {
+      "title": "IT-Consulting",
+      "desc": "Strategische Beratung und Roadmap-Entwicklung für Ihre IT-Transformation und Digitalisierung."
     },
-    "efficiency_ai": {
-      "title": "Effizienz mit AI",
-      "desc": "Automatisieren Sie Prozesse und steigern Sie Ihre Produktivität mit künstlicher Intelligenz."
+    "software_development": {
+      "title": "Software-Entwicklung",
+      "desc": "Maßgeschneiderte Software-Lösungen, Web-Apps und mobile Anwendungen nach modernsten Standards."
+    },
+    "devops": {
+      "title": "DevOps & Cloud",
+      "desc": "Automatisierung, CI/CD-Pipelines und Cloud-Infrastruktur für effiziente Software-Entwicklung."
+    },
+    "ai_solutions": {
+      "title": "KI-Lösungen",
+      "desc": "Künstliche Intelligenz und Machine Learning für Prozessoptimierung und intelligente Automatisierung."
+    },
+    "freelancing": {
+      "title": "Freelancing",
+      "desc": "Flexible IT-Dienstleistungen für Projekte aller Größen – von der Beratung bis zur Umsetzung."
     },
     "data_protection": {
       "title": "Datenschutz",
       "desc": "Ihre Daten bleiben sicher – Speicherung und Verarbeitung ausschliesslich in der Schweiz."
-    },
-    "swiss_made": {
-      "title": "Swiss Made",
-      "desc": "Lösungen und Beratung aus der Schweiz, für die Schweiz. Qualität, Zuverlässigkeit, Nähe."
-    },
-    "ai_integration": {
-      "title": "KI-Integration",
-      "desc": "Nahtlose Integration von KI-Funktionen in Ihre bestehenden Geschäftsprozesse und Systeme."
     }
   },
   "team_section": {
     "lukas": {
       "role": "CEO & Co-Founder",
-      "desc": "Unternehmer, Analyst und Investor mit Leidenschaft für KI und Digitalisierung. Bringt Business und Technologie zusammen."
+      "desc": "Unternehmer, Analyst und Investor mit Leidenschaft für IT-Consulting und Digitalisierung. Bringt Business und Technologie zusammen."
     },
     "lars": {
       "role": "CTO & Co-Founder",
-      "desc": "Software Engineer mit Fokus auf innovative Lösungen und sichere IT. Begeistert von AI und Swiss Quality."
+      "desc": "Software Engineer mit Fokus auf innovative Lösungen und sichere IT. Experte für DevOps und Cloud-Architekturen."
     },
     "luca": {
       "role": "Full Stack Developer",
@@ -154,10 +159,11 @@
     "services": {
       "title": "Leistungsangebot",
       "text": "Die Kelepar GmbH bietet folgende Dienstleistungen an:",
-      "item1": "KI-Beratung und Consulting für Unternehmen",
-      "item2": "Entwicklung und Implementierung von KI-Lösungen",
-      "item3": "Datenschutzkonforme IT-Lösungen",
-      "item4": "Schulungen und Workshops zu KI-Themen"
+      "item1": "IT-Consulting und strategische Beratung für Unternehmen",
+      "item2": "Software-Entwicklung und Web-Entwicklung",
+      "item3": "DevOps und Cloud-Infrastruktur",
+      "item4": "KI-Lösungen und Machine Learning",
+      "item5": "Freelancing und Projektarbeit"
     },
     "contract": {
       "title": "Vertragsschluss",

@@ -54,7 +54,7 @@ class PerformanceService {
         this.metrics.fcp = firstEntry.startTime;
         this.logMetric('FCP', firstEntry.startTime);
       });
-      fcpObserver.observe({ entryTypes: ['first-contentful-paint'] });
+      fcpObserver.observe({ entryTypes: ['paint'] });
     }
   }
 
