@@ -1,34 +1,34 @@
 <template>
   <div class="privacy-page">
     <div class="container">
-      <h1>{{ $t('privacy_section.title') }}</h1>
+      <h1>{{ getTranslation('privacy_section.title', 'Datenschutzerklärung') }}</h1>
       
       <section class="legal-section">
-        <p>{{ $t('privacy_section.intro') }}</p>
+        <p>{{ getTranslation('privacy_section.intro', 'Diese Datenschutzerklärung informiert Sie über die Art, den Umfang und Zweck der Verarbeitung von personenbezogenen Daten auf dieser Website.') }}</p>
       </section>
 
       <section class="legal-section">
-        <h2>{{ $t('privacy_section.responsible') }}</h2>
-        <p v-html="$t('privacy_section.responsible_text')"></p>
+        <h2>{{ getTranslation('privacy_section.responsible', 'Verantwortlichkeit') }}</h2>
+        <p v-html="getTranslation('privacy_section.responsible_text', 'Kelepar GmbH<br>Museggstrasse 17<br>6004 Luzern<br>Schweiz<br>E-Mail: info@kelepar.com')"></p>
       </section>
 
       <section class="legal-section">
-        <h2>{{ $t('privacy_section.data_collection') }}</h2>
-        <p>{{ $t('privacy_section.data_collection_text') }}</p>
+        <h2>{{ getTranslation('privacy_section.data_collection', 'Erhebung und Verarbeitung von Daten') }}</h2>
+        <p>{{ getTranslation('privacy_section.data_collection_text', 'Wir erheben und verarbeiten personenbezogene Daten nur im notwendigen Umfang und ausschließlich für die angegebenen Zwecke.') }}</p>
       </section>
 
       <section class="legal-section">
-        <h2>{{ $t('privacy_section.your_rights') }}</h2>
-        <p>{{ $t('privacy_section.your_rights_text') }}</p>
+        <h2>{{ getTranslation('privacy_section.your_rights', 'Ihre Rechte') }}</h2>
+        <p>{{ getTranslation('privacy_section.your_rights_text', 'Sie haben das Recht auf Auskunft, Berichtigung, Löschung und Einschränkung der Verarbeitung Ihrer personenbezogenen Daten.') }}</p>
       </section>
 
       <section class="legal-section">
-        <h2>{{ $t('privacy_section.contact') }}</h2>
-        <p>{{ $t('privacy_section.contact_text') }}</p>
+        <h2>{{ getTranslation('privacy_section.contact', 'Kontakt') }}</h2>
+        <p>{{ getTranslation('privacy_section.contact_text', 'Bei Fragen zum Datenschutz kontaktieren Sie uns gerne unter info@kelepar.com') }}</p>
       </section>
 
       <div class="back-link">
-        <RouterLink to="/" class="btn1">{{ $t('privacy_section.back_home') }}</RouterLink>
+        <RouterLink to="/" class="btn1">{{ getTranslation('privacy_section.back_home', 'Zurück zur Startseite') }}</RouterLink>
       </div>
     </div>
   </div>
@@ -36,6 +36,18 @@
 
 <script setup>
 import { RouterLink } from 'vue-router';
+import { useI18n } from 'vue-i18n';
+
+const { t } = useI18n();
+
+const getTranslation = (key, fallback) => {
+  try {
+    const translation = t(key);
+    return translation || fallback;
+  } catch (error) {
+    return fallback;
+  }
+};
 </script>
 
 <style scoped>

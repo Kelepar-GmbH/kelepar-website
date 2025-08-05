@@ -1,57 +1,57 @@
 <template>
   <div class="impressum-page">
     <div class="container">
-      <h1>{{ $t('impressum.title') }}</h1>
+      <h1>{{ getTranslation('impressum.title', 'Impressum') }}</h1>
       
       <section class="legal-section">
-        <h2>{{ $t('impressum.company.title') }}</h2>
+        <h2>{{ getTranslation('impressum.company.title', 'Unternehmen') }}</h2>
         <div class="company-info">
-          <p><strong>{{ $t('impressum.company.name') }}</strong></p>
-          <p>{{ $t('impressum.company.address.street') }}</p>
-          <p>{{ $t('impressum.company.address.city') }}</p>
-          <p>{{ $t('impressum.company.address.country') }}</p>
+          <p><strong>{{ getTranslation('impressum.company.name', 'Kelepar GmbH') }}</strong></p>
+          <p>{{ getTranslation('impressum.company.address.street', 'Museggstrasse 17') }}</p>
+          <p>{{ getTranslation('impressum.company.address.city', '6004 Luzern') }}</p>
+          <p>{{ getTranslation('impressum.company.address.country', 'Schweiz') }}</p>
         </div>
       </section>
 
       <section class="legal-section">
-        <h2>{{ $t('impressum.contact.title') }}</h2>
+        <h2>{{ getTranslation('impressum.contact.title', 'Kontakt') }}</h2>
         <div class="contact-info">
-          <p><strong>{{ $t('impressum.contact.email') }}:</strong> {{ $t('impressum.contact.emailAddress') }}</p>
-          <p><strong>{{ $t('impressum.contact.website') }}:</strong> {{ $t('impressum.contact.websiteUrl') }}</p>
+          <p><strong>{{ getTranslation('impressum.contact.email', 'E-Mail') }}:</strong> {{ getTranslation('impressum.contact.emailAddress', 'info@kelepar.com') }}</p>
+          <p><strong>{{ getTranslation('impressum.contact.website', 'Website') }}:</strong> {{ getTranslation('impressum.contact.websiteUrl', 'www.kelepar.com') }}</p>
         </div>
       </section>
 
       <section class="legal-section">
-        <h2>{{ $t('impressum.legal.title') }}</h2>
+        <h2>{{ getTranslation('impressum.legal.title', 'Rechtliche Informationen') }}</h2>
         <div class="legal-info">
-          <p><strong>{{ $t('impressum.legal.registry') }}:</strong> {{ $t('impressum.legal.registryNumber') }}</p>
-          <p><strong>{{ $t('impressum.legal.vat') }}:</strong> {{ $t('impressum.legal.vatNumber') }}</p>
-          <p><strong>{{ $t('impressum.legal.authority') }}:</strong> {{ $t('impressum.legal.authorityName') }}</p>
+          <p><strong>{{ getTranslation('impressum.legal.registry', 'Handelsregister') }}:</strong> {{ getTranslation('impressum.legal.registryNumber', 'CHE-407.597.854') }}</p>
+          <p><strong>{{ getTranslation('impressum.legal.vat', 'MWST-Nummer') }}:</strong> {{ getTranslation('impressum.legal.vatNumber', 'CHE-407.597.854 MWST') }}</p>
+          <p><strong>{{ getTranslation('impressum.legal.authority', 'Aufsichtsbehörde') }}:</strong> {{ getTranslation('impressum.legal.authorityName', 'Handelsregisteramt Luzern') }}</p>
         </div>
       </section>
 
       <section class="legal-section">
-        <h2>{{ $t('impressum.responsibility.title') }}</h2>
-        <p>{{ $t('impressum.responsibility.text') }}</p>
+        <h2>{{ getTranslation('impressum.responsibility.title', 'Verantwortlichkeit') }}</h2>
+        <p>{{ getTranslation('impressum.responsibility.text', 'Die Kelepar GmbH ist für den Inhalt dieser Website verantwortlich. Trotz sorgfältiger inhaltlicher Kontrolle übernehmen wir keine Haftung für die Inhalte externer Links. Für den Inhalt der verlinkten Seiten sind ausschließlich deren Betreiber verantwortlich.') }}</p>
       </section>
 
       <section class="legal-section">
-        <h2>{{ $t('impressum.disclaimer.title') }}</h2>
-        <p>{{ $t('impressum.disclaimer.text') }}</p>
+        <h2>{{ getTranslation('impressum.disclaimer.title', 'Haftungsausschluss') }}</h2>
+        <p>{{ getTranslation('impressum.disclaimer.text', 'Die Informationen auf dieser Website werden sorgfältig gepflegt. Wir können jedoch keine Gewähr für die Richtigkeit, Vollständigkeit und Aktualität der bereitgestellten Informationen übernehmen. Eine Haftung für Schäden, die sich aus der Nutzung der bereitgestellten Informationen ergeben, ist ausgeschlossen.') }}</p>
       </section>
 
       <section class="legal-section">
-        <h2>{{ $t('impressum.copyright.title') }}</h2>
-        <p>{{ $t('impressum.copyright.text') }}</p>
+        <h2>{{ getTranslation('impressum.copyright.title', 'Urheberrecht') }}</h2>
+        <p>{{ getTranslation('impressum.copyright.text', 'Alle Inhalte dieser Website sind urheberrechtlich geschützt. Die Vervielfältigung, Verbreitung oder öffentliche Zugänglichmachung der Inhalte ist ohne ausdrückliche Zustimmung der Kelepar GmbH nicht gestattet.') }}</p>
       </section>
 
       <section class="legal-section">
-        <h2>{{ $t('impressum.references.title') }}</h2>
-        <p>{{ $t('impressum.references.text') }}</p>
+        <h2>{{ getTranslation('impressum.references.title', 'Partner-Referenzen') }}</h2>
+        <p>{{ getTranslation('impressum.references.text', 'Die Firmenlogos, die in der Partner-Showcase auf unserer Website angezeigt werden, repräsentieren Organisationen, mit denen unsere Teammitglieder bereits berufliche Erfahrungen gesammelt haben. Diese Referenzen spiegeln individuelle Arbeitserfahrung und Expertise wider, nicht unbedingt direkte Geschäftsbeziehungen unter der Kelepar GmbH.') }}</p>
       </section>
 
       <div class="back-link">
-        <RouterLink to="/" class="btn1">{{ $t('impressum.backHome') }}</RouterLink>
+        <RouterLink to="/" class="btn1">{{ getTranslation('impressum.backHome', 'Zurück zur Startseite') }}</RouterLink>
       </div>
     </div>
   </div>
@@ -59,6 +59,18 @@
 
 <script setup>
 import { RouterLink } from 'vue-router';
+import { useI18n } from 'vue-i18n';
+
+const { t } = useI18n();
+
+const getTranslation = (key, fallback) => {
+  try {
+    const translation = t(key);
+    return translation || fallback;
+  } catch (error) {
+    return fallback;
+  }
+};
 </script>
 
 <style scoped>

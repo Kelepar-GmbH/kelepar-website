@@ -3,7 +3,9 @@ import en from './locales/en.json'
 import de from './locales/de.json'
 
 const i18n = createI18n({
-    legacy: true,
+    legacy: false,
+    globalInjection: true,
+    allowComposition: true,
     locale: 'de',
     fallbackLocale: 'de',
     messages: {
