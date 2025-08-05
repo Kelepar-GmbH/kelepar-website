@@ -58,7 +58,11 @@
     "errorEmailInvalid": "Please enter a valid email address.",
     "errorMessageRequired": "Please enter a message.",
     "errorMessageTooShort": "Your message should be at least 10 characters long.",
-    "errorSubmit": "Error sending message. Please try again later."
+    "errorSubmit": "Error sending message. Please try again later.",
+    "errorNameInvalid": "Please enter a valid name (2-100 characters).",
+    "errorMessageLength": "Your message should be between 10 and 5000 characters.",
+    "errorSpamDetected": "Your message was rejected. Please remove any URLs or suspicious content.",
+    "rateLimitError": "Too many submissions. Please wait {minutes} minutes before sending another message."
   },
   "privacy_section": {
     "title": "Privacy Policy",

@@ -1,5 +1,6 @@
 <script setup>
 import IconLinkedin from '@/components/icons/IconLinkedin.vue';
+import LazyImage from '@/components/LazyImage.vue';
 import lukasImg from '@/assets/img/team/lukas.webp';
 import larsImg from '@/assets/img/team/lars.webp';
 import lucaImg from '@/assets/img/team/luca.webp';
@@ -33,7 +34,7 @@ const team = [
       <div class="team-list">
         <div v-for="member in team" :key="member.name" class="team-card">
           <div class="team-img">
-            <img :src="member.img" :alt="member.name" />
+            <LazyImage :src="member.img" :alt="member.name" width="300" height="300" />
           </div>
           <h3>{{ member.name }}</h3>
           <p class="team-role">{{ $t(`team_section.${member.key}.role`) }}</p>

@@ -58,7 +58,11 @@
     "errorEmailInvalid": "Bitte geben Sie eine gültige E-Mail-Adresse ein.",
     "errorMessageRequired": "Bitte geben Sie eine Nachricht ein.",
     "errorMessageTooShort": "Ihre Nachricht sollte mindestens 10 Zeichen lang sein.",
-    "errorSubmit": "Fehler beim Senden. Bitte versuchen Sie es später erneut."
+    "errorSubmit": "Fehler beim Senden. Bitte versuchen Sie es später erneut.",
+    "errorNameInvalid": "Bitte geben Sie einen gültigen Namen ein (2-100 Zeichen).",
+    "errorMessageLength": "Ihre Nachricht sollte zwischen 10 und 5000 Zeichen lang sein.",
+    "errorSpamDetected": "Ihre Nachricht wurde abgelehnt. Bitte entfernen Sie URLs oder verdächtige Inhalte.",
+    "rateLimitError": "Zu viele Nachrichten gesendet. Bitte warten Sie {minutes} Minuten vor der nächsten Nachricht."
   },
   "privacy_section": {
     "title": "Datenschutzerklärung",

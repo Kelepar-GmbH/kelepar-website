@@ -1,0 +1,15 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(firebase login:*)",
+      "Bash(npm install:*)",
+      "Bash(npm test)",
+      "Bash(npx playwright:*)",
+      "Bash(mkdir:*)",
+      "Bash(chmod:*)",
+      "Bash(npm run build:*)",
+      "Bash(npm run bundle:check:*)"
+    ],
+    "deny": []
+  }
+}

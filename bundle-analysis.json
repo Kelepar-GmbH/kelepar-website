@@ -1,0 +1,122 @@
+{
+  "timestamp": "2025-08-05T18:23:03.183Z",
+  "total": {
+    "size": 2777497,
+    "kb": 2712
+  },
+  "code": {
+    "size": 721482,
+    "kb": 705,
+    "limit": 800,
+    "ok": true
+  },
+  "js": {
+    "size": 454474,
+    "kb": 444,
+    "limit": 500,
+    "ok": true
+  },
+  "css": {
+    "size": 267008,
+    "kb": 261,
+    "limit": 300,
+    "ok": true
+  },
+  "files": [
+    {
+      "path": "kelepar_k-ff0af3ff.png",
+      "size": 1725079,
+      "kb": 1684.65
+    },
+    {
+      "path": "index-e78c87b8.js",
+      "size": 318191,
+      "kb": 310.73
+    },
+    {
+      "path": "index-959de0bd.css",
+      "size": 267008,
+      "kb": 260.75
+    },
+    {
+      "path": "Rubik-Regular-7839aacd.ttf",
+      "size": 207632,
+      "kb": 202.77
+    },
+    {
+      "path": "vendor-e407f88b.js",
+      "size": 136282,
+      "kb": 133.09
+    },
+    {
+      "path": "luca-6384af8b.webp",
+      "size": 29934,
+      "kb": 29.23
+    },
+    {
+      "path": "lars-684c3d6a.webp",
+      "size": 25280,
+      "kb": 24.69
+    },
+    {
+      "path": "lukas-556b3987.webp",
+      "size": 22386,
+      "kb": 21.86
+    },
+    {
+      "path": "valus-4d3b51bd.png",
+      "size": 12074,
+      "kb": 11.79
+    },
+    {
+      "path": "hornbach-2f46453c.svg",
+      "size": 11444,
+      "kb": 11.18
+    },
+    {
+      "path": "ah-d90f9df0.png",
+      "size": 7515,
+      "kb": 7.34
+    },
+    {
+      "path": "visana-24784ae9.svg",
+      "size": 4293,
+      "kb": 4.19
+    },
+    {
+      "path": "oekk-ef18e2fe.svg",
+      "size": 3004,
+      "kb": 2.93
+    },
+    {
+      "path": "bsi-b3cd6b94.svg",
+      "size": 2897,
+      "kb": 2.83
+    },
+    {
+      "path": "swica-5f4cf4f7.svg",
+      "size": 1700,
+      "kb": 1.66
+    },
+    {
+      "path": "css-a704bbac.svg",
+      "size": 1184,
+      "kb": 1.16
+    },
+    {
+      "path": "cross-2cb4eba2.svg",
+      "size": 835,
+      "kb": 0.82
+    },
+    {
+      "path": "menu-48561f83.svg",
+      "size": 758,
+      "kb": 0.74
+    },
+    {
+      "path": "icons-4ed993c7.js",
+      "size": 1,
+      "kb": 0
+    }
+  ]
+}

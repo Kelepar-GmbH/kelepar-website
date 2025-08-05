@@ -12,12 +12,67 @@ const formSubmitted = ref(false);
 const error = ref('');
 const isSubmitting = ref(false);
 
+// Rate limiting - prevent spam submissions
+const RATE_LIMIT_KEY = 'kelepar_contact_submissions';
+const RATE_LIMIT_WINDOW = 60 * 60 * 1000; // 1 hour in milliseconds
+const MAX_SUBMISSIONS = 3;
+
 const WEB3FORMS_ACCESS_KEY = "ade71fee-66c2-4888-b0c9-c65a2bb8cc51";
 
-// Form validation
+// Rate limiting check
+const checkRateLimit = () => {
+  try {
+    const submissions = JSON.parse(localStorage.getItem(RATE_LIMIT_KEY) || '[]');
+    const now = Date.now();
+    
+    // Remove old submissions outside the window
+    const recentSubmissions = submissions.filter(timestamp => 
+      now - timestamp < RATE_LIMIT_WINDOW
+    );
+    
+    // Update localStorage with cleaned submissions
+    localStorage.setItem(RATE_LIMIT_KEY, JSON.stringify(recentSubmissions));
+    
+    if (recentSubmissions.length >= MAX_SUBMISSIONS) {
+      const oldestSubmission = Math.min(...recentSubmissions);
+      const waitTime = Math.ceil((RATE_LIMIT_WINDOW - (now - oldestSubmission)) / (1000 * 60));
+      error.value = t('contact_section.rateLimitError', { minutes: waitTime });
+      return false;
+    }
+    
+    return true;
+  } catch (e) {
+    // If localStorage fails, allow the submission
+    return true;
+  }
+};
+
+// Record successful submission
+const recordSubmission = () => {
+  try {
+    const submissions = JSON.parse(localStorage.getItem(RATE_LIMIT_KEY) || '[]');
+    submissions.push(Date.now());
+    localStorage.setItem(RATE_LIMIT_KEY, JSON.stringify(submissions));
+  } catch (e) {
+    // Fail silently if localStorage is not available
+  }
+};
+
+// Form validation with enhanced security
 const validateForm = () => {
+  // Check rate limiting first
+  if (!checkRateLimit()) {
+    return false;
+  }
+  
   if (!name.value.trim()) {
     error.value = t('contact_section.errorNameRequired');
+    return false;
+  }
+  
+  // Enhanced name validation - prevent obviously fake names
+  if (name.value.trim().length < 2 || name.value.trim().length > 100) {
+    error.value = t('contact_section.errorNameInvalid');
     return false;
   }
   
@@ -26,9 +81,9 @@ const validateForm = () => {
     return false;
   }
   
-  // Basic email validation
-  const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-  if (!emailRegex.test(email.value)) {
+  // Enhanced email validation
+  const emailRegex = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?(?:\.[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?)*$/;
+  if (!emailRegex.test(email.value) || email.value.length > 320) {
     error.value = t('contact_section.errorEmailInvalid');
     return false;
   }
@@ -38,9 +93,25 @@ const validateForm = () => {
     return false;
   }
   
-  if (message.value.length < 10) {
-    error.value = t('contact_section.errorMessageTooShort');
+  if (message.value.length < 10 || message.value.length > 5000) {
+    error.value = t('contact_section.errorMessageLength');
     return false;
+  }
+  
+  // Basic spam detection - look for suspicious patterns
+  const spamPatterns = [
+    /https?:\/\//gi, // URLs
+    /www\./gi, // Web addresses
+    /@.*@/gi, // Multiple @ symbols
+    /(.)\1{10,}/gi, // Repeated characters (more than 10 times)
+  ];
+  
+  const fullText = `${name.value} ${email.value} ${message.value}`;
+  for (const pattern of spamPatterns) {
+    if (pattern.test(fullText)) {
+      error.value = t('contact_section.errorSpamDetected');
+      return false;
+    }
   }
   
   return true;
@@ -83,6 +154,9 @@ async function submitForm() {
     
     if (result.success) {
       formSubmitted.value = true;
+      
+      // Record this successful submission for rate limiting
+      recordSubmission();
       
       // Track successful submission
       analyticsService.trackEvent('contact_form_success', {
