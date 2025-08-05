@@ -13,7 +13,7 @@ export default defineConfig({
       manifest: {
         name: 'Kelepar GmbH - Software',
         short_name: 'Kelepar',
-        description: 'Vertrauen. Innovation. Swiss Made. Ihr Schweizer Partner für KI-Lösungen.',
+        description: 'Swiss Made. Vertrauen. Innovation. Ihr Schweizer Partner für IT-Lösungen.',
         theme_color: '#1e225a',
         background_color: '#ffffff',
         display: 'standalone',

@@ -2,9 +2,9 @@
   "welcome": "Willkommen bei Kelepar GmbH",
   "services": "Unsere Dienstleistungen",
   "hero": {
-    "title": "Vertrauen. Innovation.",
-    "title2": "Swiss Made.",
-    "subtitle": "IT-Consulting, Entwicklung & DevOps für Schweizer Kunden<br>datenschutzkonform - persönlich",
+    "title": "Swiss Made. Vertrauen. Innovation.",
+    "title2": "",
+    "subtitle": "Ihr Schweizer Partner für IT-Lösungen<br>datenschutzkonform - persönlich",
     "cta": "Jetzt unverbindlich beraten lassen"
   },
   "competences": "Kompetenzen",
@@ -40,7 +40,7 @@
   },
   "aboutus_section": {
     "title": "Über uns",
-    "text": "Wir sind Ihr Schweizer Partner für IT-Consulting, Software-Entwicklung und DevOps-Lösungen. Mit Leidenschaft, Know-how und höchsten Datenschutz-Standards begleiten wir unsere Kunden auf dem Weg in die digitale Zukunft. Vertrauen Sie auf Swiss Made IT – persönlich, sicher, effizient.",
+    "text": "Wir sind Ihr Schweizer Partner für IT-Lösungen. Mit Leidenschaft, Know-how und höchsten Datenschutz-Standards begleiten wir unsere Kunden auf dem Weg in die digitale Zukunft. Swiss Made. Vertrauen. Innovation. – persönlich, sicher, effizient.",
     "cta": "Jetzt Kontakt aufnehmen"
   },
   "contact_section": {

@@ -15,7 +15,7 @@ const router = createRouter({
             component: Home,
             meta: {
                 title: 'Kelepar GmbH - Software',
-                description: 'Vertrauen. Innovation. Swiss Made. Ihr Schweizer Partner für IT-Consulting, Software-Entwicklung & DevOps mit höchsten Datenschutz-Standards.'
+                description: 'Swiss Made. Vertrauen. Innovation. Ihr Schweizer Partner für IT-Lösungen mit höchsten Datenschutz-Standards.'
             }
         },
         {
