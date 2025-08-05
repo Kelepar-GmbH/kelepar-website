@@ -1,57 +1,57 @@
 <template>
   <div class="impressum-page">
     <div class="container">
-      <h1>Impressum</h1>
+      <h1>{{ $t('impressum.title') }}</h1>
       
       <section class="legal-section">
-        <h2>Unternehmen</h2>
+        <h2>{{ $t('impressum.company.title') }}</h2>
         <div class="company-info">
-          <p><strong>Kelepar GmbH</strong></p>
-          <p>Museggstrasse 17</p>
-          <p>6004 Luzern</p>
-          <p>Schweiz</p>
+          <p><strong>{{ $t('impressum.company.name') }}</strong></p>
+          <p>{{ $t('impressum.company.address.street') }}</p>
+          <p>{{ $t('impressum.company.address.city') }}</p>
+          <p>{{ $t('impressum.company.address.country') }}</p>
         </div>
       </section>
 
       <section class="legal-section">
-        <h2>Kontakt</h2>
+        <h2>{{ $t('impressum.contact.title') }}</h2>
         <div class="contact-info">
-          <p><strong>E-Mail:</strong> info@kelepar.com</p>
-          <p><strong>Website:</strong> www.kelepar.com</p>
+          <p><strong>{{ $t('impressum.contact.email') }}:</strong> {{ $t('impressum.contact.emailAddress') }}</p>
+          <p><strong>{{ $t('impressum.contact.website') }}:</strong> {{ $t('impressum.contact.websiteUrl') }}</p>
         </div>
       </section>
 
       <section class="legal-section">
-        <h2>Rechtliche Informationen</h2>
+        <h2>{{ $t('impressum.legal.title') }}</h2>
         <div class="legal-info">
-          <p><strong>Handelsregister:</strong> CHE-407.597.854</p>
-          <p><strong>MWST-Nummer:</strong> CHE-407.597.854 MWST</p>
-          <p><strong>Aufsichtsbehörde:</strong> Handelsregisteramt Luzern</p>
+          <p><strong>{{ $t('impressum.legal.registry') }}:</strong> {{ $t('impressum.legal.registryNumber') }}</p>
+          <p><strong>{{ $t('impressum.legal.vat') }}:</strong> {{ $t('impressum.legal.vatNumber') }}</p>
+          <p><strong>{{ $t('impressum.legal.authority') }}:</strong> {{ $t('impressum.legal.authorityName') }}</p>
         </div>
       </section>
 
       <section class="legal-section">
-        <h2>Verantwortlichkeit</h2>
-        <p>Die Kelepar GmbH ist für den Inhalt dieser Website verantwortlich. Trotz sorgfältiger inhaltlicher Kontrolle übernehmen wir keine Haftung für die Inhalte externer Links. Für den Inhalt der verlinkten Seiten sind ausschließlich deren Betreiber verantwortlich.</p>
+        <h2>{{ $t('impressum.responsibility.title') }}</h2>
+        <p>{{ $t('impressum.responsibility.text') }}</p>
       </section>
 
       <section class="legal-section">
-        <h2>Haftungsausschluss</h2>
-        <p>Die Informationen auf dieser Website werden sorgfältig gepflegt. Wir können jedoch keine Gewähr für die Richtigkeit, Vollständigkeit und Aktualität der bereitgestellten Informationen übernehmen. Eine Haftung für Schäden, die sich aus der Nutzung der bereitgestellten Informationen ergeben, ist ausgeschlossen.</p>
+        <h2>{{ $t('impressum.disclaimer.title') }}</h2>
+        <p>{{ $t('impressum.disclaimer.text') }}</p>
       </section>
 
       <section class="legal-section">
-        <h2>Urheberrecht</h2>
-        <p>Alle Inhalte dieser Website sind urheberrechtlich geschützt. Die Vervielfältigung, Verbreitung oder öffentliche Zugänglichmachung der Inhalte ist ohne ausdrückliche Zustimmung der Kelepar GmbH nicht gestattet.</p>
+        <h2>{{ $t('impressum.copyright.title') }}</h2>
+        <p>{{ $t('impressum.copyright.text') }}</p>
       </section>
 
       <section class="legal-section">
-        <h2>Partner-Referenzen</h2>
-        <p>Die Firmenlogos, die in der Partner-Showcase auf unserer Website angezeigt werden, repräsentieren Organisationen, mit denen unsere Teammitglieder bereits berufliche Erfahrungen gesammelt haben. Diese Referenzen spiegeln individuelle Arbeitserfahrung und Expertise wider, nicht unbedingt direkte Geschäftsbeziehungen unter der Kelepar GmbH.</p>
+        <h2>{{ $t('impressum.references.title') }}</h2>
+        <p>{{ $t('impressum.references.text') }}</p>
       </section>
 
       <div class="back-link">
-        <RouterLink to="/" class="btn1">Zurück zur Startseite</RouterLink>
+        <RouterLink to="/" class="btn1">{{ $t('impressum.backHome') }}</RouterLink>
       </div>
     </div>
   </div>

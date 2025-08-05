@@ -1,34 +1,34 @@
 <template>
   <div class="privacy-page">
     <div class="container">
-      <h1>Datenschutzerklärung</h1>
+      <h1>{{ $t('privacy_section.title') }}</h1>
       
       <section class="legal-section">
-        <p>Diese Datenschutzerklärung informiert Sie über die Art, den Umfang und Zweck der Verarbeitung von personenbezogenen Daten auf dieser Website.</p>
+        <p>{{ $t('privacy_section.intro') }}</p>
       </section>
 
       <section class="legal-section">
-        <h2>Verantwortlichkeit</h2>
-        <p>Kelepar GmbH<br>Museggstrasse 17<br>6004 Luzern<br>Schweiz<br>E-Mail: info@kelepar.com</p>
+        <h2>{{ $t('privacy_section.responsible') }}</h2>
+        <p v-html="$t('privacy_section.responsible_text')"></p>
       </section>
 
       <section class="legal-section">
-        <h2>Erhebung und Verarbeitung von Daten</h2>
-        <p>Wir erheben und verarbeiten personenbezogene Daten nur im notwendigen Umfang und ausschließlich für die angegebenen Zwecke.</p>
+        <h2>{{ $t('privacy_section.data_collection') }}</h2>
+        <p>{{ $t('privacy_section.data_collection_text') }}</p>
       </section>
 
       <section class="legal-section">
-        <h2>Ihre Rechte</h2>
-        <p>Sie haben das Recht auf Auskunft, Berichtigung, Löschung und Einschränkung der Verarbeitung Ihrer personenbezogenen Daten.</p>
+        <h2>{{ $t('privacy_section.your_rights') }}</h2>
+        <p>{{ $t('privacy_section.your_rights_text') }}</p>
       </section>
 
       <section class="legal-section">
-        <h2>Kontakt</h2>
-        <p>Bei Fragen zum Datenschutz kontaktieren Sie uns gerne unter info@kelepar.com</p>
+        <h2>{{ $t('privacy_section.contact') }}</h2>
+        <p>{{ $t('privacy_section.contact_text') }}</p>
       </section>
 
       <div class="back-link">
-        <RouterLink to="/" class="btn1">Zurück zur Startseite</RouterLink>
+        <RouterLink to="/" class="btn1">{{ $t('privacy_section.back_home') }}</RouterLink>
       </div>
     </div>
   </div>
