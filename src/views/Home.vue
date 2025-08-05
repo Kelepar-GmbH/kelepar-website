@@ -9,9 +9,9 @@ import ReferenceLogosComponent from "@/components/ReferenceLogosComponent.vue";
 <template>
   <main>
     <IntroComponent/>
+    <ReferenceLogosComponent/>
     <AboutusComponent/>
     <CompetencesComponent/>
-    <ReferenceLogosComponent/>
     <TeamComponent/>
   </main>
 </template>
