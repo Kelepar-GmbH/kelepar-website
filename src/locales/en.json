@@ -9,6 +9,10 @@
   },
   "competences": "Competences",
   "competences.title": "Competences",
+  "references": {
+    "title": "Our Partners",
+    "subtitle": "Companies we've had the pleasure to work with"
+  },
   "team": "Team",
   "team.title": "Team",
   "contact": "Contact",
@@ -116,7 +120,7 @@
       "name": "Kelepar GmbH",
       "address": {
         "street": "Museggstrasse 17",
-        "city": "6004 Lucerne, Switzerland",
+        "city": "6004 Lucerne",
         "country": "Switzerland"
       }
     },
@@ -130,9 +134,9 @@
     "legal": {
       "title": "Legal Information",
       "registry": "Commercial Register",
-      "registryNumber": "CHE-123.456.789",
+      "registryNumber": "CHE-407.597.854",
       "vat": "VAT Number",
-      "vatNumber": "CHE-123.456.789 VAT",
+      "vatNumber": "CHE-407.597.854 VAT",
       "authority": "Supervisory Authority",
       "authorityName": "Commercial Register Office Lucerne"
     },
@@ -147,6 +151,10 @@
     "copyright": {
       "title": "Copyright",
       "text": "All content on this website is protected by copyright. Reproduction, distribution or public accessibility of the content is not permitted without the express consent of Kelepar GmbH."
+    },
+    "references": {
+      "title": "Partner References",
+      "text": "The company logos displayed in the partner showcase on our website represent organizations with which our team members have had professional experience. These references reflect individual work history and expertise, not necessarily direct business relationships under the Kelepar GmbH entity."
     },
     "backHome": "Back to Homepage"
   },

@@ -9,6 +9,10 @@
   },
   "competences": "Kompetenzen",
   "competences.title": "Kompetenzen",
+  "references": {
+    "title": "Unsere Partner",
+    "subtitle": "Unternehmen, mit denen wir zusammenarbeiten durften"
+  },
   "team": "Team",
   "team.title": "Team",
   "contact": "Kontakt",
@@ -116,7 +120,7 @@
       "name": "Kelepar GmbH",
       "address": {
         "street": "Museggstrasse 17",
-        "city": "6004 Luzern, Schweiz",
+        "city": "6004 Luzern",
         "country": "Schweiz"
       }
     },
@@ -130,9 +134,9 @@
     "legal": {
       "title": "Rechtliche Informationen",
       "registry": "Handelsregister",
-      "registryNumber": "CHE-123.456.789",
+      "registryNumber": "CHE-407.597.854",
       "vat": "MWST-Nummer",
-      "vatNumber": "CHE-123.456.789 MWST",
+      "vatNumber": "CHE-407.597.854 MWST",
       "authority": "Aufsichtsbehörde",
       "authorityName": "Handelsregisteramt Luzern"
     },
@@ -147,6 +151,10 @@
     "copyright": {
       "title": "Urheberrecht",
       "text": "Alle Inhalte dieser Website sind urheberrechtlich geschützt. Die Vervielfältigung, Verbreitung oder öffentliche Zugänglichmachung der Inhalte ist ohne ausdrückliche Zustimmung der Kelepar GmbH nicht gestattet."
+    },
+    "references": {
+      "title": "Partner-Referenzen",
+      "text": "Die Firmenlogos, die in der Partner-Showcase auf unserer Website angezeigt werden, repräsentieren Organisationen, mit denen unsere Teammitglieder bereits berufliche Erfahrungen gesammelt haben. Diese Referenzen spiegeln individuelle Arbeitserfahrung und Expertise wider, nicht unbedingt direkte Geschäftsbeziehungen unter der Kelepar GmbH."
     },
     "backHome": "Zurück zur Startseite"
   },

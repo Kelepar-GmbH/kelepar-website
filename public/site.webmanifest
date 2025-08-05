@@ -1,0 +1,17 @@
+{
+  "name": "Kelepar GmbH - Software",
+  "short_name": "Kelepar",
+  "description": "Vertrauen. Innovation. Swiss Made. Ihr Schweizer Partner für IT-Consulting, Software-Entwicklung & DevOps.",
+  "theme_color": "#0f172a",
+  "background_color": "#ffffff",
+  "display": "standalone",
+  "start_url": "/",
+  "scope": "/",
+  "icons": [
+    {
+      "src": "/favicon.ico",
+      "sizes": "any",
+      "type": "image/x-icon"
+    }
+  ]
+} 

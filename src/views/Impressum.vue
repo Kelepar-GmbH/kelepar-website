@@ -45,6 +45,11 @@
         <p>{{ $t('impressum.copyright.text') }}</p>
       </section>
 
+      <section class="legal-section">
+        <h2>{{ $t('impressum.references.title') }}</h2>
+        <p>{{ $t('impressum.references.text') }}</p>
+      </section>
+
       <div class="back-link">
         <RouterLink to="/" class="btn1">{{ $t('impressum.backHome') }}</RouterLink>
       </div>

@@ -3,6 +3,7 @@ import TeamComponent from "@/components/TeamComponent.vue";
 import AboutusComponent from "@/components/AboutusComponent.vue";
 import IntroComponent from "@/components/IntroComponent.vue";
 import CompetencesComponent from "@/components/CompetencesComponent.vue";
+import ReferenceLogosComponent from "@/components/ReferenceLogosComponent.vue";
 </script>
 
 <template>
@@ -10,6 +11,7 @@ import CompetencesComponent from "@/components/CompetencesComponent.vue";
     <IntroComponent/>
     <AboutusComponent/>
     <CompetencesComponent/>
+    <ReferenceLogosComponent/>
     <TeamComponent/>
   </main>
 </template>
