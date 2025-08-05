@@ -1,57 +1,57 @@
 <template>
   <div class="impressum-page">
     <div class="container">
-      <h1>{{ $t('impressum.title') }}</h1>
+      <h1>Legal Notice</h1>
       
       <section class="legal-section">
-        <h2>{{ $t('impressum.company.title') }}</h2>
+        <h2>Company</h2>
         <div class="company-info">
-          <p><strong>{{ $t('impressum.company.name') }}</strong></p>
-          <p>{{ $t('impressum.company.address.street') }}</p>
-          <p>{{ $t('impressum.company.address.city') }}</p>
-          <p>{{ $t('impressum.company.address.country') }}</p>
+          <p><strong>Kelepar GmbH</strong></p>
+          <p>Museggstrasse 17</p>
+          <p>6004 Lucerne</p>
+          <p>Switzerland</p>
         </div>
       </section>
 
       <section class="legal-section">
-        <h2>{{ $t('impressum.contact.title') }}</h2>
+        <h2>Contact</h2>
         <div class="contact-info">
-          <p><strong>{{ $t('impressum.contact.email') }}:</strong> {{ $t('impressum.contact.emailAddress') }}</p>
-          <p><strong>{{ $t('impressum.contact.website') }}:</strong> {{ $t('impressum.contact.websiteUrl') }}</p>
+          <p><strong>Email:</strong> info@kelepar.com</p>
+          <p><strong>Website:</strong> www.kelepar.com</p>
         </div>
       </section>
 
       <section class="legal-section">
-        <h2>{{ $t('impressum.legal.title') }}</h2>
+        <h2>Legal Information</h2>
         <div class="legal-info">
-          <p><strong>{{ $t('impressum.legal.registry') }}:</strong> {{ $t('impressum.legal.registryNumber') }}</p>
-          <p><strong>{{ $t('impressum.legal.vat') }}:</strong> {{ $t('impressum.legal.vatNumber') }}</p>
-          <p><strong>{{ $t('impressum.legal.authority') }}:</strong> {{ $t('impressum.legal.authorityName') }}</p>
+          <p><strong>Commercial Register:</strong> CHE-407.597.854</p>
+          <p><strong>VAT Number:</strong> CHE-407.597.854 VAT</p>
+          <p><strong>Supervisory Authority:</strong> Commercial Register Office Lucerne</p>
         </div>
       </section>
 
       <section class="legal-section">
-        <h2>{{ $t('impressum.responsibility.title') }}</h2>
-        <p>{{ $t('impressum.responsibility.text') }}</p>
+        <h2>Responsibility</h2>
+        <p>Kelepar GmbH is responsible for the content of this website. Despite careful content control, we assume no liability for the content of external links. The operators of the linked pages are solely responsible for their content.</p>
       </section>
 
       <section class="legal-section">
-        <h2>{{ $t('impressum.disclaimer.title') }}</h2>
-        <p>{{ $t('impressum.disclaimer.text') }}</p>
+        <h2>Disclaimer</h2>
+        <p>The information on this website is carefully maintained. However, we cannot guarantee the accuracy, completeness and timeliness of the information provided. Liability for damages arising from the use of the provided information is excluded.</p>
       </section>
 
       <section class="legal-section">
-        <h2>{{ $t('impressum.copyright.title') }}</h2>
-        <p>{{ $t('impressum.copyright.text') }}</p>
+        <h2>Copyright</h2>
+        <p>All content on this website is protected by copyright. Reproduction, distribution or public accessibility of the content is not permitted without the express consent of Kelepar GmbH.</p>
       </section>
 
       <section class="legal-section">
-        <h2>{{ $t('impressum.references.title') }}</h2>
-        <p>{{ $t('impressum.references.text') }}</p>
+        <h2>Partner References</h2>
+        <p>The company logos displayed in the partner showcase on our website represent organizations with which our team members have had professional experience. These references reflect individual work history and expertise, not necessarily direct business relationships under the Kelepar GmbH entity.</p>
       </section>
 
       <div class="back-link">
-        <RouterLink to="/" class="btn1">{{ $t('impressum.backHome') }}</RouterLink>
+        <RouterLink to="/" class="btn1">Back to Homepage</RouterLink>
       </div>
     </div>
   </div>
