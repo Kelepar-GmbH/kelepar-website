@@ -1,42 +1,37 @@
 {
-  "timestamp": "2025-08-05T18:23:03.183Z",
+  "timestamp": "2025-08-05T18:36:51.924Z",
   "total": {
-    "size": 2777497,
-    "kb": 2712
+    "size": 1198950,
+    "kb": 1171
   },
   "code": {
-    "size": 721482,
-    "kb": 705,
+    "size": 735558,
+    "kb": 718,
     "limit": 800,
     "ok": true
   },
   "js": {
-    "size": 454474,
-    "kb": 444,
+    "size": 464078,
+    "kb": 453,
     "limit": 500,
     "ok": true
   },
   "css": {
-    "size": 267008,
-    "kb": 261,
+    "size": 271480,
+    "kb": 265,
     "limit": 300,
     "ok": true
   },
   "files": [
     {
-      "path": "kelepar_k-ff0af3ff.png",
-      "size": 1725079,
-      "kb": 1684.65
+      "path": "index-ce2ed2dc.js",
+      "size": 324429,
+      "kb": 316.83
     },
     {
-      "path": "index-e78c87b8.js",
-      "size": 318191,
-      "kb": 310.73
-    },
-    {
-      "path": "index-959de0bd.css",
-      "size": 267008,
-      "kb": 260.75
+      "path": "index-640e22e2.css",
+      "size": 271480,
+      "kb": 265.12
     },
     {
       "path": "Rubik-Regular-7839aacd.ttf",
@@ -44,9 +39,14 @@
       "kb": 202.77
     },
     {
-      "path": "vendor-e407f88b.js",
-      "size": 136282,
-      "kb": 133.09
+      "path": "vendor-91105933.js",
+      "size": 139648,
+      "kb": 136.38
+    },
+    {
+      "path": "kelepar_k-b88166d9.png",
+      "size": 132456,
+      "kb": 129.35
     },
     {
       "path": "luca-6384af8b.webp",

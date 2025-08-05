@@ -64,6 +64,20 @@
     "errorSpamDetected": "Your message was rejected. Please remove any URLs or suspicious content.",
     "rateLimitError": "Too many submissions. Please wait {minutes} minutes before sending another message."
   },
+  "errors": {
+    "generic": "Something went wrong. Please try again.",
+    "network": "Network error. Please check your connection and try again.",
+    "notFound": "The requested resource was not found.",
+    "server": "Server error. Please try again later.",
+    "timeout": "Request timed out. Please try again.",
+    "somethingWentWrong": "Something went wrong",
+    "componentError": "A component has encountered an error. You can try refreshing the page or continue browsing.",
+    "tryAgain": "Try Again",
+    "reloadPage": "Reload Page",
+    "technicalDetails": "Technical Details",
+    "notifications": "Error Notifications",
+    "dismissAll": "Dismiss All"
+  },
   "privacy_section": {
     "title": "Privacy Policy",
     "intro": "This privacy policy informs you about the nature, scope and purpose of the processing of personal data on this website.",

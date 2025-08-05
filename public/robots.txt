@@ -1,12 +1,28 @@
 User-agent: *
 Allow: /
 
-# Sitemap
-Sitemap: https://kelepar.com/sitemap.xml
-
-# Disallow admin areas (if any)
+# Disallow development and internal files
 Disallow: /admin/
 Disallow: /api/
+Disallow: /.well-known/
+Disallow: /src/
+Disallow: /node_modules/
+Disallow: /dist/
+Disallow: /*.json$
+Disallow: /*.js.map$
+Disallow: /*.css.map$
 
-# Crawl delay (optional)
-Crawl-delay: 1 
+# Allow important pages explicitly
+Allow: /contact
+Allow: /privacy
+Allow: /impressum
+Allow: /agb
+
+# Sitemaps
+Sitemap: https://kelepar.com/sitemap.xml
+
+# Crawl delay for respectful crawling
+Crawl-delay: 1
+
+# Host directive
+Host: https://kelepar.com 

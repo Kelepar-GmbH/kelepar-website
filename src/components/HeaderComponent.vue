@@ -4,6 +4,7 @@ import { RouterLink } from 'vue-router';
 import { onMounted, ref } from "vue";
 import { useI18n } from 'vue-i18n'
 import ThemeSwitcherComponent from './ThemeSwitcherComponent.vue';
+import OptimizedLogo from './OptimizedLogo.vue';
 
 const { locale } = useI18n()
 const mobileView = ref(false);
@@ -45,7 +46,7 @@ onMounted(() => {
         <!-- Logo -->
         <div class="logo">
           <RouterLink :to="{ name: 'Home' }">
-            <img src="@/assets/img/logos/kelepar_k.png" width="60" height="60" alt="Kelepar Logo">
+            <OptimizedLogo size="medium" alt="Kelepar Logo" />
           </RouterLink>
         </div>
         <!-- Desktop Navigation -->

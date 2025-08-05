@@ -2,8 +2,10 @@
 import { ref } from 'vue';
 import { useI18n } from 'vue-i18n';
 import analyticsService from '@/services/analytics.js';
+import { useErrorHandler } from '@/composables/useErrorHandler.js';
 
 const { t } = useI18n();
+const { handleAsyncError, getErrorMessage } = useErrorHandler();
 
 const name = ref('');
 const email = ref('');
@@ -133,24 +135,30 @@ async function submitForm() {
       event_label: 'contact_form'
     });
     
-    const response = await fetch("https://api.web3forms.com/submit", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-        Accept: "application/json",
-      },
-      body: JSON.stringify({
-        access_key: WEB3FORMS_ACCESS_KEY,
-        name: name.value.trim(),
-        email: email.value.trim(),
-        message: message.value.trim(),
-        subject: `Neue Kontaktanfrage von ${name.value.trim()}`,
-        from_name: name.value.trim(),
-        replyto: email.value.trim(),
-      }),
-    });
-    
-    const result = await response.json();
+    const result = await handleAsyncError(async () => {
+      const response = await fetch("https://api.web3forms.com/submit", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          Accept: "application/json",
+        },
+        body: JSON.stringify({
+          access_key: WEB3FORMS_ACCESS_KEY,
+          name: name.value.trim(),
+          email: email.value.trim(),
+          message: message.value.trim(),
+          subject: `Neue Kontaktanfrage von ${name.value.trim()}`,
+          from_name: name.value.trim(),
+          replyto: email.value.trim(),
+        }),
+      });
+
+      if (!response.ok) {
+        throw new Error(`HTTP ${response.status}: ${response.statusText}`)
+      }
+      
+      return await response.json();
+    }, 'contact-form-submission');
     
     if (result.success) {
       formSubmitted.value = true;
@@ -175,7 +183,7 @@ async function submitForm() {
     
   } catch (err) {
     console.error('Form submission error:', err);
-    error.value = t('contact_section.errorSubmit');
+    error.value = getErrorMessage(err);
     
     // Track failed submission
     analyticsService.trackEvent('contact_form_error', {

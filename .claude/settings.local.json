@@ -8,7 +8,10 @@
       "Bash(mkdir:*)",
       "Bash(chmod:*)",
       "Bash(npm run build:*)",
-      "Bash(npm run bundle:check:*)"
+      "Bash(npm run bundle:check:*)",
+      "Bash(ls:*)",
+      "Bash(rm:*)",
+      "Bash(npm run dev:*)"
     ],
     "deny": []
   }

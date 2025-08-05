@@ -64,6 +64,20 @@
     "errorSpamDetected": "Ihre Nachricht wurde abgelehnt. Bitte entfernen Sie URLs oder verdächtige Inhalte.",
     "rateLimitError": "Zu viele Nachrichten gesendet. Bitte warten Sie {minutes} Minuten vor der nächsten Nachricht."
   },
+  "errors": {
+    "generic": "Etwas ist schiefgelaufen. Bitte versuchen Sie es erneut.",
+    "network": "Netzwerkfehler. Bitte überprüfen Sie Ihre Verbindung und versuchen Sie es erneut.",
+    "notFound": "Die angeforderte Ressource wurde nicht gefunden.",
+    "server": "Serverfehler. Bitte versuchen Sie es später erneut.",
+    "timeout": "Anfrage-Timeout. Bitte versuchen Sie es erneut.",
+    "somethingWentWrong": "Etwas ist schiefgelaufen",
+    "componentError": "Eine Komponente ist auf einen Fehler gestoßen. Sie können die Seite aktualisieren oder weiter browsen.",
+    "tryAgain": "Erneut versuchen",
+    "reloadPage": "Seite neu laden",
+    "technicalDetails": "Technische Details",
+    "notifications": "Fehlermeldungen",
+    "dismissAll": "Alle ausblenden"
+  },
   "privacy_section": {
     "title": "Datenschutzerklärung",
     "intro": "Diese Datenschutzerklärung informiert Sie über die Art, den Umfang und Zweck der Verarbeitung von personenbezogenen Daten auf dieser Website.",

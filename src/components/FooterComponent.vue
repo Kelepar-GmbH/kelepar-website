@@ -1,11 +1,13 @@
-<script setup></script>
+<script setup>
+import OptimizedLogo from './OptimizedLogo.vue';
+</script>
 
 <template>
   <footer class="footer">
     <div class="container">
       <div class="footer-content">
         <div class="footer-brand">
-          <img src="@/assets/img/logos/kelepar_k.png" width="40" height="40" alt="Kelepar Logo">
+          <OptimizedLogo size="small" alt="Kelepar Logo" />
           <span>Kelepar GmbH – Software</span>
         </div>
         
