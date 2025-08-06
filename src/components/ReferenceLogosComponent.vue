@@ -235,10 +235,6 @@ const handleMouseLeave = () => {
     padding: 0 1.5rem;
   }
   
-  /* SVG logos always colored on mobile */
-  .logo-image {
-    filter: grayscale(0%) opacity(1) !important;
-  }
 }
 
 @media (max-width: 480px) {
