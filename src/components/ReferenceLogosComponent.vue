@@ -1,5 +1,5 @@
 <script setup>
-import { ref, onMounted, onUnmounted } from 'vue';
+import {ref} from 'vue';
 
 const companies = [
   {
@@ -17,11 +17,11 @@ const companies = [
     logo: new URL('../assets/img/reference_logos/valus.png', import.meta.url).href,
     url: 'https://www.valus.ch'
   },
-  // {
-  //   name: 'Swiss Life',
-  //   logo: new URL('../assets/img/reference_logos/swiss-life.svg', import.meta.url).href,
-  //   url: 'https://www.swisslife.ch'
-  // },
+  {
+    name: 'Swiss Life',
+    logo: new URL('../assets/img/reference_logos/swiss-life.svg', import.meta.url).href,
+    url: 'https://www.swisslife.ch'
+  },
   {
     name: 'Ashen Horizon',
     logo: new URL('../assets/img/reference_logos/ah.png', import.meta.url).href,
